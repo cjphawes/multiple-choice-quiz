@@ -8,21 +8,18 @@
 body {
   font-weight: 400;
   font-family: sans-serif;
-  color: #fff;
+  color: #000;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 
   background-image: url(/assets/images/different-coloured-pencils-in-a-line.webp);
-  background-position: 100% 70%;
-  background-size: cover;
+  background-position: 100% 100%;
+  background-size: 100%;
 }
 
 /*INDEX.HTML PAGE*/
 /*Header Section*/
-.general-header {
-}
-
 #website-name {
   text-align: center;
   position: relative;
@@ -30,9 +27,9 @@ body {
   font-size: 1200%;
   font-weight: 900;
   text-transform: uppercase;
-  color: #000;
+  color: inherit;
   text-decoration: none;
-  letter-spacing: 15px;
+  letter-spacing: 50px;
   z-index: 2;
   cursor: default;
 }
@@ -61,12 +58,71 @@ body {
   z-index: 1;
 }
 
-/*Navigation*/
+/**Navigation**/
 .nav-ul-list {
   display: flex;
+  justify-content: space-between;
+
+  margin: 50px 50px 0px 50px;
+  list-style-type: none;
 }
-.nav-links {
-  font-size: 500%;
+
+#quiz-link:link,
+#quiz-link:visited,
+#contact-us:link,
+#contact-us:visited {
+  font-size: 400%;
   font-weight: 600;
-  color: #000;
+  margin: 20px 30px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+#quiz-link:hover,
+#quiz-link:active,
+#contact-us:hover,
+#contact-us:active {
+  border-bottom: 8px solid #a2a0a3;
+}
+
+/*Main Section*/
+main {
+  flex: 1 0 auto;
+}
+
+#play-btn-container {
+  position: relative;
+  top: 300px;
+  height: 500px;
+  text-align: center;
+}
+#play-btn:link,
+#play-btn:visited {
+  font-size: 600%;
+  font-weight: 900;
+  padding: 50px 50px;
+  border-radius: 50px;
+  color: inherit;
+  border: 5px solid #6d6666;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+#play-btn:hover,
+#play-btn:active {
+  color: #fff;
+  border: inset 0px red;
+  background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
+}
+
+/*Footer Section*/
+footer {
+  background-color: #edeaed;
+  height: 150px;
+}
+#copyright-text {
+  font-size: 300%;
+  font-weight: 400;
+  margin: 50px 50px;
+  text-align: center;
 }
