@@ -10,7 +10,7 @@
     />
     <meta name="author" content="Cameron Hawes" />
     <title>TriviaX | General Knowledge Quiz</title>
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link
       rel="shortcut icon"
       href="assets/images/favicon.ico"
@@ -21,24 +21,31 @@
     <!--Header Section-->
     <header class="general-header">
       <!--Navigation Pane-->
-      <nav class="nav-bar">
-        <ul class="nav-ul-list">
-          <li class="nav-links">The Quiz</li>
-          <li class="nav-links">Contact us</li>
-          <li class="nav-links"></li>
-        </ul>
-      </nav>
+      <div>
+        <nav class="nav-bar">
+          <ul class="nav-ul-list">
+            <li class="nav-links">
+              <a href="about-us.html" id="quiz-link">What is TriviaX</a>
+            </li>
+            <li class="nav-links">
+              <a href="contact-us.html" id="contact-us">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <h2 id="website-name">trivia</h2>
+      </div>
       <!--Title-->
-      <h2 id="website-name">trivia</h2>
     </header>
     <!--Main Section-->
     <main>
-      <div>
-        <a href="#"></a>
+      <div id="play-btn-container">
+        <a href="#" id="play-btn">Play Now</a>
       </div>
     </main>
     <!--Footer Section-->
-    <footer></footer>
+    <footer>
+      <p id="copyright-text">All rights reserved &copy; TriviaX</p>
+    </footer>
     <!--Font Awesome JS Script-->
     <script
       src="https://kit.fontawesome.com/25f1a73407.js"
