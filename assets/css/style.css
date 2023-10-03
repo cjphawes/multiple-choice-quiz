@@ -126,3 +126,68 @@ footer {
   margin: 50px 50px;
   text-align: center;
 }
+
+/*QUIZ.HTML*/
+#roundone-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(/assets/images/different-coloured-pencils-in-a-line.webp);
+}
+/*Header Section*/
+
+/*Main Section*/
+.question {
+  display: block;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 600%;
+  font-weight: 600;
+}
+#round-number {
+  display: block;
+  text-align: center;
+  margin-top: 250px;
+  font-size: 500%;
+  font-weight: 700;
+  color: #fff;
+}
+
+#answers-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  row-gap: 100px;
+  column-gap: 100px;
+  margin: 100px 700px;
+  height: 800px;
+}
+
+#answers-container-1,
+#answers-container-2,
+#answers-container-3,
+#answers-container-4 {
+  display: grid;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+#answers-container-1:hover,
+#answers-container-2:hover,
+#answers-container-3:hover,
+#answers-container-4:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 15px solid #fff;
+}
+
+.answer-title {
+  font-size: 600%;
+  font-weight: 600;
+  align-self: center;
+  justify-self: center;
+}
+/*Footer Section*/
