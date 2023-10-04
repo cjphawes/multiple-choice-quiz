@@ -16,6 +16,12 @@
       href="assets/images/favicon.ico"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body id="roundone-body">
     <!--Header Section-->
@@ -24,7 +30,9 @@
       <nav class="nav-bar">
         <ul class="nav-ul-list">
           <li class="nav-links">
-            <a href="about-us.html" id="quiz-link">What is TriviaX</a>
+            <a href="about-us.html" id="quiz-link"
+              >What is Trivia<span id="letter-x">X</span></a
+            >
           </li>
           <li class="nav-links">
             <a href="contact-us.html" id="contact-us">Contact Us</a>
@@ -32,13 +40,11 @@
         </ul>
       </nav>
       <!--Title-->
-      <a href="index.html">
-        <img
-          src="/assets/images/triviax-img-logo.png"
-          alt="logo-of-website"
-          id="website-name"
-        />
-      </a>
+      <h2 id="website-name">
+        <a href="index.html" id="logo-link"
+          >Trivia<span id="letter-x">X</span></a
+        >
+      </h2>
     </header>
     <!--Main Section-->
     <main>
@@ -46,6 +52,7 @@
         <span id="round-number">Round 1</span>
         <p class="question">What is the capital of Thailand?</p>
       </div>
+
       <section id="answers-container">
         <div id="answers-container-1">
           <h2 class="answer-title">Laos</h2>
@@ -60,6 +67,10 @@
           <h2 class="answer-title">Phnom Penh</h2>
         </div>
       </section>
+
+      <div id="next-question">
+        <a href="roundtwo.html" id="next-question-link">Next Question</a>
+      </div>
     </main>
     <!--Footer Section-->
     <footer>
