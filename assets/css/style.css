@@ -13,16 +13,18 @@ body {
   min-height: 100vh;
   flex-direction: column;
 
-  background-image: url(/assets/images/different-coloured-pencils-in-a-line.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/images/tons-of-open-page-books.webp);
   background-position: 100% 90%;
   background-size: 100%;
 }
 
 /*INDEX.HTML PAGE*/
 /*Header Section*/
-#website-name {
+#website-hero-name {
   text-align: center;
-  font-size: 1300%;
+  margin-top: 200px;
+  font-size: 2000%;
 }
 
 #logo-link:link,
@@ -36,6 +38,25 @@ body {
   font-family: "Monoton", sans-serif;
   color: inherit;
   background-color: transparent;
+}
+
+#letter-t {
+  color: #fff;
+}
+#letter-r {
+  color: blue;
+}
+#letter-i {
+  color: yellow;
+}
+#letter-v {
+  color: greenyellow;
+}
+#letter-i-two {
+  color: red;
+}
+#letter-a {
+  color: pink;
 }
 /**Navigation**/
 .nav-ul-list {
@@ -53,7 +74,7 @@ body {
   font-size: 400%;
   font-weight: 600;
   margin: 20px 30px;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
   transition: all 0.1s;
 }
@@ -62,7 +83,7 @@ body {
 #quiz-link:active,
 #contact-us:hover,
 #contact-us:active {
-  border-bottom: 8px solid #6e6e6e;
+  border-bottom: 8px solid #d7d7d7;
 }
 
 /*Main Section*/
@@ -78,14 +99,15 @@ main {
 }
 #play-btn:link,
 #play-btn:visited {
-  font-size: 600%;
+  font-size: 1000%;
   font-weight: 900;
-  padding: 50px 50px;
+  padding: 80px 120px;
   border-radius: 50px;
   color: inherit;
-  border: 5px solid #6d6666;
+  border: 10px solid #fff;
   text-decoration: none;
   transition: all 0.3s;
+  color: #fff;
 }
 #play-btn:hover,
 #play-btn:active {
@@ -106,14 +128,18 @@ footer {
   text-align: center;
 }
 
-/*QUIZ.HTML*/
+/*ROUNDONE.HTML*/
 #roundone-body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url(/assets/images/two-pencils-on-a-yellow-background.webp);
-  background-position: 100% 60%;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/images/flag-of-thailand.webp);
+  background-position: 90% 70%;
+  background-size: 150%;
 }
 /*Header Section*/
+.website-name {
+  text-align: center;
+  font-size: 1300%;
+}
 
 /*Main Section*/
 .number-and-question {
@@ -126,8 +152,9 @@ footer {
   text-align: center;
   font-size: 600%;
   font-weight: 600;
+  color: #fff;
 }
-#round-number {
+.round {
   display: block;
   text-align: center;
   font-size: 500%;
@@ -194,7 +221,25 @@ footer {
   padding: 30px;
 }
 
+#next-question-link:hover,
+#next-question-link:active {
+  color: #fff;
+  border: inset 0px red;
+  background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
+}
+
 /*Footer Section*/
+
+/*ROUNDTWO.HTML*/
+#roundtwo-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/images/canadian-parliament.webp);
+  background-position: 100% 30%;
+  background-size: 120%;
+}
+/*Header Section*/
+
+/*Main Section*/
 
 /*FOR SCREEN WIDTHS BELOW 3px*/
 /*MEDIA QUERIES FOR INDEX.HTML*/
