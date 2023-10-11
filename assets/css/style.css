@@ -207,10 +207,13 @@ footer {
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+  gap: 100px;
 }
 
 #next-question-link:link,
-#next-question-link:visited {
+#next-question-link:visited,
+#previous-question-link:link,
+#previous-question-link:visited {
   font-size: 400%;
   font-weight: 600;
   background-color: #000;
@@ -222,7 +225,9 @@ footer {
 }
 
 #next-question-link:hover,
-#next-question-link:active {
+#next-question-link:active,
+#previous-question-link:hover,
+#previous-question-link:active {
   color: #fff;
   border: inset 0px red;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
@@ -240,6 +245,22 @@ footer {
 /*Header Section*/
 
 /*Main Section*/
+
+/*ROUNDTHREE.HTML*/
+#roundthree-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/images/olympic-rings.webp);
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+/*ROUNDFOUR.HTML*/
+#roundfour-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/images/pacific-ocean.webp);
+  background-position: 100% 40%;
+  background-size: cover;
+}
 
 /*FOR SCREEN WIDTHS BELOW 3px*/
 /*MEDIA QUERIES FOR INDEX.HTML*/
