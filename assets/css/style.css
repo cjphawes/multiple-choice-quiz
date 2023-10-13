@@ -278,8 +278,8 @@ footer {
   background-size: 90%;
 }
 
-/*QUIZRESULTS.HTML*/
-#quizresults-body {
+/*QUIZRESULTS.HTML, ABOUTUS.HTML, CONTACTUS.HTML*/
+.generic-body {
   background-color: #a59070;
 }
 
