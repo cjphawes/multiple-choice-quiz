@@ -70,10 +70,8 @@ body {
   list-style-type: none;
 }
 
-#quiz-link:link,
-#quiz-link:visited,
-#contact-us:link,
-#contact-us:visited {
+.nav-link:link,
+.nav-link:visited {
   font-size: 400%;
   font-weight: 600;
   margin: 20px 30px;
@@ -82,10 +80,8 @@ body {
   transition: all 0.1s;
 }
 
-#quiz-link:hover,
-#quiz-link:active,
-#contact-us:hover,
-#contact-us:active {
+.nav-link:hover,
+.nav-link:active {
   border-bottom: 8px solid #d7d7d7;
 }
 
