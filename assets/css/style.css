@@ -127,8 +127,8 @@ footer {
 #roundone-body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/flag-of-thailand.webp);
-  background-position: 90% 70%;
-  background-size: 150%;
+  background-position: 100% 70%;
+  background-size: 100%;
 }
 /*Header Section*/
 .website-name {
@@ -165,8 +165,9 @@ footer {
   justify-content: center;
   row-gap: 100px;
   column-gap: 100px;
-  margin: 80px 700px 0 700px;
+  margin: 80px auto;
   height: 800px;
+  width: 90%;
 }
 
 #answers-container-1,
@@ -174,6 +175,8 @@ footer {
 #answers-container-3,
 #answers-container-4 {
   display: grid;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   background-color: #fff;
   border-radius: 10px;
@@ -191,10 +194,9 @@ footer {
 }
 
 .answer-title {
-  font-size: 600%;
+  font-size: 700%;
   font-weight: 600;
-  align-self: center;
-  justify-self: center;
+  text-align: center;
 }
 
 #next-question {
@@ -282,14 +284,21 @@ footer {
     background-position: 100% 100%;
     background-size: cover;
   }
+
+  /*MEDIA QUERIES FOR ROUNDONE.HTML*/
+  #roundone-body {
+    background-position: 100% 100%;
+    background-size: cover;
+  }
 }
 
-/*FOR SCREEN WIDTHS BELOW 1600px*/
-/*MEDIA QUERIES FOR INDEX.HTML*/
-@media screen and (max-width: 1600px) {
-  .website-hero-name {
-    margin-top: 300px;
-    font-size: 1300%;
+/*FOR SCREEN WIDTHS BELOW 1920px*/
+/*MEDIA QUERIES FOR ROUNDONE.HTML*/
+@media screen and (max-width: 1920px) {
+  /**Header Section**/
+  .website-name {
+    margin-top: 100px;
+    font-size: 1000%;
   }
 
   #letter-t,
@@ -301,9 +310,29 @@ footer {
   #letter-a,
   #letter-a,
   #letter-x-title {
-    text-shadow: 10px 10px #95897b;
+    text-shadow: 13px 13px #95897b;
   }
 
+  /**Main Section**/
+  #round-one {
+    font-size: 350%;
+  }
+
+  #question-one {
+    font-size: 400%;
+  }
+
+  #answers-container {
+    height: 600px;
+  }
+  .answer-title {
+    font-size: 500%;
+  }
+}
+
+/*FOR SCREEN WIDTHS BELOW 1600px*/
+/*MEDIA QUERIES FOR INDEX.HTML*/
+@media screen and (max-width: 1600px) {
   /***Navigation Links***/
   .nav-ul-list {
     margin: 50px 20px 0px 20px;
@@ -323,6 +352,47 @@ footer {
   #play-btn:visited {
     font-size: 600%;
     padding: 60px 100px;
+  }
+
+  /*MEDIA QUERIES FOR ROUNDONE.HTML*/
+  #answers-container {
+    height: 500px;
+  }
+  .answer-title {
+    font-size: 400%;
+  }
+
+  #next-question-link:link,
+  #next-question-link:visited,
+  #previous-question-link:link,
+  #previous-question-link:visited {
+    font-size: 300%;
+    border: 10px solid #fff;
+    border-radius: 20px;
+    padding: 30px;
+  }
+}
+
+/*FOR SCREEN WIDTHS BELOW 1200px*/
+/*MEDIA QUERIES FOR ROUNDONE.HTML*/
+@media screen and (max-width: 1200px) {
+  /**Main Section**/
+  #round-one {
+    font-size: 300%;
+  }
+
+  #question-one {
+    font-size: 350%;
+  }
+
+  #answers-container {
+    height: 400px;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+
+  .answer-title {
+    font-size: 350%;
   }
 }
 
@@ -374,6 +444,44 @@ footer {
 
   #copyright-text {
     font-size: 200%;
+  }
+
+  /*MEDIA QUERIES FOR ROUNDONE.HTML*/
+  /**Header Section**/
+  .website-name {
+    margin-top: 100px;
+    font-size: 700%;
+  }
+
+  #letter-t,
+  #letter-r,
+  #letter-i,
+  #letter-t,
+  #letter-v,
+  #letter-i-two,
+  #letter-a,
+  #letter-a,
+  #letter-x-title {
+    text-shadow: 8px 8px #95897b;
+  }
+
+  /**Main Section**/
+  #round-one {
+    font-size: 300%;
+  }
+
+  #question-one {
+    font-size: 350%;
+  }
+
+  #answers-container {
+    height: 400px;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+
+  .answer-title {
+    font-size: 350%;
   }
 }
 
