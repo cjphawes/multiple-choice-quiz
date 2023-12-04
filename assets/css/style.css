@@ -90,20 +90,18 @@ main {
   text-align: center;
   margin: 0 auto;
 }
-#play-btn:link,
-#play-btn:visited {
+#play-btn {
   font-size: 1000%;
   font-weight: 900;
   padding: 80px 120px;
   border-radius: 50px;
-  color: inherit;
   border: 10px solid #fff;
   text-decoration: none;
   transition: all 0.3s;
   color: #fff;
+  background-color: transparent;
 }
-#play-btn:hover,
-#play-btn:active {
+#play-btn:hover {
   color: #fff;
   border: inset 0px red;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
@@ -125,6 +123,7 @@ footer {
 
 /*ROUNDONE.HTML*/
 #roundone-body {
+  display: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/flag-of-thailand.webp);
   background-position: 100% 70%;
@@ -234,6 +233,7 @@ footer {
 
 /*ROUNDTWO.HTML*/
 #roundtwo-body {
+  display: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/canadian-parliament.webp);
   background-position: 100% 30%;
@@ -242,6 +242,7 @@ footer {
 
 /*ROUNDTHREE.HTML*/
 #roundthree-body {
+  display: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/olympic-rings.webp);
   background-position: 100% 100%;
@@ -250,6 +251,7 @@ footer {
 
 /*ROUNDFOUR.HTML*/
 #roundfour-body {
+  display: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/pacific-ocean.webp);
   background-position: 100% 40%;
@@ -258,6 +260,7 @@ footer {
 
 /*ROUNDFIVE.HTML*/
 #roundfive-body {
+  display: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/assets/images/blackboard-with-scientific-calculations.webp);
   background-position: 100% 40%;
@@ -266,13 +269,20 @@ footer {
 
 /*ROUNDSIX.HTML*/
 #roundsix-body {
+  display: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/planet-of-jupiter.webp);
   background-position: 190% -40%;
   background-size: 90%;
 }
 
-/*QUIZRESULTS.HTML, ABOUT-US.HTML, CONTACT-US.HTML*/
+/*QUIZ-RESULTS HTML*/
+#quizresults-body {
+  display: none;
+  background-color: #a59070;
+}
+
+/*ABOUT-US.HTML, CONTACT-US.HTML*/
 .generic-body {
   background-color: #a59070;
 }
@@ -333,6 +343,24 @@ footer {
 /*FOR SCREEN WIDTHS BELOW 1600px*/
 /*MEDIA QUERIES FOR INDEX.HTML*/
 @media screen and (max-width: 1600px) {
+  /**Header Section**/
+  .website-hero-name {
+    margin-top: 100px;
+    font-size: 1300%;
+  }
+
+  #letter-t,
+  #letter-r,
+  #letter-i,
+  #letter-t,
+  #letter-v,
+  #letter-i-two,
+  #letter-a,
+  #letter-a,
+  #letter-x-title {
+    text-shadow: 6px 6px #95897b;
+  }
+
   /***Navigation Links***/
   .nav-ul-list {
     margin: 50px 20px 0px 20px;
