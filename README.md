@@ -4,7 +4,7 @@
 
 Welcome to TriviaX, an online general knowledge quiz, testing the users IQ to see if they are smart enough to know the answers to some common questions.
 
-The questions are from a variety of categories and aren't specifically aimed at anyone or any subject in particular. There are 6 questions in total.
+The websites aim is to provide a somewhat challenging quiz to entertain online users. The questions are from a variety of categories and aren't specifically aimed at anyone or any subject in particular. There are 6 questions in total.
 
 Have a go and see if you can guess all six answers correctly! [TriviaX](https://cjphawes.github.io/multiple-choice-quiz/)
 
