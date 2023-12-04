@@ -1,0 +1,10 @@
+function checkAnswer() {}
+function incrementScore() {}
+function displayRoundOne() {}
+function displayRoundTwo() {}
+function displayRoundThree() {}
+function displayRoundFour() {}
+function displayRoundFive() {}
+function displayRoundSix() {}
+function displayQuizResults() {}
+function calculateCorrectAnswer() {}
