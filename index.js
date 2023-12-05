@@ -12,7 +12,7 @@ let nextRoundDiv = document.getElementById("next-round-container");
 let tryAgain = document.getElementById("restart-quiz");
 let tryAgainDiv = document.getElementById("restart-quiz-container");
 
-//Q&A Variable that is an Object, created with a round number, question, 4 answer array and the correct answer
+//Q&A Variable that is an Object, created with 4 properties
 let questionAndAnswer = [
   {
     round: 1,
@@ -78,11 +78,16 @@ nextRound.addEventListener("click", displayRoundFour);
 nextRound.addEventListener("click", displayRoundFive);
 nextRound.addEventListener("click", displayRoundSix);
 nextRound.addEventListener("click", displayQuizResults);
-
-//START QUIZ
-hideElements();
 /**
- * Hides the correct and incorrect scores for the user
+ *Get the restart btn and create event listener, returns back to the start of the quiz with the play btn
+ */
+tryAgain.addEventListener('click', () => {
+  hideElements();
+  returnToStart();
+});
+
+/**
+ *Hides the correct and incorrect scores and btns for the user
  */
 function hideElements() {
   correctAnswersDiv.style.display = "none";
@@ -91,51 +96,23 @@ function hideElements() {
   nextRoundDiv.style.display = "none";
 }
 
-/**
- * displays the correct answers to the user
- */
-function showCorrectAnswers() {
-  correctAnswersDiv.style.display = "block";
-}
+//START QUIZ
+hideElements();
+
 /**
  *Displays the first round of the quiz, removing the play button and displaying the first
  *question, 4 answers, next button and round 1 title.
  */
 function displayRoundOne(event) {
-  //on click make play btn disappear
-  startQuiz.style.display = "none";
   console.log("Round 1! Here we go!");
+  //on click make play btn disappear and empty the quiz container
+  startQuiz.style.display = "none";
+  quizContainer.innerHTML = '';
 
   let firstRound = (document.getElementById(
     "roundone-body"
-  ).innerHTML = `<!--Main Section-->
- <div class="number-and-question">
-   <span class="round" id="round-one">Round 1</span>
-   <p class="question" id="question-one">
-       What is the capital of Thailand?
-   </p>
- </div>
- <!--4 Boxes With Answers-->
- <section id="answers-container">
-   <div id="answers-container-1">
-     <h2 class="answer-title">Laos</h2>
-   </div>
-   <div id="answers-container-2">
-     <h2 class="answer-title">Bangkok</h2>
-   </div>
-   <div id="answers-container-3">
-     <h2 class="answer-title">Chiang Mai</h2>
-   </div>
-   <div id="answers-container-4">
-     <h2 class="answer-title">Phnom Penh</h2>
-   </div>
- </section>
- <!--Next Question Link-->
- <div id="next-question">
-   <a href="roundtwo.html" id="next-question-link">Next Question</a>
- </div>`);
+  ).innerHTML = );
 
-  firstRound.style.display = "block";
 }
 
 //START SECOND ROUND
@@ -185,37 +162,26 @@ function displayRoundSix() {
  */
 function displayQuizResults() {
   console.log("Results time!");
+
+  function showCorrectAnswers() {
+    correctAnswersDiv.style.display = "block";
+    tryAgainDiv.style.display = "block";
+  }
 }
 
 function checkAnswer() {}
 function incrementScore() {}
 function calculateCorrectAnswer() {}
-let html = `
-  <!--Main Section-->
-  <div>
-    <div class="number-and-question">
-      <span class="round" id="round-one">Round 1</span>
-      <p class="question" id="question-one">
-        What is the capital of Thailand?
-      </p>
-    </div>
-    <!--4 Boxes With Answers-->
-    <section id="answers-container">
-      <div id="answers-container-1">
-        <h2 class="answer-title">Laos</h2>
-      </div>
-      <div id="answers-container-2">
-        <h2 class="answer-title">Bangkok</h2>
-      </div>
-      <div id="answers-container-3">
-        <h2 class="answer-title">Chiang Mai</h2>
-      </div>
-      <div id="answers-container-4">
-        <h2 class="answer-title">Phnom Penh</h2>
-      </div>
-    </section>
-    <!--Next Question Link-->
-    <div id="next-question">
-      <a href="roundtwo.html" id="next-question-link">Next Question</a>
-    </div>
-  </div>`;
+
+/**
+ *Displays the correct answers to the user
+ */
+
+/**
+  *Returns back to the home screen with the play btn
+  */
+function returnToStart() {
+  startQuiz.style.display = 'flex';
+  correctAnswers = 0;
+  wrongAnswers = 0;
+}
