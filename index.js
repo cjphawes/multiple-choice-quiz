@@ -1,7 +1,12 @@
 // VARIABLES
 
-//Variable for correct answers
-let numOfCorrectAnswers = 0;
+//Get the DOM HTML Elements
+let quizContainer = document.getElementById("quiz-container");
+let startQuiz = document.getElementById("play-btn");
+let correctAnswers = document.getElementById("correct-answers");
+let wrongAnswers = document.getElementById("wrong-answers");
+let nextRound = document.getElementById("next-round");
+let tryAgain = document.getElementById("restart-quiz");
 
 //Q&A Variable that is an Object, created with a round number, question, 4 answer array and the correct answer
 let questionAndAnswer = [
@@ -53,9 +58,22 @@ let questionAndAnswer = [
   },
 ];
 
-//Get the play btn and create event listener for the user click
-let startBtn = document.getElementById("play-btn");
-startBtn.addEventListener("click", displayRoundOne);
+//Variable for correct/incorrect answers
+let numOfCorrectAnswers = 0;
+let numOfWrongAnswers = 0;
+
+// EVENT LISTENERS
+
+//Get the play btn and create event listener, running the function displayRoundOne
+startQuiz.addEventListener("click", displayRoundOne);
+
+//Get the next btn and create event listener, displaying the next round
+nextRound.addEventListener("click", displayRoundTwo);
+nextRound.addEventListener("click", displayRoundThree);
+nextRound.addEventListener("click", displayRoundFour);
+nextRound.addEventListener("click", displayRoundFive);
+nextRound.addEventListener("click", displayRoundSix);
+nextRound.addEventListener("click", displayQuizResults);
 
 /**
  *Displays the first round of the quiz, removing the play button and displaying the first
@@ -63,7 +81,7 @@ startBtn.addEventListener("click", displayRoundOne);
  */
 function displayRoundOne(event) {
   //on click make play btn disappear
-  startBtn.style.display = "none";
+  startQuiz.style.display = "none";
   console.log("Round 1! Here we go!");
 
   let firstRound = (document.getElementById(
@@ -98,38 +116,13 @@ function displayRoundOne(event) {
   firstRound.style.display = "block";
 }
 
-let secondRound = document.getElementById("roundtwo-body");
-let thirdRound = document.getElementById("roundthree-body");
-let fourthRound = document.getElementById("roundfour-body");
-let fifthRound = document.getElementById("roundfive-body");
-let sixthRound = document.getElementById("roundsix-body");
-let quizResults = document.getElementById("quizresults-body");
-
-// ///Round 1 Variables
-// let roundTwo = createRoundTwo();
-
-// ///Round 2 Variables
-// let roundThree = createRoundThree();
-
-// ///Round 3 Variables
-// let roundFour = createRoundFour();
-
-// ///Round 4 Variables
-// let roundFive = createRoundFive();
-
-// ///Round 5 Variables
-// let roundSix = createRoundSix();
-
-// ///Round 6 Variables
-// let quizTotal = createQuizResults();
-
+//START SECOND ROUND
 /**
  *Displays the second round of the quiz, removing the first round and displaying the second
  *question, 4 answers, next button, previous button and round 2 title.
  */
 function displayRoundTwo() {
   console.log("Round 2! Good luck!");
-  roundOne.style.display = "none";
 }
 
 /**
@@ -152,8 +145,9 @@ function displayRoundFour() {
  *Displays the fifth round of the quiz, removing the fourth round and displaying the fifth
  *question, 4 answers, next button, previous button and round 5 title.
  */
-// function displayRoundFive() {}
-// console.log("Round 5! Almost finished!");
+function displayRoundFive() {
+  console.log("Round 5! Almost finished!");
+}
 
 /**
  *Displays the sixth round of the quiz, removing the fifth round and displaying the sixth
