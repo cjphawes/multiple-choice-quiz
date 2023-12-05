@@ -3,10 +3,14 @@
 //Get the DOM HTML Elements
 let quizContainer = document.getElementById("quiz-container");
 let startQuiz = document.getElementById("play-btn");
+let correctAnswersDiv = document.getElementById("correct-answers-container");
 let correctAnswers = document.getElementById("correct-answers");
+let wrongAnswersDiv = document.getElementById("wrong-answers-container");
 let wrongAnswers = document.getElementById("wrong-answers");
 let nextRound = document.getElementById("next-round");
+let nextRoundDiv = document.getElementById("next-round-container");
 let tryAgain = document.getElementById("restart-quiz");
+let tryAgainDiv = document.getElementById("restart-quiz-container");
 
 //Q&A Variable that is an Object, created with a round number, question, 4 answer array and the correct answer
 let questionAndAnswer = [
@@ -75,6 +79,24 @@ nextRound.addEventListener("click", displayRoundFive);
 nextRound.addEventListener("click", displayRoundSix);
 nextRound.addEventListener("click", displayQuizResults);
 
+//START QUIZ
+hideElements();
+/**
+ * Hides the correct and incorrect scores for the user
+ */
+function hideElements() {
+  correctAnswersDiv.style.display = "none";
+  wrongAnswersDiv.style.display = "none";
+  tryAgainDiv.style.display = "none";
+  nextRoundDiv.style.display = "none";
+}
+
+/**
+ * displays the correct answers to the user
+ */
+function showCorrectAnswers() {
+  correctAnswersDiv.style.display = "block";
+}
 /**
  *Displays the first round of the quiz, removing the play button and displaying the first
  *question, 4 answers, next button and round 1 title.
