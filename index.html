@@ -54,9 +54,26 @@
     </header>
     <!--Main Section-->
     <main>
-      <!--CTA Play Button Container, Will be replaced with question set and answers using JS-->
-      <div id="play-btn-container">
+      <!--Quiz Container-->
+      <div id="quiz-container">
+        <!--Will be replaced with round number, question set, answers and next btn using JS-->
         <button id="play-btn">Play Now</button>
+      </div>
+      <!--Will collate the correct answers by user, however won't display until quiz results using JS-->
+      <div id="correct-answers-container">
+        <h3>You got: <span id="correct-answers"></span></h3>
+      </div>
+      <!--Will collate the incorrect answers by user, however won't display at all, using JS-->
+      <div id="wrong-answers-container">
+        <h3><span id="wrong-answers"></span></h3>
+      </div>
+      <!--Displays next round btn for user to click, shown every round with JS-->
+      <div id="next-round-container">
+        <button id="next-round"></button>
+      </div>
+      <!--Displays restart quiz btn at the quiz results, shown at end with JS-->
+      <div id="restart-quiz-container">
+        <button id="restart-quiz"></button>
       </div>
     </main>
     <!--Footer Section-->
