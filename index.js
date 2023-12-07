@@ -62,7 +62,16 @@ let questionAndAnswer = [
   },
 ];
 
-//Variable for correct/incorrect answers
+//Variables for new round heading
+
+//Variables for new questions
+let newQuestion = document.createElement('p');
+newQuestion.textContent = 
+
+//Variables for new x4 answers
+let newAnswers = document.createElement('');
+
+//Variables for correct/incorrect answers
 let numOfCorrectAnswers = 0;
 let numOfWrongAnswers = 0;
 
@@ -81,7 +90,7 @@ nextRound.addEventListener("click", displayQuizResults);
 /**
  *Get the restart btn and create event listener, returns back to the start of the quiz with the play btn
  */
-tryAgain.addEventListener('click', () => {
+tryAgain.addEventListener("click", () => {
   hideElements();
   returnToStart();
 });
@@ -96,6 +105,9 @@ function hideElements() {
   nextRoundDiv.style.display = "none";
 }
 
+// function checkAnswer() {}!!!
+// function incrementScore() {}!!!
+
 //START QUIZ
 hideElements();
 
@@ -107,12 +119,10 @@ function displayRoundOne(event) {
   console.log("Round 1! Here we go!");
   //on click make play btn disappear and empty the quiz container
   startQuiz.style.display = "none";
-  quizContainer.innerHTML = '';
+  quizContainer.innerHTML = "";
 
-  let firstRound = (document.getElementById(
-    "roundone-body"
-  ).innerHTML = );
-
+  correctAnswers.textContent = numOfCorrectAnswers;
+  wrongAnswers.textContent = numOfWrongAnswers;
 }
 
 //START SECOND ROUND
@@ -120,7 +130,7 @@ function displayRoundOne(event) {
  *Displays the second round of the quiz, removing the first round and displaying the second
  *question, 4 answers, next button, previous button and round 2 title.
  */
-function displayRoundTwo() {
+function displayRoundTwo(event) {
   console.log("Round 2! Good luck!");
 }
 
@@ -128,7 +138,7 @@ function displayRoundTwo() {
  *Displays the third round of the quiz, removing the second round and displaying the third
  *question, 4 answers, next button, previous button and round 3 title.
  */
-function displayRoundThree() {
+function displayRoundThree(event) {
   console.log("Round 3! Halfway!");
 }
 
@@ -136,7 +146,7 @@ function displayRoundThree() {
  *Displays the fourth round of the quiz, removing the third round and displaying the fourth
  *question, 4 answers, next button, previous button and round 4 title.
  */
-function displayRoundFour() {
+function displayRoundFour(event) {
   console.log("Round 4! Great job so far!");
 }
 
@@ -144,7 +154,7 @@ function displayRoundFour() {
  *Displays the fifth round of the quiz, removing the fourth round and displaying the fifth
  *question, 4 answers, next button, previous button and round 5 title.
  */
-function displayRoundFive() {
+function displayRoundFive(event) {
   console.log("Round 5! Almost finished!");
 }
 
@@ -152,7 +162,7 @@ function displayRoundFive() {
  *Displays the sixth round of the quiz, removing the fifth round and displaying the sixth
  *question, 4 answers, next button, previous button and round 6 title.
  */
-function displayRoundSix() {
+function displayRoundSix(event) {
   console.log("Round 6! Final question!");
 }
 
@@ -160,28 +170,23 @@ function displayRoundSix() {
  *Displays the quiz results round of the quiz, removing the sixth round and displaying the
  *total out of 6 questions how many the user got correct.
  */
-function displayQuizResults() {
+function displayQuizResults(event) {
   console.log("Results time!");
-
+  /**
+   *Displays the correct answers to the user
+   */
   function showCorrectAnswers() {
     correctAnswersDiv.style.display = "block";
     tryAgainDiv.style.display = "block";
   }
 }
 
-function checkAnswer() {}
-function incrementScore() {}
-function calculateCorrectAnswer() {}
-
 /**
- *Displays the correct answers to the user
+ *Returns back to the home screen with the play btn
  */
-
-/**
-  *Returns back to the home screen with the play btn
-  */
 function returnToStart() {
-  startQuiz.style.display = 'flex';
+  startQuiz.style.display = "block";
   correctAnswers = 0;
   wrongAnswers = 0;
+  hideElements();
 }
