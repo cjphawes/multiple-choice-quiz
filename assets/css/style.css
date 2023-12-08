@@ -87,11 +87,11 @@ main {
 }
 
 /*Game container elements*/
-.number-and-question {
+.question-container {
   margin-top: 50px;
 }
 
-.question {
+#question {
   display: block;
   margin-top: 50px;
   text-align: center;
