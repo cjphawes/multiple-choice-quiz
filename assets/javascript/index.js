@@ -8,6 +8,9 @@ let resultsContainer = document.getElementById("results-container");
 //Grabbing the play btn and setting it a variable for event listener to start the game
 let playBtn = document.getElementById("play-btn");
 
+//Grabbing the answer boxes and setting a variable for event listener for users click
+let subContainers = document.getElementsByClassName("answers-sub-container");
+
 // //Q&A Variable that is an Object, created with 4 properties in order
 let questionAndAnswer = [
   {
@@ -168,9 +171,9 @@ let currentRound = 0;
 let correctAnswers = 0;
 let maxNumOfQuestions = 10;
 
-// // EVENT LISTENERS
+//// EVENT LISTENERS
 
-// //Get the play btn and create event listener, running the function displayRoundOne
+//Get the play btn and create event listener, running the function displayRoundOne
 playBtn.addEventListener("click", startQuiz);
 
 /**
@@ -190,11 +193,15 @@ function startQuiz() {
     console.log("questions shuffled!");
   }
   //Run the function for displaying the first question
-  function displayNewQuestionAndAnswer() {}
+  displayNewQuestionAndAnswer();
 }
 
 function displayNewQuestionAndAnswer() {
-  //
+  //Enable the answers for clicking by user
+  subContainers.disabled = false;
+  console.log("answers enabled");
+  //Add 1 on to current round
+  currentRound++;
 }
 
 let nextRound = document.getElementById("next-round");
