@@ -26,55 +26,54 @@
   <body id="index-body">
     <!--Header Section-->
     <header class="general-header">
-      <!--Navigation Pane-->
-      <nav class="nav-bar">
-        <ul class="nav-ul-list">
-          <li class="nav-links">
-            <!--Link taking you to an About Us page-->
-            <a href="about-us.html" class="nav-link"
-              >What is Trivia<span id="letter-x">X</span></a
-            >
-          </li>
-          <li class="nav-links">
-            <!--Link taking you to a Contact Us page-->
-            <a href="contact-us.html" class="nav-link">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
       <!--Title of website-->
       <h2 class="website-hero-name">
         <!--Link taking you back to original home page-->
-        <a href="index.html" id="logo-link"
-          ><span id="letter-t">T</span><span id="letter-r">r</span
-          ><span id="letter-i">i</span><span id="letter-v">v</span
-          ><span id="letter-i-two">i</span><span id="letter-a">a</span
-          ><span id="letter-x-title">X</span></a
+        <a href="index.html" id="logo-link" ARIALABELHERE
+          ><span id="trivia-title">Trivia</span><span id="letter-x">X</span></a
         >
       </h2>
     </header>
     <!--Main Section-->
-    <main>
-      <!--Quiz Container-->
-      <div id="quiz-container">
-        <!--Will be replaced with round number, question set, answers and next btn using JS-->
+    <main class="main-container">
+      <!-- Quiz Container -->
+      <section id="welcome-container">
+        <!-- Will be replaced with round number, question set, answers and next btn
+        using JS -->
         <button id="play-btn">Play Now</button>
-      </div>
-      <!--Will collate the correct answers by user, however won't display until quiz results using JS-->
-      <div id="correct-answers-container">
-        <h3>You got: <span id="correct-answers"></span></h3>
-      </div>
-      <!--Will collate the incorrect answers by user, however won't display at all, using JS-->
-      <div id="wrong-answers-container">
-        <h3><span id="wrong-answers"></span></h3>
-      </div>
-      <!--Displays next round btn for user to click, shown every round with JS-->
-      <div id="next-round-container">
-        <button id="next-round"></button>
-      </div>
-      <!--Displays restart quiz btn at the quiz results, shown at end with JS-->
-      <div id="restart-quiz-container">
-        <button id="restart-quiz"></button>
-      </div>
+      </section>
+      <!-- Displays the game content, question, answers, next btn -->
+      <!-- <section id="game-container">
+        <div class="number-and-question">
+          <span class="round" id="round-one">Round 1</span>
+          <p class="question" id="question-one">
+            What is the capital of Thailand?
+          </p>
+        </div>
+        4 Boxes With Answers
+        <section id="answers-container">
+          <div id="answers-container-1">
+            <h2 class="answer-title">Laos</h2>
+          </div>
+          <div id="answers-container-2">
+            <h2 class="answer-title">Bangkok</h2>
+          </div>
+          <div id="answers-container-3">
+            <h2 class="answer-title">Chiang Mai</h2>
+          </div>
+          <div id="answers-container-4">
+            <h2 class="answer-title">Phnom Penh</h2>
+          </div>
+        </section>
+        <button id="next-round">Next Question</button>
+      </section> -->
+
+      <!-- <section id="results-container">
+        <h2 id="encouragement-title">Congratulations</h2>
+        <p id="answer-text">You got <span id="correct-answers">0</span></p>
+        <p id="encouragement-text">You did so well! Gold star for you!</p>
+        <button id="restart-quiz">Restart Quiz</button>
+      </section> -->
     </main>
     <!--Footer Section-->
     <footer>
