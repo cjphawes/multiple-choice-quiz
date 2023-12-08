@@ -107,7 +107,7 @@ main {
   color: #fff;
 }
 
-#answers-container {
+#answers-main-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -120,10 +120,7 @@ main {
   width: 90%;
 }
 
-#answers-container-1,
-#answers-container-2,
-#answers-container-3,
-#answers-container-4 {
+.answers-sub-container {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -133,10 +130,7 @@ main {
   transition: all 0.3s;
 }
 
-#answers-container-1:hover,
-#answers-container-2:hover,
-#answers-container-3:hover,
-#answers-container-4:hover {
+.answers-sub-container:hover {
   background-color: #000;
   color: #fff;
   cursor: pointer;
@@ -144,7 +138,7 @@ main {
 }
 
 .answer-title {
-  font-size: 700%;
+  font-size: 800%;
   font-weight: 600;
   text-align: center;
 }
