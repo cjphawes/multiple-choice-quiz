@@ -92,7 +92,7 @@ let questionElement = document.getElementById("question");
 gameContainer.style.display = "none";
 resultsContainer.style.display = "none";
 //Resetting Temp Variables back to original numbers
-let currentQuestionIndex = 0;
+let currentQuestionIndex = questionAndAnswer[0];
 let currentRound = 0;
 let correctAnswers = 0;
 let maxNumOfQuestions = 10;
@@ -112,9 +112,14 @@ function startQuiz() {
   console.log("welcome container hidden");
   //Run the function for shuffling the question set
   function shuffleQuestions() {
-    shuffledListOfQuestionAndAnswers = questionAndAnswer.sort(() =>
-      Math.floor(Math.random() - 0.5)
-    );
+    for (let i = questionAndAnswer.length - 1; i <= 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [questionAndAnswer[i], questionAndAnswer[j]] = [
+        questionAndAnswer[j],
+        questionAndAnswer[i],
+      ];
+    }
+    shuffledListOfQuestionAndAnswers = questionAndAnswer;
     console.log("questions shuffled!");
   }
   //Show game container
@@ -125,7 +130,7 @@ function startQuiz() {
 }
 
 function makeNewQuestionAndAnswer() {
-  displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
+  displayQuestion(shuffledListOfQuestionAndAnswers[0]);
   //Enable the answers for clicking by user
   subContainers.disabled = false;
   console.log("answers enabled");
@@ -133,10 +138,11 @@ function makeNewQuestionAndAnswer() {
   currentRound++;
 }
 
-function displayQuestion(question) {
-  questionElement.textContent = question.question;
+function displayQuestion(questionAndAnswer) {
+  questionElement.textContent = questionAndAnswer.question;
 }
 
+//Grabbing btn elements for next question and restarting the quiz
 let nextRound = document.getElementById("next-round");
 let tryAgain = document.getElementById("restart-quiz");
 
