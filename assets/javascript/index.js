@@ -8,15 +8,80 @@ let resultsContainer = document.getElementById("results-container");
 //Grabbing the play btn and setting it a variable for event listener to start the game
 let playBtn = document.getElementById("play-btn");
 
-////Setting up welcome container before starting the game
-//Hiding the game container and results container from page load
-gameContainer.style.display = "none";
-resultsContainer.style.display = "none";
-//Resetting Temp Variables back to original numbers
-let currentQuestionIndex = 0;
-let currentRound = 0;
-let correctAnswers = 0;
-let maxNumOfQuestions = 10;
+// //Q&A Variable that is an Object, created with 4 properties in order
+let questionAndAnswer = [
+  {
+    question: "What is the capital of Thailand?",
+    options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
+    correctAnswer: "Bangkok",
+  },
+  {
+    question: "Who became the Canadian Prime Minister in 2015?",
+    options: [
+      "Boris Johnson",
+      "Donald Trump",
+      "Justin Trudeau",
+      "Stephen Harper",
+    ],
+    correctAnswer: "Justin Trudeau",
+  },
+  {
+    question: "Which country hosted the 2016 Summer Olympics?",
+    options: ["Brazil", "United Kingdom", "Russia", "Japan"],
+    correctAnswer: "Brazil",
+  },
+  {
+    question: "What is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Pacific Ocean", "Red Sea", "Arctic Ocean"],
+    correctAnswer: "Pacific Ocean",
+  },
+  {
+    question: "Which famous scientist formulated the theory of relativity?",
+    options: [
+      "Stephen Hawking",
+      "Albert Einstein",
+      "Issac Newton",
+      "Thomas Edison",
+    ],
+    correctAnswer: "Albert Einstein",
+  },
+  {
+    question: "What is the name of the largest planet in our solar system?",
+    options: ["Mars", "Saturn", "Neptune", "Jupiter"],
+    correctAnswer: "Jupiter",
+  },
+  {
+    question: "What is the world's largest desert?",
+    options: ["Arctic", "Antarctica", "Sahara", "Arabian"],
+    correctAnswer: "Antarctica",
+  },
+  {
+    question: "Who painted the Mona Lisa?",
+    options: [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "Leonardo DiCaprio",
+      "Pablo Picasso",
+    ],
+    correctAnswer: "Leonardo da Vinci",
+  },
+  {
+    question: "In which year did the Titanic sink?",
+    options: [
+      "12th April 1915",
+      "7th January 1902",
+      "15th April 1912",
+      "11th May 1922",
+    ],
+    correctAnswer: "15th April 1912",
+  },
+  {
+    question:
+      "What country is known for exporting some of the sweetest Mangoes in the world",
+    options: ["Thailand", "Puerto Rico", "Mexico", "Philippines"],
+    correctAnswer: "Philippines",
+  },
+];
 
 //Object storing all the questions but at random
 let shuffledListOfQuestionAndAnswers = [
@@ -93,6 +158,21 @@ let shuffledListOfQuestionAndAnswers = [
   },
 ];
 
+////Setting up welcome container before starting the game
+//Hiding the game container and results container from page load
+gameContainer.style.display = "none";
+resultsContainer.style.display = "none";
+//Resetting Temp Variables back to original numbers
+let currentQuestionIndex = 0;
+let currentRound = 0;
+let correctAnswers = 0;
+let maxNumOfQuestions = 10;
+
+// // EVENT LISTENERS
+
+// //Get the play btn and create event listener, running the function displayRoundOne
+playBtn.addEventListener("click", startQuiz);
+
 /**
  *This function will be used to start the game on the user click, it will hide the welcome container
  *and show the game container, whilst shuffling and displaying the first question set.
@@ -106,112 +186,19 @@ function startQuiz() {
   console.log("game container shown");
   //Run the function for shuffling the question set
   function shuffleQuestions() {
-    questionAndAnswer.shu;
+    questionAndAnswer.sort(Math.floor(Math.random() * maxNumOfQuestions));
+    console.log("questions shuffled!");
   }
   //Run the function for displaying the first question
+  function displayNewQuestionAndAnswer() {}
 }
 
-// let correctAnswersDiv = document.getElementById("correct-answers-container");
-// let correctAnswers = document.getElementById("correct-answers");
-// let wrongAnswersDiv = document.getElementById("wrong-answers-container");
-// let wrongAnswers = document.getElementById("wrong-answers");
-// let nextRound = document.getElementById("next-round");
-// let nextRoundDiv = document.getElementById("next-round-container");
-// let tryAgain = document.getElementById("restart-quiz");
-// let tryAgainDiv = document.getElementById("restart-quiz-container");
+function displayNewQuestionAndAnswer() {
+  //
+}
 
-// //Q&A Variable that is an Object, created with 4 properties
-let questionAndAnswer = [
-  {
-    question: "What is the capital of Thailand?",
-    options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
-    correctAnswer: "Bangkok",
-  },
-  {
-    question: "Who became the Canadian Prime Minister in 2015?",
-    options: [
-      "Boris Johnson",
-      "Donald Trump",
-      "Justin Trudeau",
-      "Stephen Harper",
-    ],
-    correctAnswer: "Justin Trudeau",
-  },
-  {
-    question: "Which country hosted the 2016 Summer Olympics?",
-    options: ["Brazil", "United Kingdom", "Russia", "Japan"],
-    correctAnswer: "Brazil",
-  },
-  {
-    question: "What is the largest ocean on Earth?",
-    options: ["Atlantic Ocean", "Pacific Ocean", "Red Sea", "Arctic Ocean"],
-    correctAnswer: "Pacific Ocean",
-  },
-  {
-    question: "Which famous scientist formulated the theory of relativity?",
-    options: [
-      "Stephen Hawking",
-      "Albert Einstein",
-      "Issac Newton",
-      "Thomas Edison",
-    ],
-    correctAnswer: "Albert Einstein",
-  },
-  {
-    question: "What is the name of the largest planet in our solar system?",
-    options: ["Mars", "Saturn", "Neptune", "Jupiter"],
-    correctAnswer: "Jupiter",
-  },
-  {
-    question: "What is the world's largest desert?",
-    options: ["Arctic", "Antarctica", "Sahara", "Arabian"],
-    correctAnswer: "Antarctica",
-  },
-  {
-    question: "Who painted the Mona Lisa?",
-    options: [
-      "Leonardo da Vinci",
-      "Vincent van Gogh",
-      "Leonardo DiCaprio",
-      "Pablo Picasso",
-    ],
-    correctAnswer: "Leonardo da Vinci",
-  },
-  {
-    question: "In which year did the Titanic sink?",
-    options: [
-      "12th April 1915",
-      "7th January 1902",
-      "15th April 1912",
-      "11th May 1922",
-    ],
-    correctAnswer: "15th April 1912",
-  },
-  {
-    question:
-      "What country is known for exporting some of the sweetest Mangoes in the world",
-    options: ["Thailand", "Puerto Rico", "Mexico", "Philippines"],
-    correctAnswer: "Philippines",
-  },
-];
-
-// //Variables for new round heading
-
-// //Variables for new questions
-// let newQuestion = document.createElement('p');
-// newQuestion.textContent =
-
-// //Variables for new x4 answers
-// let newAnswers = document.createElement('');
-
-// //Variables for correct/incorrect answers
-// let numOfCorrectAnswers = 0;
-// let numOfWrongAnswers = 0;
-
-// // EVENT LISTENERS
-
-// //Get the play btn and create event listener, running the function displayRoundOne
-playBtn.addEventListener("click", startQuiz);
+let nextRound = document.getElementById("next-round");
+let tryAgain = document.getElementById("restart-quiz");
 
 // //Get the next btn and create event listener, displaying the next round
 // nextRound.addEventListener("click", displayRoundTwo);
