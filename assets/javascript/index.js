@@ -1,14 +1,97 @@
 //VARIABLES
 
-//Get the DOM HTML Elements
-
-//Grabbing the container elements and setting them variables
+//Grabbing the container elements and setting their variables
 let welcomeContainer = document.getElementById("welcome-container");
 let gameContainer = document.getElementById("game-container");
-let resultContainer = document.getElementById("results-container");
+let resultsContainer = document.getElementById("results-container");
 
 //Grabbing the play btn and setting it a variable for event listener to start the game
 let playBtn = document.getElementById("play-btn");
+
+////Setting up welcome container before starting the game
+//Hiding the game container and results container from page load
+gameContainer.style.display = "none";
+resultsContainer.style.display = "none";
+//Resetting Temp Variables back to original numbers
+let currentQuestionIndex = 0;
+let currentRound = 0;
+let correctAnswers = 0;
+let maxNumOfQuestions = 10;
+
+//Object storing all the questions but at random
+let shuffledListOfQuestionAndAnswers = [
+  {
+    question: "Who painted the Mona Lisa?",
+    options: [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "Leonardo DiCaprio",
+      "Pablo Picasso",
+    ],
+    correctAnswer: "Leonardo da Vinci",
+  },
+  {
+    question: "Which country hosted the 2016 Summer Olympics?",
+    options: ["Brazil", "United Kingdom", "Russia", "Japan"],
+    correctAnswer: "Brazil",
+  },
+  {
+    question: "What is the name of the largest planet in our solar system?",
+    options: ["Mars", "Saturn", "Neptune", "Jupiter"],
+    correctAnswer: "Jupiter",
+  },
+  {
+    question: "Who became the Canadian Prime Minister in 2015?",
+    options: [
+      "Boris Johnson",
+      "Donald Trump",
+      "Justin Trudeau",
+      "Stephen Harper",
+    ],
+    correctAnswer: "Justin Trudeau",
+  },
+  {
+    question:
+      "What country is known for exporting some of the sweetest Mangoes in the world",
+    options: ["Thailand", "Puerto Rico", "Mexico", "Philippines"],
+    correctAnswer: "Philippines",
+  },
+  {
+    question: "What is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Pacific Ocean", "Red Sea", "Arctic Ocean"],
+    correctAnswer: "Pacific Ocean",
+  },
+  {
+    question: "What is the capital of Thailand?",
+    options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
+    correctAnswer: "Bangkok",
+  },
+  {
+    question: "In which year did the Titanic sink?",
+    options: [
+      "12th April 1915",
+      "7th January 1902",
+      "15th April 1912",
+      "11th May 1922",
+    ],
+    correctAnswer: "15th April 1912",
+  },
+  {
+    question: "Which famous scientist formulated the theory of relativity?",
+    options: [
+      "Stephen Hawking",
+      "Albert Einstein",
+      "Issac Newton",
+      "Thomas Edison",
+    ],
+    correctAnswer: "Albert Einstein",
+  },
+  {
+    question: "What is the world's largest desert?",
+    options: ["Arctic", "Antarctica", "Sahara", "Arabian"],
+    correctAnswer: "Antarctica",
+  },
+];
 
 /**
  *This function will be used to start the game on the user click, it will hide the welcome container
@@ -22,7 +105,9 @@ function startQuiz() {
   gameContainer.style.display = "block";
   console.log("game container shown");
   //Run the function for shuffling the question set
-
+  function shuffleQuestions() {
+    questionAndAnswer.shu;
+  }
   //Run the function for displaying the first question
 }
 
@@ -36,48 +121,79 @@ function startQuiz() {
 // let tryAgainDiv = document.getElementById("restart-quiz-container");
 
 // //Q&A Variable that is an Object, created with 4 properties
-// let questionAndAnswer = [
-//   {
-//     question: "What is the capital of Thailand?",
-//     options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
-//     correctAnswer: "Bangkok",
-//   },
-//   {
-//     question: "Who became the Canadian Prime Minister in 2015?",
-//     options: [
-//       "Boris Johnson",
-//       "Donald Trump",
-//       "Justin Trudeau",
-//       "Stephen Harper",
-//     ],
-//     correctAnswer: "Justin Trudeau",
-//   },
-//   {
-//     question: "Which country hosted the 2016 Summer Olympics?",
-//     options: ["Brazil", "United Kingdom", "Russia", "Japan"],
-//     correctAnswer: "Brazil",
-//   },
-//   {
-//     question: "What is the largest ocean on Earth?",
-//     options: ["Atlantic Ocean", "Pacific Ocean", "Red Sea", "Arctic Ocean"],
-//     correctAnswer: "Pacific Ocean",
-//   },
-//   {
-//     question: "Which famous scientist formulated the theory of relativity?",
-//     options: [
-//       "Stephen Hawking",
-//       "Albert Einstein",
-//       "Issac Newton",
-//       "Thomas Edison",
-//     ],
-//     correctAnswer: "Albert Einstein",
-//   },
-//   {
-//     question: "What is the name of the largest planet in our solar system?",
-//     options: ["Mars", "Saturn", "Neptune", "Jupiter"],
-//     correctAnswer: "Jupiter",
-//   },
-// ];
+let questionAndAnswer = [
+  {
+    question: "What is the capital of Thailand?",
+    options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
+    correctAnswer: "Bangkok",
+  },
+  {
+    question: "Who became the Canadian Prime Minister in 2015?",
+    options: [
+      "Boris Johnson",
+      "Donald Trump",
+      "Justin Trudeau",
+      "Stephen Harper",
+    ],
+    correctAnswer: "Justin Trudeau",
+  },
+  {
+    question: "Which country hosted the 2016 Summer Olympics?",
+    options: ["Brazil", "United Kingdom", "Russia", "Japan"],
+    correctAnswer: "Brazil",
+  },
+  {
+    question: "What is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Pacific Ocean", "Red Sea", "Arctic Ocean"],
+    correctAnswer: "Pacific Ocean",
+  },
+  {
+    question: "Which famous scientist formulated the theory of relativity?",
+    options: [
+      "Stephen Hawking",
+      "Albert Einstein",
+      "Issac Newton",
+      "Thomas Edison",
+    ],
+    correctAnswer: "Albert Einstein",
+  },
+  {
+    question: "What is the name of the largest planet in our solar system?",
+    options: ["Mars", "Saturn", "Neptune", "Jupiter"],
+    correctAnswer: "Jupiter",
+  },
+  {
+    question: "What is the world's largest desert?",
+    options: ["Arctic", "Antarctica", "Sahara", "Arabian"],
+    correctAnswer: "Antarctica",
+  },
+  {
+    question: "Who painted the Mona Lisa?",
+    options: [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "Leonardo DiCaprio",
+      "Pablo Picasso",
+    ],
+    correctAnswer: "Leonardo da Vinci",
+  },
+  {
+    question: "In which year did the Titanic sink?",
+    options: [
+      "12th April 1915",
+      "7th January 1902",
+      "15th April 1912",
+      "11th May 1922",
+    ],
+    correctAnswer: "15th April 1912",
+  },
+  {
+    question:
+      "What country is known for exporting some of the sweetest Mangoes in the world",
+    options: ["Thailand", "Puerto Rico", "Mexico", "Philippines"],
+    correctAnswer: "Philippines",
+  },
+];
 
 // //Variables for new round heading
 
