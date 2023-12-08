@@ -25,8 +25,8 @@ body {
 /*Header Section*/
 .website-hero-name {
   text-align: center;
-  margin-top: 200px;
-  font-size: 2000%;
+  font-size: 1600%;
+  margin-top: 30px;
 }
 
 #logo-link:link,
@@ -36,66 +36,45 @@ body {
   letter-spacing: 20px;
 }
 
-#letter-t,
-#letter-r,
-#letter-i,
-#letter-t,
-#letter-v,
-#letter-i-two,
-#letter-a,
-#letter-a,
-#letter-x-title {
+#trivia-title,
+#letter-x {
   color: #fff;
   text-shadow: 20px 20px #95897b;
 }
-#letter-x,
-#letter-x-title {
+#letter-x {
   font-family: "Monoton", sans-serif;
 }
 
-/**Navigation**/
-.nav-ul-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 50px 50px 0px 50px;
-  list-style-type: none;
-}
-
-.nav-link:link,
-.nav-link:visited {
-  font-size: 400%;
-  font-weight: 600;
-  margin: 20px 30px;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.1s;
-}
-
-.nav-link:hover,
-.nav-link:active {
-  border-bottom: 8px solid #d7d7d7;
-}
-
 /*Main Section*/
+
+/*Main containers*/
 main {
   flex: 1 0 auto;
 }
 
-#play-btn-container {
-  position: relative;
-  top: 200px;
-  height: min-content;
-  text-align: center;
-  margin: 0 auto;
+#welcome-container {
+  display: flex;
+  justify-content: center;
 }
+
+#game-container {
+  text-align: center;
+}
+
+#results-container {
+  margin: 0 900px;
+  text-align: center;
+}
+
+/*Welcome container elements*/
 #play-btn {
-  font-size: 1000%;
+  position: relative;
+  top: 300px;
+  font-size: 1600%;
   font-weight: 900;
-  padding: 80px 120px;
+  padding: 100px 150px;
   border-radius: 50px;
-  border: 10px solid #fff;
+  border: 25px solid #fff;
   text-decoration: none;
   transition: all 0.3s;
   color: #fff;
@@ -103,39 +82,11 @@ main {
 }
 #play-btn:hover {
   color: #fff;
-  border: inset 0px red;
+  border: inset 0px;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
-/*Footer Section*/
-footer {
-  background-color: #edeaed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 150px;
-}
-#copyright-text {
-  font-size: 300%;
-  font-weight: 400;
-  margin: 50px 50px;
-}
-
-/*ROUNDONE.HTML*/
-#roundone-body {
-  display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/assets/images/flag-of-thailand.webp);
-  background-position: 100% 70%;
-  background-size: 100%;
-}
-/*Header Section*/
-.website-name {
-  text-align: center;
-  font-size: 1300%;
-}
-
-/*Main Section*/
+/*Game container elements*/
 .number-and-question {
   margin-top: 50px;
 }
@@ -144,7 +95,7 @@ footer {
   display: block;
   margin-top: 50px;
   text-align: center;
-  font-size: 600%;
+  font-size: 800%;
   font-weight: 600;
   color: #fff;
 }
@@ -198,18 +149,7 @@ footer {
   text-align: center;
 }
 
-#next-question {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  gap: 100px;
-}
-
-#next-question-link:link,
-#next-question-link:visited,
-#previous-question-link:link,
-#previous-question-link:visited {
+#next-round {
   font-size: 400%;
   font-weight: 600;
   background-color: #000;
@@ -220,66 +160,124 @@ footer {
   padding: 30px;
 }
 
-#next-question-link:hover,
-#next-question-link:active,
-#previous-question-link:hover,
-#previous-question-link:active {
+#next-round:hover {
   color: #fff;
-  border: inset 0px red;
+  border: inset 0px;
+  background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
+}
+
+/*Results container elements*/
+#encouragement-title {
+  margin-top: 100px;
+  font-size: 1100%;
+  color: #fff;
+}
+
+#encouragement-text {
+  margin-top: 100px;
+  font-size: 700%;
+  color: #fff;
+}
+
+#answer-text {
+  margin-top: 50px;
+  font-size: 900%;
+  color: #fff;
+}
+
+#correct-answer {
+  color: #e63010;
+}
+
+#restart-quiz {
+  margin-top: 150px;
+  font-size: 400%;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  border: 10px solid #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#restart-quiz:hover {
+  color: #fff;
+  border: inset 0px;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
 /*Footer Section*/
+footer {
+  background-color: #edeaed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+#copyright-text {
+  font-size: 300%;
+  font-weight: 400;
+  margin: 50px 50px;
+}
+
+/*ROUNDONE.HTML*/
+#roundone-body {
+  display: none;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/images/flag-of-thailand.webp);
+  background-position: 100% 70%;
+  background-size: 100%; */
+}
 
 /*ROUNDTWO.HTML*/
 #roundtwo-body {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/canadian-parliament.webp);
   background-position: 100% 30%;
-  background-size: 120%;
+  background-size: 120%; */
 }
 
 /*ROUNDTHREE.HTML*/
 #roundthree-body {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/olympic-rings.webp);
-  background-position: 100% 100%;
-  background-size: cover;
+  background-position: 100% 100%; */
+  /* background-size: cover; */
 }
 
 /*ROUNDFOUR.HTML*/
 #roundfour-body {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/pacific-ocean.webp);
-  background-position: 100% 40%;
-  background-size: cover;
+  background-position: 100% 40%; */
+  /* background-size: cover; */
 }
 
 /*ROUNDFIVE.HTML*/
 #roundfive-body {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/assets/images/blackboard-with-scientific-calculations.webp);
   background-position: 100% 40%;
-  background-size: cover;
+  background-size: cover; */
 }
 
 /*ROUNDSIX.HTML*/
 #roundsix-body {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/planet-of-jupiter.webp);
-  background-position: 190% -40%;
-  background-size: 90%;
+  background-position: 190% -40%; */
+  /* background-size: 90%; */
 }
 
 /*QUIZ-RESULTS HTML*/
 #quizresults-body {
   display: none;
-  background-color: #a59070;
 }
 
 /*ABOUT-US.HTML, CONTACT-US.HTML*/
@@ -291,12 +289,6 @@ footer {
 /*MEDIA QUERIES FOR INDEX.HTML*/
 @media screen and (max-width: 2900px) {
   #index-body {
-    background-position: 100% 100%;
-    background-size: cover;
-  }
-
-  /*MEDIA QUERIES FOR ROUNDONE.HTML*/
-  #roundone-body {
     background-position: 100% 100%;
     background-size: cover;
   }
@@ -323,7 +315,17 @@ footer {
     text-shadow: 13px 13px #95897b;
   }
 
+  .website-hero-name {
+    margin-top: 100px;
+    font-size: 1300%;
+  }
+
   /**Main Section**/
+  #play-btn {
+    font-size: 1000%;
+    padding: 60px 100px;
+  }
+
   #round-one {
     font-size: 350%;
   }
@@ -345,8 +347,7 @@ footer {
 @media screen and (max-width: 1600px) {
   /**Header Section**/
   .website-hero-name {
-    margin-top: 100px;
-    font-size: 1300%;
+    font-size: 1100%;
   }
 
   #letter-t,
@@ -372,13 +373,9 @@ footer {
   }
 
   /**Main Section**/
-  #play-btn-container {
-    top: 100px;
-  }
-
-  #play-btn:link,
-  #play-btn:visited {
+  #play-btn {
     font-size: 600%;
+    border: 15px solid #fff;
     padding: 60px 100px;
   }
 
@@ -390,10 +387,7 @@ footer {
     font-size: 400%;
   }
 
-  #next-question-link:link,
-  #next-question-link:visited,
-  #previous-question-link:link,
-  #previous-question-link:visited {
+  #next-round {
     font-size: 300%;
     border: 10px solid #fff;
     border-radius: 20px;
@@ -456,11 +450,7 @@ footer {
   }
 
   /**Main Section**/
-  #play-btn-container {
-    top: 100px;
-  }
-  #play-btn:link,
-  #play-btn:visited {
+  #play-btn {
     font-size: 400%;
     padding: 50px 70px;
   }
@@ -545,15 +535,11 @@ footer {
   }
 
   /**Main Section**/
-  #play-btn-container {
-    top: 80px;
-  }
-  #play-btn:link,
-  #play-btn:visited {
+  #play-btn {
     font-size: 250%;
     padding: 30px 40px;
     border-radius: 30px;
-    border: 7px solid #fff;
+    border: 10px solid #fff;
   }
 
   /**Footer Section**/
@@ -594,18 +580,6 @@ footer {
     margin: 10px 20px;
   }
 
-  /**Main Section**/
-  #play-btn-container {
-    top: 50px;
-  }
-  #play-btn:link,
-  #play-btn:visited {
-    font-size: 200%;
-    padding: 20px 30px;
-    border-radius: 30px;
-    border: 5px solid #fff;
-  }
-
   /**Footer Section**/
   footer {
     height: 50px;
@@ -621,7 +595,6 @@ footer {
 @media screen and (max-width: 380px) {
   /**Header Section**/
   .website-hero-name {
-    margin-top: 80px;
     font-size: 200%;
   }
 
@@ -649,15 +622,11 @@ footer {
   }
 
   /**Main Section**/
-  #play-btn-container {
-    top: 70px;
-  }
-  #play-btn:link,
-  #play-btn:visited {
+  #play-btn {
     font-size: 180%;
     padding: 15px 20px;
     border-radius: 20px;
-    border: 4px solid #fff;
+    border: 5px solid #fff;
   }
 
   /**Footer Section**/
