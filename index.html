@@ -36,44 +36,50 @@
     </header>
     <!--Main Section-->
     <main class="main-container">
-      <!-- Quiz Container -->
+      <!--Home Screen Container -->
       <section id="welcome-container">
-        <!-- Will be replaced with round number, question set, answers and next btn
-        using JS -->
+        <!--Start btn user clicks on to start the quiz-->
         <button id="play-btn">Play Now</button>
       </section>
-      <!-- Displays the game content, question, answers, next btn -->
-      <!-- <section id="game-container">
+      <!-- Displays the game round, question, answers, next btn -->
+      <section id="game-container">
         <div class="number-and-question">
+          <!--Displays round number-->
           <span class="round" id="round-one">Round 1</span>
+          <!--Displays question-->
           <p class="question" id="question-one">
             What is the capital of Thailand?
           </p>
         </div>
-        4 Boxes With Answers
-        <section id="answers-container">
-          <div id="answers-container-1">
+        <!-- 4 Boxes With Answers -->
+        <div id="answers-main-container">
+          <button class="answers-sub-container" id="answers-container-1">
+            <!--Answer 1-->
             <h2 class="answer-title">Laos</h2>
-          </div>
-          <div id="answers-container-2">
+          </button>
+          <button class="answers-sub-container" id="answers-container-2">
+            <!--Answer 2-->
             <h2 class="answer-title">Bangkok</h2>
-          </div>
-          <div id="answers-container-3">
+          </button>
+          <button class="answers-sub-container" id="answers-container-3">
+            <!--Answer 3-->
             <h2 class="answer-title">Chiang Mai</h2>
-          </div>
-          <div id="answers-container-4">
+          </button>
+          <button class="answers-sub-container" id="answers-container-4">
+            <!--Answer 4-->
             <h2 class="answer-title">Phnom Penh</h2>
-          </div>
-        </section>
+          </button>
+        </div>
+        <!--Next question btn for user to click on once chosen an answer on the current round-->
         <button id="next-round">Next Question</button>
-      </section> -->
+      </section>
 
-      <!-- <section id="results-container">
+      <section id="results-container">
         <h2 id="encouragement-title">Congratulations</h2>
         <p id="answer-text">You got <span id="correct-answers">0</span></p>
         <p id="encouragement-text">You did so well! Gold star for you!</p>
         <button id="restart-quiz">Restart Quiz</button>
-      </section> -->
+      </section>
     </main>
     <!--Footer Section-->
     <footer>
