@@ -4,14 +4,11 @@
 let welcomeContainer = document.getElementById("welcome-container");
 let gameContainer = document.getElementById("game-container");
 let resultsContainer = document.getElementById("results-container");
-
-//Grabbing the play btn and setting it a variable for event listener to start the game
-let playBtn = document.getElementById("play-btn");
-
 //Grabbing the answer boxes and setting a variable for event listener for users click
 let subContainers = document.getElementsByClassName("answers-sub-container");
-
-// //Q&A Variable that is an Object, created with 4 properties in order
+//Grabbing the play btn and setting it a variable for event listener to start the game
+let playBtn = document.getElementById("play-btn");
+//Q&A Variable that is an Object, created with 4 properties in order
 let questionAndAnswer = [
   {
     question: "What is the capital of Thailand?",
@@ -85,81 +82,10 @@ let questionAndAnswer = [
     correctAnswer: "Philippines",
   },
 ];
-
-//Object storing all the questions but at random
-let shuffledListOfQuestionAndAnswers = [
-  {
-    question: "Who painted the Mona Lisa?",
-    options: [
-      "Leonardo da Vinci",
-      "Vincent van Gogh",
-      "Leonardo DiCaprio",
-      "Pablo Picasso",
-    ],
-    correctAnswer: "Leonardo da Vinci",
-  },
-  {
-    question: "Which country hosted the 2016 Summer Olympics?",
-    options: ["Brazil", "United Kingdom", "Russia", "Japan"],
-    correctAnswer: "Brazil",
-  },
-  {
-    question: "What is the name of the largest planet in our solar system?",
-    options: ["Mars", "Saturn", "Neptune", "Jupiter"],
-    correctAnswer: "Jupiter",
-  },
-  {
-    question: "Who became the Canadian Prime Minister in 2015?",
-    options: [
-      "Boris Johnson",
-      "Donald Trump",
-      "Justin Trudeau",
-      "Stephen Harper",
-    ],
-    correctAnswer: "Justin Trudeau",
-  },
-  {
-    question:
-      "What country is known for exporting some of the sweetest Mangoes in the world",
-    options: ["Thailand", "Puerto Rico", "Mexico", "Philippines"],
-    correctAnswer: "Philippines",
-  },
-  {
-    question: "What is the largest ocean on Earth?",
-    options: ["Atlantic Ocean", "Pacific Ocean", "Red Sea", "Arctic Ocean"],
-    correctAnswer: "Pacific Ocean",
-  },
-  {
-    question: "What is the capital of Thailand?",
-    options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
-    correctAnswer: "Bangkok",
-  },
-  {
-    question: "In which year did the Titanic sink?",
-    options: [
-      "12th April 1915",
-      "7th January 1902",
-      "15th April 1912",
-      "11th May 1922",
-    ],
-    correctAnswer: "15th April 1912",
-  },
-  {
-    question: "Which famous scientist formulated the theory of relativity?",
-    options: [
-      "Stephen Hawking",
-      "Albert Einstein",
-      "Issac Newton",
-      "Thomas Edison",
-    ],
-    correctAnswer: "Albert Einstein",
-  },
-  {
-    question: "What is the world's largest desert?",
-    options: ["Arctic", "Antarctica", "Sahara", "Arabian"],
-    correctAnswer: "Antarctica",
-  },
-];
+//Variable for shuffled questions undefined enabling us to define inside the function startQuiz
+let shuffledListOfQuestionAndAnswers;
+//Grabbing the question <p> element for setting the question
+let questionElement = document.getElementById("question");
 
 ////Setting up welcome container before starting the game
 //Hiding the game container and results container from page load
@@ -184,24 +110,31 @@ function startQuiz() {
   //Hide the welcome container
   welcomeContainer.style.display = "none";
   console.log("welcome container hidden");
+  //Run the function for shuffling the question set
+  function shuffleQuestions() {
+    shuffledListOfQuestionAndAnswers = questionAndAnswer.sort(() =>
+      Math.floor(Math.random() - 0.5)
+    );
+    console.log("questions shuffled!");
+  }
   //Show game container
   gameContainer.style.display = "block";
   console.log("game container shown");
-  //Run the function for shuffling the question set
-  function shuffleQuestions() {
-    questionAndAnswer.sort(Math.floor(Math.random() * maxNumOfQuestions));
-    console.log("questions shuffled!");
-  }
   //Run the function for displaying the first question
-  displayNewQuestionAndAnswer();
+  makeNewQuestionAndAnswer();
 }
 
-function displayNewQuestionAndAnswer() {
+function makeNewQuestionAndAnswer() {
+  displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
   //Enable the answers for clicking by user
   subContainers.disabled = false;
   console.log("answers enabled");
   //Add 1 on to current round
   currentRound++;
+}
+
+function displayQuestion(question) {
+  questionElement.textContent = question.question;
 }
 
 let nextRound = document.getElementById("next-round");
