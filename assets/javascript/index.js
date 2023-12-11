@@ -106,7 +106,7 @@ playBtn.addEventListener("click", startQuiz);
  *Used to shuffled the question and answer set for randomized population of questions
  */
 function shuffleQuestions() {
-  for (let i = questionAndAnswer.length - 1; i <= 0; i--) {
+  for (let i = questionAndAnswer.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     let temp = questionAndAnswer[i];
     questionAndAnswer[i] = questionAndAnswer[j];
