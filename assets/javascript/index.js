@@ -144,9 +144,9 @@ function makeNewQuestionAndAnswer() {
   currentRound++;
 }
 
-// function displayQuestion(questionAndAnswer) {
-//   questionElement.textContent = questionAndAnswer.question;
-// }
+function displayQuestion(questionAndAnswer) {
+  questionElement.textContent = questionAndAnswer.question;
+}
 
 //Grabbing btn elements for next question and restarting the quiz
 let nextRound = document.getElementById("next-round");
