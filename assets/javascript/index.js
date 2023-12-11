@@ -108,10 +108,9 @@ playBtn.addEventListener("click", startQuiz);
 function shuffleQuestions() {
   for (let i = questionAndAnswer.length - 1; i <= 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
-    [questionAndAnswer[i], questionAndAnswer[j]] = [
-      questionAndAnswer[j],
-      questionAndAnswer[i],
-    ];
+    let temp = questionAndAnswer[i];
+    questionAndAnswer[i] = questionAndAnswer[j];
+    questionAndAnswer[j] = temp;
   }
   shuffledListOfQuestionAndAnswers = questionAndAnswer;
   console.log("questions shuffled!");
