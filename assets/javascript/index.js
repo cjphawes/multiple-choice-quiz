@@ -90,6 +90,9 @@ let roundNumber = document.getElementById("round-number");
 let questionElement = document.getElementById("question");
 //Grabbing the answer <h2> element for setting th answers
 let answerElement = document.getElementsByClassName("answer-title");
+//Grabbing btn elements for next question and restarting the quiz
+let nextRound = document.getElementById("next-round");
+let restartBtn = document.getElementById("restart-quiz");
 
 ////WELCOME CONTAINER SET-UP
 //Hiding the game container and results container from page load
@@ -127,6 +130,33 @@ function shuffleQuestions() {
 }
 
 /**
+ *Displays the next question in the shuffled list of questions, with associated answers, enabling
+ *the buttons to click on the answers and updating the round number.
+ */
+function displayQuestion(questionAndAnswer) {
+  // Update the question text
+  questionElement.textContent = questionAndAnswer.question;
+
+  // Update each answer element with the corresponding options
+  for (let i = 0; i < questionAndAnswer.options.length; i++) {
+    answerElement[i].textContent = questionAndAnswer.options[i];
+    //Enable the answers for clicking by user
+    answerElement[i].disabled = false;
+    console.log("answers enabled");
+  }
+
+  //Add 1 on to current round
+  currentRound++;
+  //Update the round number inner text
+  roundNumber.textContent = currentRound;
+}
+
+/**
+ *
+ */
+function checkAnswer() {}
+
+/**
  *This function will be used to start the game on the user click, it will hide the welcome container
  *and show the game container, whilst shuffling and displaying the first question set.
  */
@@ -140,46 +170,8 @@ function startQuiz() {
   gameContainer.style.display = "block";
   console.log("Game container shown, Game Started!");
   //Run the function for displaying the first question
-  makeNewQuestionAndAnswer();
-}
-
-/**
- * Displays the next question and answer set
- */
-function makeNewQuestionAndAnswer() {
-  //Displaying question
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 }
-/**
- *Displays
- */
-function displayQuestion(questionAndAnswer) {
-  // Update the question text
-  questionElement.textContent = questionAndAnswer.question;
-
-  // Ensure there are enough elements for the options
-  if (answerElement.length < questionAndAnswer.options.length) {
-    console.error("Not enough elements to display all answer options");
-    return;
-  }
-
-  // Update each answer element with the corresponding option
-  for (let i = 0; i < questionAndAnswer.options.length; i++) {
-    answerElement[i].textContent = questionAndAnswer.options[i];
-    //Enable the answers for clicking by user
-    answerElement[i].disabled = false;
-    console.log("answers enabled");
-  }
-
-  //Add 1 on to current round
-  currentRound++;
-  //Update the round number
-  roundNumber.textContent = currentRound;
-}
-
-//Grabbing btn elements for next question and restarting the quiz
-let nextRound = document.getElementById("next-round");
-let tryAgain = document.getElementById("restart-quiz");
 
 // /**
 //  *Get the restart btn and create event listener, returns back to the start of the quiz with the play btn
@@ -189,78 +181,7 @@ let tryAgain = document.getElementById("restart-quiz");
 //   returnToStart();
 // });
 
-// // function checkAnswer() {}!!!
 // // function incrementScore() {}!!!
-
-// /**
-//  *Displays the first round of the quiz, removing the play button and displaying the first
-//  *question, 4 answers, next button and round 1 title.
-//  */
-// function displayRoundOne(event) {
-//   console.log("Round 1! Here we go!");
-//   //on click make play btn disappear and empty the quiz container
-//   startQuiz.style.display = "none";
-//   quizContainer.innerHTML = "";
-
-//   correctAnswers.textContent = numOfCorrectAnswers;
-//   wrongAnswers.textContent = numOfWrongAnswers;
-// }
-
-// //START SECOND ROUND
-// /**
-//  *Displays the second round of the quiz, removing the first round and displaying the second
-//  *question, 4 answers, next button, previous button and round 2 title.
-//  */
-// function displayRoundTwo(event) {
-//   console.log("Round 2! Good luck!");
-// }
-
-// /**
-//  *Displays the third round of the quiz, removing the second round and displaying the third
-//  *question, 4 answers, next button, previous button and round 3 title.
-//  */
-// function displayRoundThree(event) {
-//   console.log("Round 3! Halfway!");
-// }
-
-// /**
-//  *Displays the fourth round of the quiz, removing the third round and displaying the fourth
-//  *question, 4 answers, next button, previous button and round 4 title.
-//  */
-// function displayRoundFour(event) {
-//   console.log("Round 4! Great job so far!");
-// }
-
-// /**
-//  *Displays the fifth round of the quiz, removing the fourth round and displaying the fifth
-//  *question, 4 answers, next button, previous button and round 5 title.
-//  */
-// function displayRoundFive(event) {
-//   console.log("Round 5! Almost finished!");
-// }
-
-// /**
-//  *Displays the sixth round of the quiz, removing the fifth round and displaying the sixth
-//  *question, 4 answers, next button, previous button and round 6 title.
-//  */
-// function displayRoundSix(event) {
-//   console.log("Round 6! Final question!");
-// }
-
-// /**
-//  *Displays the quiz results round of the quiz, removing the sixth round and displaying the
-//  *total out of 6 questions how many the user got correct.
-//  */
-// function displayQuizResults(event) {
-//   console.log("Results time!");
-//   /**
-//    *Displays the correct answers to the user
-//    */
-//   function showCorrectAnswers() {
-//     correctAnswersDiv.style.display = "block";
-//     tryAgainDiv.style.display = "block";
-//   }
-// }
 
 // /**
 //  *Returns back to the home screen with the play btn
