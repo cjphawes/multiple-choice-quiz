@@ -84,6 +84,8 @@ let questionAndAnswer = [
 ];
 //Variable for shuffled questions undefined enabling us to define inside the function startQuiz
 let shuffledListOfQuestionAndAnswers;
+//Grabbing the round number element for setting the round number
+let roundNumber = document.getElementById("round-number");
 //Grabbing the question <p> element for setting the question
 let questionElement = document.getElementById("question");
 //Grabbing the answer <h2> element for setting th answers
@@ -103,6 +105,10 @@ let maxNumOfQuestions = 10;
 
 //Get the play btn and create event listener, running the function displayRoundOne
 playBtn.addEventListener("click", startQuiz);
+//Get the answer boxes and create event listener, running the function checkAnswer
+for (let i = 0; i < subContainers.length; i++) {
+  subContainers[i].addEventListener("click", checkAnswer);
+}
 
 ////FUNCTIONS USED FOR QUIZ
 /**
@@ -137,18 +143,38 @@ function startQuiz() {
   makeNewQuestionAndAnswer();
 }
 
+/**
+ * Displays the next question and answer set
+ */
 function makeNewQuestionAndAnswer() {
+  //Displaying question
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
-  //Enable the answers for clicking by user
-  subContainers.disabled = false;
-  console.log("answers enabled");
+}
+/**
+ *Displays
+ */
+function displayQuestion(questionAndAnswer) {
+  // Update the question text
+  questionElement.textContent = questionAndAnswer.question;
+
+  // Ensure there are enough elements for the options
+  if (answerElement.length < questionAndAnswer.options.length) {
+    console.error("Not enough elements to display all answer options");
+    return;
+  }
+
+  // Update each answer element with the corresponding option
+  for (let i = 0; i < questionAndAnswer.options.length; i++) {
+    answerElement[i].textContent = questionAndAnswer.options[i];
+    //Enable the answers for clicking by user
+    answerElement[i].disabled = false;
+    console.log("answers enabled");
+  }
+
   //Add 1 on to current round
   currentRound++;
-}
-
-function displayQuestion(questionAndAnswer) {
-  questionElement.textContent = questionAndAnswer.question;
-  answerElement.textContent = questionAndAnswer.options;
+  //Update the round number
+  roundNumber.textContent = currentRound;
 }
 
 //Grabbing btn elements for next question and restarting the quiz
