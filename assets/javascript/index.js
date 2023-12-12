@@ -95,6 +95,7 @@ let nextRound = document.getElementById("next-round");
 let restartBtn = document.getElementById("restart-quiz");
 
 ////WELCOME CONTAINER SET-UP
+
 //Hiding the game container and results container from page load
 gameContainer.style.display = "none";
 resultsContainer.style.display = "none";
@@ -109,9 +110,14 @@ let maxNumOfQuestions = 10;
 //Get the play btn and create event listener, running the function displayRoundOne
 playBtn.addEventListener("click", startQuiz);
 //Get the answer boxes and create event listener, running the function checkAnswer
-for (let i = 0; i < subContainers.length; i++) {
-  subContainers[i].addEventListener("click", checkAnswer);
-}
+// for (let i = 0; i < subContainers.length; i++) {
+//   subContainers[i].addEventListener("click", checkAnswer);
+// }
+//Get the next round btn and create event listener, running the function displayNextRound
+nextRound.addEventListener("click", () => {
+  currentQuestionIndex++;
+  displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
+});
 
 ////FUNCTIONS USED FOR QUIZ
 /**
@@ -134,6 +140,12 @@ function shuffleQuestions() {
  *the buttons to click on the answers and updating the round number.
  */
 function displayQuestion(questionAndAnswer) {
+  //Add 1 on to current round
+  currentRound++;
+  console.log(`Round ${currentRound}`);
+  //Update the round number inner text
+  roundNumber.textContent = currentRound;
+
   // Update the question text
   questionElement.textContent = questionAndAnswer.question;
 
@@ -142,19 +154,47 @@ function displayQuestion(questionAndAnswer) {
     answerElement[i].textContent = questionAndAnswer.options[i];
     //Enable the answers for clicking by user
     answerElement[i].disabled = false;
-    console.log("answers enabled");
+    console.log("answer enabled");
   }
+  //Disable the next round btn
+  nextRound.disabled = true;
+  console.log("next round btn disabled");
 
-  //Add 1 on to current round
-  currentRound++;
-  //Update the round number inner text
-  roundNumber.textContent = currentRound;
+  checkAnswer();
 }
 
 /**
  *
  */
-function checkAnswer() {}
+function checkAnswer(event) {
+  //Get the correct answer from the shuffled list of questions
+  let correctAnswer =
+    shuffledListOfQuestionAndAnswers[currentQuestionIndex].correctAnswer;
+  console.log(`The correct answer is ${correctAnswer}`);
+  //Get the answer clicked by the user
+  let answerClicked = this.textContent;
+  console.log(`You chose ${answerClicked}`);
+  //Check if the answer clicked is the correct answer
+  if (answerClicked === correctAnswer) {
+    console.log("Correct Answer!");
+    //Add 1 to the correct answer score
+    correctAnswers++;
+    console.log(correctAnswers);
+    //Enable the next round btn
+    nextRound.disabled = false;
+    console.log("next round btn enabled");
+  } else {
+    console.log("Wrong Answer!");
+    //Disable the answers from clicking
+    for (let i = 0; i < answerElement.length; i++) {
+      answerElement[i].disabled = true;
+      console.log("answers disabled");
+    }
+    //Enable the next round btn
+    nextRound.disabled = false;
+    console.log("next round btn enabled");
+  }
+}
 
 /**
  *This function will be used to start the game on the user click, it will hide the welcome container
