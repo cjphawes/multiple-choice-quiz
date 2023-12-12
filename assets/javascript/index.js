@@ -77,7 +77,7 @@ let questionAndAnswer = [
   },
   {
     question:
-      "What country is known for exporting some of the sweetest Mangoes in the world",
+      "What country is known for exporting some of the sweetest Mangoes in the world?",
     options: ["Thailand", "Puerto Rico", "Mexico", "Philippines"],
     correctAnswer: "Philippines",
   },
@@ -86,8 +86,10 @@ let questionAndAnswer = [
 let shuffledListOfQuestionAndAnswers;
 //Grabbing the question <p> element for setting the question
 let questionElement = document.getElementById("question");
+//Grabbing the answer <h2> element for setting th answers
+let answerElement = document.getElementsByClassName("answer-title");
 
-////Setting up welcome container before starting the game
+////WELCOME CONTAINER SET-UP
 //Hiding the game container and results container from page load
 gameContainer.style.display = "none";
 resultsContainer.style.display = "none";
@@ -102,6 +104,7 @@ let maxNumOfQuestions = 10;
 //Get the play btn and create event listener, running the function displayRoundOne
 playBtn.addEventListener("click", startQuiz);
 
+////FUNCTIONS USED FOR QUIZ
 /**
  *Used to shuffled the question and answer set for randomized population of questions
  */
@@ -145,19 +148,13 @@ function makeNewQuestionAndAnswer() {
 
 function displayQuestion(questionAndAnswer) {
   questionElement.textContent = questionAndAnswer.question;
+  answerElement.textContent = questionAndAnswer.options;
 }
 
 //Grabbing btn elements for next question and restarting the quiz
 let nextRound = document.getElementById("next-round");
 let tryAgain = document.getElementById("restart-quiz");
 
-// //Get the next btn and create event listener, displaying the next round
-// nextRound.addEventListener("click", displayRoundTwo);
-// nextRound.addEventListener("click", displayRoundThree);
-// nextRound.addEventListener("click", displayRoundFour);
-// nextRound.addEventListener("click", displayRoundFive);
-// nextRound.addEventListener("click", displayRoundSix);
-// nextRound.addEventListener("click", displayQuizResults);
 // /**
 //  *Get the restart btn and create event listener, returns back to the start of the quiz with the play btn
 //  */
@@ -166,25 +163,9 @@ let tryAgain = document.getElementById("restart-quiz");
 //   returnToStart();
 // });
 
-// /**
-//  *Hides the correct and incorrect scores and btns for the user
-//  */
-// function hideElements() {
-//   correctAnswersDiv.style.display = "none";
-//   wrongAnswersDiv.style.display = "none";
-//   tryAgainDiv.style.display = "none";
-//   nextRoundDiv.style.display = "none";
-// }
-
 // // function checkAnswer() {}!!!
 // // function incrementScore() {}!!!
 
-// //START QUIZ
-// hideElements();
-
-// function startQuiz() {
-//   welcomeContainer
-// }
 // /**
 //  *Displays the first round of the quiz, removing the play button and displaying the first
 //  *question, 4 answers, next button and round 1 title.
