@@ -109,15 +109,18 @@ let maxNumOfQuestions = 10;
 
 //Get the play btn and create event listener, running the function displayRoundOne
 playBtn.addEventListener("click", startQuiz);
-//Get the answer boxes and create event listener, running the function checkAnswer
-// for (let i = 0; i < subContainers.length; i++) {
-//   subContainers[i].addEventListener("click", checkAnswer);
-// }
+//Run a for loop through the answer buttons
+for (let i = 0; i < subContainers.length; i++) {
+  subContainers[i].addEventListener("click", nextBtnEnable);
+}
+
 //Get the next round btn and create event listener, running the function displayNextRound
 nextRound.addEventListener("click", () => {
+  checkAnswer();
   currentQuestionIndex++;
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 });
+//get the next round btn and create event listener, running the function to make them chose an answer
 
 ////FUNCTIONS USED FOR QUIZ
 /**
@@ -145,10 +148,8 @@ function displayQuestion(questionAndAnswer) {
   console.log(`Round ${currentRound}`);
   //Update the round number inner text
   roundNumber.textContent = currentRound;
-
   // Update the question text
   questionElement.textContent = questionAndAnswer.question;
-
   // Update each answer element with the corresponding options
   for (let i = 0; i < questionAndAnswer.options.length; i++) {
     answerElement[i].textContent = questionAndAnswer.options[i];
@@ -174,20 +175,29 @@ function checkAnswer() {
     console.log("Correct Answer!");
     //Add 1 to the correct answer score
     correctAnswers++;
-    console.log(`You have ${correctAnswers} so far`);
+    console.log(
+      `You have ${correctAnswers} out of ${maxNumOfQuestions} so far!}`
+    );
   } else {
     console.log("Wrong Answer!");
-    // //Disable the answers from clicking
-    // for (let i = 0; i < answerElement.length; i++) {
-    //   answerElement[i].disabled = true;
-    //   console.log("answers disabled");
-    // }
   }
-  //Enable the next round btn
-  nextRound.disabled = false;
-  console.log("next round btn enabled");
+  if (currentRound === maxNumOfQuestions) {
+    console.log("Game Over");
+    //Run the function to display the results
+    displayResults();
+  }
 }
 
+//enable the next round btn
+function nextBtnEnable() {
+  nextRound.disabled = false;
+  console.log("next round btn enabled");
+  //disable the answers from clicking
+  for (let i = 0; i < answerElement.length; i++) {
+    answerElement[i].disabled = true;
+    console.log("answers disabled");
+  }
+}
 //START OF QUIZ
 
 /**
@@ -225,7 +235,25 @@ function startQuiz() {
 // }
 // }
 
-// /**
-// * Displays the results container, showing the users score and the restart btn
-// */
-// function displayResults() {}
+/**
+ * Displays the results container, showing the users score and the restart btn
+ */
+function displayResults() {
+  //Hide the game container
+  gameContainer.style.display = "none";
+  console.log("Game container hidden");
+  //Show the results container
+  resultsContainer.style.display = "block";
+  console.log("Results container shown");
+  //Update the score text
+  document.getElementById(
+    "score"
+  ).textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+  console.log("Score updated");
+  //Disable the next round btn
+  nextRound.disabled = true;
+  console.log("next round btn disabled");
+  //Enable the restart btn
+  restartBtn.disabled = false;
+  console.log("restart btn enabled");
+}
