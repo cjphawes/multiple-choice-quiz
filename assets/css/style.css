@@ -157,27 +157,20 @@ h3 {
   background-color: #fff;
   border-radius: 10px;
   transition: all 0.3s;
+  font-size: 800%;
+  font-weight: 600;
 }
 
 .answers-sub-container:hover {
-  background-color: #000;
-  color: #fff;
   cursor: pointer;
+  color: #fff;
   border: 15px solid #fff;
+  background-color: #000;
 }
 
-.answer-title {
-  font-size: 800%;
-  font-weight: 600;
-  text-align: center;
-}
-
-#next-round {
+#next-round-btn {
   font-size: 400%;
   font-weight: 600;
-  background-color: #000;
-  color: #fff;
-  border: 10px solid #fff;
   text-decoration: none;
   border-radius: 20px;
   padding: 30px;
