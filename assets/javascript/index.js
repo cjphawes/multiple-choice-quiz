@@ -76,8 +76,8 @@ const questionAndAnswer = [
 const welcomeContainer = document.getElementById("welcome-container");
 const gameContainer = document.getElementById("game-container");
 const resultsContainer = document.getElementById("results-container");
-//Grabbing the answer boxes and setting the variable
-const subContainers = document.getElementsByClassName("answers-sub-container");
+//Grabbing the answer btn and setting the variable
+let btnContainers = document.getElementsByClassName("answers-sub-container");
 const playBtn = document.getElementById("play-btn");
 //Variable for shuffled questions undefined enabling us to define inside the function startQuiz
 let shuffledListOfQuestionAndAnswers;
@@ -85,10 +85,8 @@ let shuffledListOfQuestionAndAnswers;
 let roundNumber = document.getElementById("round-number");
 //Grabbing the question <p> element for setting the question
 let questionElement = document.getElementById("question");
-//Grabbing the answer <h2> element for setting th answers
-let answerElement = document.getElementsByClassName("answer-title");
 //Grabbing btn elements for next question and restarting the quiz
-let nextRoundBtn = document.getElementById("next-round");
+let nextRoundBtn = document.getElementById("next-round-btn");
 let restartBtn = document.getElementById("restart-quiz");
 
 ////WELCOME CONTAINER SET-UP
@@ -101,14 +99,20 @@ let currentQuestionIndex = 0;
 let currentRound = 0;
 let correctAnswers = 0;
 let maxNumOfQuestions = 10;
+let chosenAnswer = "";
 
 //// EVENT LISTENERS
 
 //Get the play btn and create event listener, running the function displayRoundOne
 playBtn.addEventListener("click", startQuiz);
 //Run a for loop through the answer buttons
-for (let i = 0; i < subContainers.length; i++) {
-  subContainers[i].addEventListener("click", nextBtnEnable);
+for (let i = 0; i < btnContainers.length; i++) {
+  btnContainers[i].addEventListener("click", function () {
+    btnContainers[i].style.backgroundColor = "#000";
+    chosenAnswer = btnContainers[i].textContent;
+    console.log(chosenAnswer);
+    nextBtnEnable();
+  });
 }
 
 //Get the next round btn and create event listener, running the function displayNextRound
@@ -117,9 +121,8 @@ nextRoundBtn.addEventListener("click", () => {
   currentQuestionIndex++;
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 });
-//get the next round btn and create event listener, running the function to make them chose an answer
 
-////FUNCTIONS USED FOR QUIZ
+////FUNCTIONS
 /**
  *Used to shuffled the question and answer set for randomized population of questions
  */
@@ -140,7 +143,6 @@ function shuffleQuestions() {
  *the buttons to click on the answers and updating the round number.
  */
 function displayQuestion(questionAndAnswer) {
-  //Add 1 on to current round
   currentRound++;
   console.log(`Round ${currentRound}`);
   //Update the round number inner text
@@ -149,9 +151,9 @@ function displayQuestion(questionAndAnswer) {
   questionElement.textContent = questionAndAnswer.question;
   // Update each answer element with the corresponding options
   for (let i = 0; i < questionAndAnswer.options.length; i++) {
-    answerElement[i].textContent = questionAndAnswer.options[i];
+    btnContainers[i].textContent = questionAndAnswer.options[i];
     //Enable the answers for clicking by user
-    answerElement[i].disabled = false;
+    btnContainers[i].disabled = false;
     console.log("answer enabled");
   }
 }
@@ -161,14 +163,14 @@ function displayQuestion(questionAndAnswer) {
  */
 function checkAnswer() {
   //Get the answer clicked by the user
-  let answerClicked = answerElement.textContent;
-  console.log(`You chose ${answerClicked}`);
+  let chosenAnswer = btnContainers.textContent;
+  console.log(`You chose ${chosenAnswer}`);
   //Get the correct answer from the shuffled list of questions
   let correctAnswer =
     shuffledListOfQuestionAndAnswers[currentQuestionIndex].correctAnswer;
   console.log(`The correct answer is ${correctAnswer}`);
   //Check if the answer clicked is the correct answer
-  if (answerClicked === correctAnswer) {
+  if (chosenAnswer === correctAnswer) {
     console.log("Correct Answer!");
     //Add 1 to the correct answer score
     correctAnswers++;
@@ -183,15 +185,19 @@ function checkAnswer() {
     //Run the function to display the results
     displayResults();
   }
+  nextRoundBtn.disabled = true;
 }
 
 //enable the next round btn
 function nextBtnEnable() {
   nextRoundBtn.disabled = false;
+  nextRoundBtn.style.backgroundColor = "#000";
+  nextRoundBtn.style.color = "#fff";
+  nextRoundBtn.style.border = "10px solid #fff";
   console.log("next round btn enabled");
   //disable the answers from clicking
-  for (let i = 0; i < answerElement.length; i++) {
-    answerElement[i].disabled = true;
+  for (let i = 0; i < btnContainers.length; i++) {
+    btnContainers[i].disabled = true;
     console.log("answers disabled");
   }
 }
