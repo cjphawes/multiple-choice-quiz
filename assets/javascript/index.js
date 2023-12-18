@@ -134,7 +134,6 @@ function shuffleQuestions() {
     questionAndAnswer[j] = temp;
   }
   shuffledListOfQuestionAndAnswers = questionAndAnswer;
-  console.log("questions shuffled!");
   return;
 }
 
@@ -144,7 +143,6 @@ function shuffleQuestions() {
  */
 function displayQuestion(questionAndAnswer) {
   currentRound++;
-  console.log(`Round ${currentRound}`);
   //Update the round number inner text
   roundNumber.textContent = currentRound;
   // Update the question text
@@ -155,7 +153,6 @@ function displayQuestion(questionAndAnswer) {
     //Enable the answers for clicking by user
     btnContainers[i].disabled = false;
     btnContainers[i].style.backgroundColor = "#fff";
-    console.log("answer enabled");
   }
 }
 
@@ -166,15 +163,12 @@ function checkAnswer() {
   //Get the correct answer from the shuffled list of questions
   let correctAnswer =
     shuffledListOfQuestionAndAnswers[currentQuestionIndex].correctAnswer;
-  console.log(`The correct answer is ${correctAnswer}`);
   //Check if the answer clicked is the correct answer
   if (chosenAnswer === correctAnswer) {
     correctAnswers++;
-    console.log(
-      `You have ${correctAnswers} out of ${maxNumOfQuestions} so far!}`
-    );
+    console.log(`Correct Answer!`);
   } else {
-    console.log("Wrong Answer!");
+    console.log(`Wrong Answer! The correct answer is ${correctAnswer}`);
   }
   if (currentRound === maxNumOfQuestions) {
     console.log("Game Over");
@@ -184,7 +178,6 @@ function checkAnswer() {
   // nextRoundBtn.style.backgroundColor = "inherit";
   // nextRoundBtn.style.color = "inherit";
   // nextRoundBtn.style.border = "inherit";
-  console.log("next round btn disabled");
 }
 
 //enable the next round btn
@@ -193,11 +186,9 @@ function nextBtnEnable() {
   nextRoundBtn.style.backgroundColor = "#000";
   nextRoundBtn.style.color = "#fff";
   nextRoundBtn.style.border = "10px solid #fff";
-  console.log("next round btn enabled");
   //disable the answers from clicking
   for (let i = 0; i < btnContainers.length; i++) {
     btnContainers[i].disabled = true;
-    console.log("answers disabled");
   }
 }
 //START OF QUIZ
@@ -225,10 +216,8 @@ function startQuiz() {
 function displayResults() {
   //Hide the game container
   gameContainer.classList.add("hide");
-  console.log("Game container hidden");
   //Show the results container
   resultsContainer.classList.remove("hide");
-  console.log("Results container shown");
   //Update the score text
   document.getElementById(
     "score"
