@@ -88,6 +88,11 @@ let questionElement = document.getElementById("question");
 //Grabbing btn elements for next question and restarting the quiz
 let nextRoundBtn = document.getElementById("next-round-btn");
 let restartBtn = document.getElementById("restart-quiz");
+//Grabbing the results container text variables
+let endQuizTitle = document.getElementById("encouragement-title");
+let correctAnswers = document.getElementById("correct-answers");
+let scoreText = document.getElementById("score-text");
+let encouragementText = document.getElementById("encouragement-text");
 
 ////WELCOME CONTAINER SET-UP
 
@@ -97,7 +102,7 @@ resultsContainer.classList.add("hide");
 //Resetting Temp Variables back to original numbers
 let currentQuestionIndex = 0;
 let currentRound = 0;
-let correctAnswers = 0;
+correctAnswers = 0;
 let maxNumOfQuestions = 10;
 let chosenAnswer = "";
 
@@ -121,6 +126,9 @@ nextRoundBtn.addEventListener("click", () => {
   currentQuestionIndex++;
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 });
+
+//Get the restart btn and create event listener, running the function restartQuiz
+restartBtn.addEventListener("click", restartQuiz);
 
 ////FUNCTIONS
 /**
@@ -175,14 +183,16 @@ function checkAnswer() {
     displayResults();
   }
   nextRoundBtn.disabled = true;
-  // nextRoundBtn.style.backgroundColor = "inherit";
-  // nextRoundBtn.style.color = "inherit";
-  // nextRoundBtn.style.border = "inherit";
+  nextRoundBtn.style.backgroundColor = "#fff";
+  nextRoundBtn.style.opacity = "0.2";
+  nextRoundBtn.style.color = "inherit";
+  nextRoundBtn.style.border = "inherit";
 }
 
 //enable the next round btn
 function nextBtnEnable() {
   nextRoundBtn.disabled = false;
+  nextRoundBtn.style.opacity = "1";
   nextRoundBtn.style.backgroundColor = "#000";
   nextRoundBtn.style.color = "#fff";
   nextRoundBtn.style.border = "10px solid #fff";
@@ -208,7 +218,17 @@ function startQuiz() {
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 }
 
-// // function restartQuiz() {}!!!
+function restartQuiz() {
+  //reset the temp variables
+  currentQuestionIndex = 0;
+  currentRound = 0;
+  correctAnswers = 0;
+
+  //Hide the results container
+  resultsContainer.classList.add("hide");
+  //Show the welcome container
+  welcomeContainer.style.display = "flex";
+}
 
 /**
  * Displays the results container, showing the users score and the restart btn
@@ -219,10 +239,10 @@ function displayResults() {
   //Show the results container
   resultsContainer.classList.remove("hide");
   //Update the score text
-  document.getElementById(
-    "score"
-  ).textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
-  console.log("Score updated");
+  // document.getElementById(
+  //   "score"
+  // ).textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+  // console.log("Score updated");
   //Disable the next round btn
   nextRoundBtn.disabled = true;
   console.log("next round btn disabled");
