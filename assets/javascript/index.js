@@ -1,5 +1,5 @@
 //VARIABLES
-const questionAndAnswer = [
+let questionAndAnswer = [
   {
     question: "What is the capital of Thailand?",
     options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
@@ -110,7 +110,7 @@ for (let i = 0; i < btnContainers.length; i++) {
   btnContainers[i].addEventListener("click", function () {
     btnContainers[i].style.backgroundColor = "#000";
     chosenAnswer = btnContainers[i].textContent;
-    console.log(chosenAnswer);
+    console.log(`You chose ${chosenAnswer}`);
     nextBtnEnable();
   });
 }
@@ -154,6 +154,7 @@ function displayQuestion(questionAndAnswer) {
     btnContainers[i].textContent = questionAndAnswer.options[i];
     //Enable the answers for clicking by user
     btnContainers[i].disabled = false;
+    btnContainers[i].style.backgroundColor = "#fff";
     console.log("answer enabled");
   }
 }
@@ -162,17 +163,12 @@ function displayQuestion(questionAndAnswer) {
  *
  */
 function checkAnswer() {
-  //Get the answer clicked by the user
-  let chosenAnswer = btnContainers.textContent;
-  console.log(`You chose ${chosenAnswer}`);
   //Get the correct answer from the shuffled list of questions
   let correctAnswer =
     shuffledListOfQuestionAndAnswers[currentQuestionIndex].correctAnswer;
   console.log(`The correct answer is ${correctAnswer}`);
   //Check if the answer clicked is the correct answer
   if (chosenAnswer === correctAnswer) {
-    console.log("Correct Answer!");
-    //Add 1 to the correct answer score
     correctAnswers++;
     console.log(
       `You have ${correctAnswers} out of ${maxNumOfQuestions} so far!}`
@@ -182,10 +178,13 @@ function checkAnswer() {
   }
   if (currentRound === maxNumOfQuestions) {
     console.log("Game Over");
-    //Run the function to display the results
     displayResults();
   }
   nextRoundBtn.disabled = true;
+  // nextRoundBtn.style.backgroundColor = "inherit";
+  // nextRoundBtn.style.color = "inherit";
+  // nextRoundBtn.style.border = "inherit";
+  console.log("next round btn disabled");
 }
 
 //enable the next round btn
@@ -209,32 +208,16 @@ function nextBtnEnable() {
  */
 function startQuiz() {
   //Hide the welcome container
-  welcomeContainer.style.display = "none";
-  // !important; //NEED TO CHANGE THIS
-  console.log("Welcome container hidden");
+  welcomeContainer.style.display = "none"; // !important; //NEED TO CHANGE THIS
   //Run the function for shuffling the question set
   shuffleQuestions();
   //Show game container
   gameContainer.classList.remove("hide");
-  console.log("Game container shown, Game Started!");
   //Run the function for displaying the first question
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 }
 
-// // function displayResults() {}!!!
-
 // // function restartQuiz() {}!!!
-
-// if (currentRound <= maxNumOfQuestions) {
-//   //Add 1 to the current question index
-//   currentQuestionIndex++;
-//   console.log(currentQuestionIndex);
-//   //enable the next round btn
-//   nextRound.disabled = false;
-// } else {
-//   //Run the function to display the results
-//   displayResults();
-// }
 
 /**
  * Displays the results container, showing the users score and the restart btn
