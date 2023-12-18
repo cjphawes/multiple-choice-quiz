@@ -1,15 +1,5 @@
 //VARIABLES
-
-//Grabbing the container elements and setting their variables
-let welcomeContainer = document.getElementById("welcome-container");
-let gameContainer = document.getElementById("game-container");
-let resultsContainer = document.getElementById("results-container");
-//Grabbing the answer boxes and setting a variable for event listener for users click
-let subContainers = document.getElementsByClassName("answers-sub-container");
-//Grabbing the play btn and setting it a variable for event listener to start the game
-let playBtn = document.getElementById("play-btn");
-//Q&A Variable that is an Object, created with 4 properties in order
-let questionAndAnswer = [
+const questionAndAnswer = [
   {
     question: "What is the capital of Thailand?",
     options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
@@ -66,7 +56,7 @@ let questionAndAnswer = [
     correctAnswer: "Leonardo da Vinci",
   },
   {
-    question: "In which year did the Titanic sink?",
+    question: "What date did the Titanic sink?",
     options: [
       "12th April 1915",
       "7th January 1902",
@@ -82,6 +72,13 @@ let questionAndAnswer = [
     correctAnswer: "Philippines",
   },
 ];
+
+const welcomeContainer = document.getElementById("welcome-container");
+const gameContainer = document.getElementById("game-container");
+const resultsContainer = document.getElementById("results-container");
+//Grabbing the answer boxes and setting the variable
+const subContainers = document.getElementsByClassName("answers-sub-container");
+const playBtn = document.getElementById("play-btn");
 //Variable for shuffled questions undefined enabling us to define inside the function startQuiz
 let shuffledListOfQuestionAndAnswers;
 //Grabbing the round number element for setting the round number
@@ -91,14 +88,14 @@ let questionElement = document.getElementById("question");
 //Grabbing the answer <h2> element for setting th answers
 let answerElement = document.getElementsByClassName("answer-title");
 //Grabbing btn elements for next question and restarting the quiz
-let nextRound = document.getElementById("next-round");
+let nextRoundBtn = document.getElementById("next-round");
 let restartBtn = document.getElementById("restart-quiz");
 
 ////WELCOME CONTAINER SET-UP
 
 //Hiding the game container and results container from page load
-gameContainer.style.display = "none";
-resultsContainer.style.display = "none";
+gameContainer.classList.add("hide");
+resultsContainer.classList.add("hide");
 //Resetting Temp Variables back to original numbers
 let currentQuestionIndex = 0;
 let currentRound = 0;
@@ -115,7 +112,7 @@ for (let i = 0; i < subContainers.length; i++) {
 }
 
 //Get the next round btn and create event listener, running the function displayNextRound
-nextRound.addEventListener("click", () => {
+nextRoundBtn.addEventListener("click", () => {
   checkAnswer();
   currentQuestionIndex++;
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
@@ -190,7 +187,7 @@ function checkAnswer() {
 
 //enable the next round btn
 function nextBtnEnable() {
-  nextRound.disabled = false;
+  nextRoundBtn.disabled = false;
   console.log("next round btn enabled");
   //disable the answers from clicking
   for (let i = 0; i < answerElement.length; i++) {
@@ -207,17 +204,16 @@ function nextBtnEnable() {
 function startQuiz() {
   //Hide the welcome container
   welcomeContainer.style.display = "none";
+  // !important; //NEED TO CHANGE THIS
   console.log("Welcome container hidden");
   //Run the function for shuffling the question set
   shuffleQuestions();
   //Show game container
-  gameContainer.style.display = "block";
+  gameContainer.classList.remove("hide");
   console.log("Game container shown, Game Started!");
   //Run the function for displaying the first question
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 }
-
-// // function incrementScore() {}!!!
 
 // // function displayResults() {}!!!
 
@@ -233,17 +229,16 @@ function startQuiz() {
 //   //Run the function to display the results
 //   displayResults();
 // }
-// }
 
 /**
  * Displays the results container, showing the users score and the restart btn
  */
 function displayResults() {
   //Hide the game container
-  gameContainer.style.display = "none";
+  gameContainer.classList.add("hide");
   console.log("Game container hidden");
   //Show the results container
-  resultsContainer.style.display = "block";
+  resultsContainer.classList.remove("hide");
   console.log("Results container shown");
   //Update the score text
   document.getElementById(
@@ -251,7 +246,7 @@ function displayResults() {
   ).textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
   console.log("Score updated");
   //Disable the next round btn
-  nextRound.disabled = true;
+  nextRoundBtn.disabled = true;
   console.log("next round btn disabled");
   //Enable the restart btn
   restartBtn.disabled = false;
