@@ -105,7 +105,6 @@ let currentRound = 0;
 correctAnswers = 0;
 let maxNumOfQuestions = 10;
 let chosenAnswer = "";
-
 //// EVENT LISTENERS
 
 //Get the play btn and create event listener, running the function displayRoundOne
@@ -113,7 +112,7 @@ playBtn.addEventListener("click", startQuiz);
 //Run a for loop through the answer buttons
 for (let i = 0; i < btnContainers.length; i++) {
   btnContainers[i].addEventListener("click", function () {
-    btnContainers[i].style.backgroundColor = "#000";
+    btnContainers[i].classList.add("selected");
     chosenAnswer = btnContainers[i].textContent;
     console.log(`You chose ${chosenAnswer}`);
     nextBtnEnable();
@@ -160,7 +159,6 @@ function displayQuestion(questionAndAnswer) {
     btnContainers[i].textContent = questionAndAnswer.options[i];
     //Enable the answers for clicking by user
     btnContainers[i].disabled = false;
-    btnContainers[i].style.backgroundColor = "#fff";
   }
 }
 
@@ -178,24 +176,30 @@ function checkAnswer() {
   } else {
     console.log(`Wrong Answer! The correct answer is ${correctAnswer}`);
   }
+  //Check if the current round is the last round, if so, display the results
   if (currentRound === maxNumOfQuestions) {
     console.log("Game Over");
     displayResults();
   }
   nextRoundBtn.disabled = true;
-  nextRoundBtn.style.backgroundColor = "#fff";
-  nextRoundBtn.style.opacity = "0.2";
-  nextRoundBtn.style.color = "inherit";
-  nextRoundBtn.style.border = "inherit";
+  // nextRoundBtn.style.backgroundColor =
+  //   "internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3))";
+  // nextRoundBtn.style.color =
+  //   "internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3))";
+  // nextRoundBtn.style.borderColor =
+  //   "internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3))";
 }
 
 //enable the next round btn
 function nextBtnEnable() {
   nextRoundBtn.disabled = false;
   nextRoundBtn.style.opacity = "1";
-  nextRoundBtn.style.backgroundColor = "#000";
   nextRoundBtn.style.color = "#fff";
-  nextRoundBtn.style.border = "10px solid #fff";
+  nextRoundBtn.style.border = "0.4rem solid #fff";
+  nextRoundBtn.style.cursor = "pointer";
+  nextRoundBtn.style.backgroundImage =
+    "linear-gradient(to bottom right, #f8770f 20%, #e63010 80%)";
+
   //disable the answers from clicking
   for (let i = 0; i < btnContainers.length; i++) {
     btnContainers[i].disabled = true;
@@ -238,14 +242,23 @@ function displayResults() {
   gameContainer.classList.add("hide");
   //Show the results container
   resultsContainer.classList.remove("hide");
-  //Update the score text
-  // document.getElementById(
-  //   "score"
-  // ).textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
-  // console.log("Score updated");
-  //Disable the next round btn
-  nextRoundBtn.disabled = true;
-  console.log("next round btn disabled");
+
+  if (correctAnswers === 10) {
+    endQuizTitle.textContent = "Perfect Score!";
+    scoreText.textContent = correctAnswers;
+    encouragementText.textContent = "You are a genius!";
+    console.log(correctAnswers);
+  } else if (correctAnswers >= 6) {
+    endQuizTitle.textContent = "Wow you did great!";
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+    encouragementText.textContent = "Keep it up!";
+    console.log(correctAnswers);
+  } else if (correctAnswers >= 3) {
+    endQuizTitle.textContent = "Someone needs to go back to school!";
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+    encouragementText.textContent = "Keep trying!";
+    console.log(correctAnswers);
+  }
   //Enable the restart btn
   restartBtn.disabled = false;
   console.log("restart btn enabled");
