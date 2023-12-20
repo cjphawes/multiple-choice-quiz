@@ -157,6 +157,9 @@ function displayQuestion(questionAndAnswer) {
   // Update each answer element with the corresponding options
   for (let i = 0; i < questionAndAnswer.options.length; i++) {
     btnContainers[i].textContent = questionAndAnswer.options[i];
+    //Remove the selected class from the answer btn
+    btnContainers[i].classList.remove("selected");
+
     //Enable the answers for clicking by user
     btnContainers[i].disabled = false;
   }
@@ -182,12 +185,9 @@ function checkAnswer() {
     displayResults();
   }
   nextRoundBtn.disabled = true;
-  // nextRoundBtn.style.backgroundColor =
-  //   "internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3))";
-  // nextRoundBtn.style.color =
-  //   "internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3))";
-  // nextRoundBtn.style.borderColor =
-  //   "internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3))";
+  nextRoundBtn.style.backgroundColor = "#fff";
+  nextRoundBtn.style.color = "#000";
+  nextRoundBtn.style.opacity = "0.5";
 }
 
 //enable the next round btn
