@@ -14,7 +14,7 @@ body {
   font-family: sans-serif;
   color: #000;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -40,7 +40,7 @@ body {
 .website-hero-name {
   text-align: center;
   font-size: 7rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 #logo-link:link,
@@ -76,7 +76,6 @@ main {
 }
 
 #results-container {
-  margin: 10rem 90rem;
   text-align: center;
 }
 
@@ -171,26 +170,26 @@ h3 {
   border-radius: 2rem;
   padding: 1rem 2rem;
   margin-top: 17rem;
-  border: 0.5rem soli;
   transition: all 0.3s;
   top: 7rem;
 }
 
 /*Results container elements*/
 #encouragement-title {
-  font-size: 1100%;
+  margin-top: 5rem;
+  font-size: 3.5rem;
   color: #fff;
 }
 
 #encouragement-text {
-  margin-top: 100px;
-  font-size: 700%;
+  margin-top: 7rem;
+  font-size: 5rem;
   color: #fff;
 }
 
 #score-text {
-  margin-top: 50px;
-  font-size: 900%;
+  margin-top: 3rem;
+  font-size: 4rem;
   color: #fff;
 }
 
@@ -199,20 +198,22 @@ h3 {
 }
 
 #restart-quiz {
-  margin-top: 150px;
-  font-size: 400%;
+  margin: 6rem 0rem;
+  font-size: 3rem;
   font-weight: 600;
   background-color: #000;
   color: #fff;
-  border: 10px solid #fff;
+  border: 0.7rem solid #fff;
   text-decoration: none;
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 5rem;
+  padding: 2.5rem 4.5rem;
+  transition: all 0.3s;
 }
 
 #restart-quiz:hover {
   color: #fff;
-  border: inset 0px;
+  cursor: pointer;
+  border: inset 0rem;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
