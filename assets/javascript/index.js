@@ -86,25 +86,14 @@ let roundNumber = document.getElementById("round-number");
 //Grabbing the question <p> element for setting the question
 let questionElement = document.getElementById("question");
 //Grabbing btn elements for next question and restarting the quiz
-let nextRoundBtn = document.getElementById("next-round-btn");
-let restartBtn = document.getElementById("restart-quiz");
+const nextRoundBtn = document.getElementById("next-round-btn");
+const restartBtn = document.getElementById("restart-quiz");
 //Grabbing the results container text variables
 let endQuizTitle = document.getElementById("encouragement-title");
 let correctAnswers = document.getElementById("correct-answers");
 let scoreText = document.getElementById("score-text");
 let encouragementText = document.getElementById("encouragement-text");
 
-////WELCOME CONTAINER SET-UP
-
-//Hiding the game container and results container from page load
-gameContainer.classList.add("hide");
-resultsContainer.classList.add("hide");
-//Resetting Temp Variables back to original numbers
-let currentQuestionIndex = 0;
-let currentRound = 0;
-correctAnswers = 0;
-let maxNumOfQuestions = 10;
-let chosenAnswer = "";
 //// EVENT LISTENERS
 
 //Get the play btn and create event listener, running the function displayRoundOne
@@ -129,7 +118,37 @@ nextRoundBtn.addEventListener("click", () => {
 //Get the restart btn and create event listener, running the function restartQuiz
 restartBtn.addEventListener("click", restartQuiz);
 
+////WELCOME CONTAINER SET-UP
+
+//Hiding the game container and results container from page load
+gameContainer.classList.add("hide");
+resultsContainer.classList.add("hide");
+//Resetting Temp Variables back to original numbers
+let currentQuestionIndex = 0;
+let currentRound = 0;
+correctAnswers = 0;
+let maxNumOfQuestions = 10;
+let chosenAnswer = "";
+
 ////FUNCTIONS
+
+//START OF QUIZ
+
+/**
+ *This function will be used to start the game on the user click, it will hide the welcome container
+ *and show the game container, whilst shuffling and displaying the first question set.
+ */
+function startQuiz() {
+  //Hide the welcome container
+  welcomeContainer.classList.add("hide"); // !important; //NEED TO CHANGE THIS
+  //Run the function for shuffling the question set
+  shuffleQuestions();
+  //Show game container
+  gameContainer.classList.remove("hide");
+  //Run the function for displaying the first question
+  displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
+}
+
 /**
  *Used to shuffled the question and answer set for randomized population of questions
  */
@@ -206,22 +225,6 @@ function nextBtnEnable() {
     // btnContainers[i].style.borderColor = "#ccc";
   }
 }
-//START OF QUIZ
-
-/**
- *This function will be used to start the game on the user click, it will hide the welcome container
- *and show the game container, whilst shuffling and displaying the first question set.
- */
-function startQuiz() {
-  //Hide the welcome container
-  welcomeContainer.style.display = "none"; // !important; //NEED TO CHANGE THIS
-  //Run the function for shuffling the question set
-  shuffleQuestions();
-  //Show game container
-  gameContainer.classList.remove("hide");
-  //Run the function for displaying the first question
-  displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
-}
 
 function restartQuiz() {
   //reset the temp variables
@@ -232,7 +235,7 @@ function restartQuiz() {
   //Hide the results container
   resultsContainer.classList.add("hide");
   //Show the welcome container
-  welcomeContainer.style.display = "flex";
+  welcomeContainer.classList.remove("hide");
 }
 
 /**
@@ -244,6 +247,7 @@ function displayResults() {
   //Show the results container
   resultsContainer.classList.remove("hide");
 
+  // correctAnswers.style.color = "red";
   if (correctAnswers === 10) {
     endQuizTitle.textContent = "Perfect Score!";
     scoreText.textContent = correctAnswers;
@@ -259,10 +263,10 @@ function displayResults() {
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
     encouragementText.textContent = "Keep trying!";
     console.log(correctAnswers);
-  } else {
+  } else if (correctAnswers < 3) {
     endQuizTitle.textContent = "You need to go back to school!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
-    encouragementText.textContent = "Is it worth trying again after that";
+    encouragementText.textContent = "Is it worth trying again after that?";
     console.log(correctAnswers);
   }
   //Enable the restart btn
