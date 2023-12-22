@@ -185,9 +185,10 @@ function checkAnswer() {
     displayResults();
   }
   nextRoundBtn.disabled = true;
-  nextRoundBtn.style.backgroundColor = "#fff";
+  nextRoundBtn.style.backgroundColor = "inherit";
   nextRoundBtn.style.color = "#000";
   nextRoundBtn.style.opacity = "0.5";
+  nextRoundBtn.style.border = "none";
 }
 
 //enable the next round btn
@@ -199,10 +200,10 @@ function nextBtnEnable() {
   nextRoundBtn.style.cursor = "pointer";
   nextRoundBtn.style.backgroundImage =
     "linear-gradient(to bottom right, #f8770f 20%, #e63010 80%)";
-
   //disable the answers from clicking
   for (let i = 0; i < btnContainers.length; i++) {
     btnContainers[i].disabled = true;
+    // btnContainers[i].style.borderColor = "#ccc";
   }
 }
 //START OF QUIZ
@@ -257,6 +258,11 @@ function displayResults() {
     endQuizTitle.textContent = "Someone needs to go back to school!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
     encouragementText.textContent = "Keep trying!";
+    console.log(correctAnswers);
+  } else {
+    endQuizTitle.textContent = "You need to go back to school!";
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+    encouragementText.textContent = "Is it worth trying again after that";
     console.log(correctAnswers);
   }
   //Enable the restart btn
