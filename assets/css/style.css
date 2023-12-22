@@ -71,11 +71,12 @@ main {
 
 #game-container {
   text-align: center;
-  margin: 3rem 0rem 7rem 0rem;
+  margin: 3rem 0rem 25rem 0rem;
 }
 
 #results-container {
   text-align: center;
+  margin: 0rem 4rem;
 }
 
 /*Welcome container elements*/
@@ -158,26 +159,21 @@ h3 {
 }
 
 #next-round-btn {
+  position: relative;
+  top: 17rem;
   font-size: 2.5rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 2rem;
   padding: 1rem 2rem;
-  margin-top: 17rem;
   transition: all 0.3s;
 }
 
 /*Results container elements*/
 #encouragement-title {
-  margin-top: 2rem;
-  font-size: 3.5rem;
+  margin-top: 2.5rem;
+  font-size: 4.5rem;
   font-weight: normal;
-  color: #fff;
-}
-
-#encouragement-text {
-  margin-top: 4rem;
-  font-size: 4rem;
   color: #fff;
 }
 
@@ -235,8 +231,7 @@ footer {
 
 @media screen and (max-width: 750px) {
   #game-container {
-    text-align: center;
-    margin: 3rem 0rem 5rem 0rem;
+    margin: 3rem 0rem 20rem 0rem;
   }
 
   #question {
@@ -250,7 +245,7 @@ footer {
 
     line-height: 1;
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
   }
 
   #round-number {
@@ -258,10 +253,6 @@ footer {
     padding: 0.5rem 0rem;
     border-radius: 1rem;
     font-size: 2rem;
-  }
-
-  .website-hero-name {
-    font-size: 5rem;
   }
 
   .answers-sub-container {
@@ -272,13 +263,24 @@ footer {
 
   #next-round-btn {
     font-size: 2rem;
-    margin-top: 12rem;
+    top: 12rem;
   }
 }
 
 @media screen and (max-width: 550px) {
+  .website-hero-name {
+    font-size: 5rem;
+  }
+
+  #play-btn {
+    font-size: 3rem;
+    padding: 2rem 3rem;
+    border-radius: 3rem;
+    border: 0.6rem solid #fff;
+  }
+
   #game-container {
-    margin: 1rem 0rem 5rem 0rem;
+    margin: 1rem 0rem 7rem 0rem;
   }
 
   #round-container {
@@ -326,6 +328,67 @@ footer {
 
   #next-round-btn {
     font-size: 1.7rem;
-    margin-top: 0rem;
+    top: 0rem;
+  }
+
+  #encouragement-title {
+    font-size: 3rem;
+  }
+
+  #score-text {
+    font-size: 3rem;
+  }
+
+  #restart-quiz {
+    margin: 4rem 0rem;
+    font-size: 3.5rem;
+    border-radius: 4rem;
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #results-container {
+    margin: 0rem 2rem;
+  }
+
+  #question {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  #round-number {
+    font-size: 1.7rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .answers-sub-container {
+    padding: 1.5rem 1rem;
+    width: 90%;
+    font-size: 2rem;
+    height: 7rem;
+  }
+
+  #next-round-btn {
+    font-size: 1.5rem;
+  }
+
+  #encouragement-title {
+    font-size: 2rem;
+  }
+
+  #score-text {
+    font-size: 2.5rem;
+  }
+
+  #restart-quiz {
+    margin: 3rem 0rem;
+    font-size: 2.5rem;
+    border: 0.5rem solid #fff;
   }
 }
