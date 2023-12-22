@@ -250,22 +250,22 @@ function displayResults() {
   // correctAnswers.style.color = "red";
   if (correctAnswers === 10) {
     endQuizTitle.textContent = "Perfect Score!";
-    scoreText.textContent = correctAnswers;
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
     encouragementText.textContent = "You are a genius!";
     console.log(correctAnswers);
   } else if (correctAnswers >= 6) {
     endQuizTitle.textContent = "Wow you did great!";
-    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
     encouragementText.textContent = "Keep it up!";
     console.log(correctAnswers);
   } else if (correctAnswers >= 3) {
     endQuizTitle.textContent = "Someone needs to go back to school!";
-    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
     encouragementText.textContent = "Keep trying!";
     console.log(correctAnswers);
   } else if (correctAnswers < 3) {
     endQuizTitle.textContent = "You need to go back to school!";
-    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}!`;
+    scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
     encouragementText.textContent = "Is it worth trying again after that?";
     console.log(correctAnswers);
   }
