@@ -100,7 +100,7 @@ let encouragementText = document.getElementById("encouragement-text");
 playBtn.addEventListener("click", startQuiz);
 //Run a for loop through the answer buttons
 for (let i = 0; i < btnContainers.length; i++) {
-  btnContainers[i].addEventListener("click", function () {
+  btnContainers[i].addEventListener("click", () => {
     btnContainers[i].classList.add("selected");
     chosenAnswer = btnContainers[i].textContent;
     console.log(`You chose ${chosenAnswer}`);
@@ -204,10 +204,13 @@ function checkAnswer() {
     displayResults();
   }
   nextRoundBtn.disabled = true;
-  nextRoundBtn.style.backgroundColor = "inherit";
-  nextRoundBtn.style.color = "#000";
-  nextRoundBtn.style.opacity = "0.5";
+  nextRoundBtn.style.opacity = "0.2";
   nextRoundBtn.style.border = "none";
+  nextRoundBtn.style.color = "#000";
+  nextRoundBtn.style.backgroundImage = "none";
+  nextRoundBtn.style.backgroundColor = "#fff";
+  {
+  }
 }
 
 //enable the next round btn
@@ -222,7 +225,6 @@ function nextBtnEnable() {
   //disable the answers from clicking
   for (let i = 0; i < btnContainers.length; i++) {
     btnContainers[i].disabled = true;
-    // btnContainers[i].style.borderColor = "#ccc";
   }
 }
 
