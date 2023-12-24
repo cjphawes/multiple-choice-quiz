@@ -76,7 +76,7 @@ main {
 
 #results-container {
   text-align: center;
-  margin: 0rem 4rem;
+  margin: 10rem 4rem 15rem 4rem;
 }
 
 /*Welcome container elements*/
@@ -277,20 +277,21 @@ footer {
     padding: 1rem 2rem;
   }
 
-  /* #encouragement-title {
-    font-size: 3rem;
+  /*Results Container*/
+  #encouragement-title {
+    font-size: 8rem;
   }
 
   #score-text {
-    font-size: 3rem;
+    font-size: 10rem;
   }
 
   #restart-quiz {
-    margin: 4rem 0rem;
-    font-size: 3.5rem;
-    border-radius: 4rem;
-    padding: 1.5rem 3rem;
-  } */
+    margin: 10rem 0rem;
+    font-size: 10rem;
+    padding: 4rem 5rem;
+    border: 1.5rem solid #fff;
+  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -348,6 +349,24 @@ footer {
     font-size: 3.5rem;
     border-radius: 2rem;
     padding: 1rem 2rem;
+  }
+
+  /*Results Container*/
+  #results-container {
+    margin: 10rem 4rem 7rem 4rem;
+  }
+
+  #encouragement-title {
+    font-size: 5rem;
+  }
+
+  #score-text {
+    font-size: 6rem;
+  }
+
+  #restart-quiz {
+    margin: 10rem 0rem;
+    font-size: 7rem;
   }
 }
 
@@ -416,6 +435,26 @@ footer {
     font-size: 2.5rem;
     top: 0rem;
   }
+
+  /*Results Container*/
+  #results-container {
+    margin: 7rem 4rem 5rem 4rem;
+  }
+
+  #encouragement-title {
+    font-size: 4rem;
+  }
+
+  #score-text {
+    font-size: 5rem;
+  }
+
+  #restart-quiz {
+    margin: 7rem 0rem;
+    font-size: 5rem;
+    padding: 3rem 4rem;
+    border: 1rem solid #fff;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -468,6 +507,26 @@ footer {
 
   #next-round-btn {
     font-size: 2rem;
+  }
+
+  /*Results Container*/
+  #results-container {
+    margin: 7rem 2rem 5rem 2rem;
+  }
+
+  #encouragement-title {
+    font-size: 2.5rem;
+  }
+
+  #score-text {
+    font-size: 3rem;
+  }
+
+  #restart-quiz {
+    margin: 7rem 0rem;
+    font-size: 4rem;
+    padding: 2rem 3rem;
+    border-radius: 3rem;
   }
 }
 
@@ -526,5 +585,21 @@ footer {
   #next-round-btn {
     font-size: 1.7rem;
     top: 1rem;
+  }
+
+  /*Results Container*/
+  #encouragement-title {
+    font-size: 1.5rem;
+  }
+
+  #score-text {
+    font-size: 2rem;
+  }
+
+  #restart-quiz {
+    margin: 5rem 0rem;
+    font-size: 3rem;
+    padding: 1.5rem 2rem;
+    border: 0.7rem solid #fff;
   }
 }
