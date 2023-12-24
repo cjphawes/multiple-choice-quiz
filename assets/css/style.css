@@ -223,11 +223,80 @@ footer {
 }
 
 /*Media Queries*/
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 3840px) {
   #index-body {
     background-size: cover;
   }
 }
+
+@media screen and (max-width: 1920px) {
+  .website-hero-name {
+    font-size: 15rem;
+  }
+
+  #play-btn {
+    font-size: 10rem;
+    border: 1.5rem solid #fff;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .website-hero-name {
+    font-size: 10rem;
+  }
+
+  #play-btn {
+    font-size: 7rem;
+    border: 1.2rem solid #fff;
+  }
+}
+/* @media screen and (min-width: 1440px) {
+  .website-hero-name {
+    font-size: 12rem;
+  }
+
+  #play-btn {
+    font-size: 7rem;
+    padding: 6rem 12rem;
+    border-radius: 7rem;
+    border: 2rem solid #fff;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  #round-number {
+    font-size: 5rem;
+  }
+
+  #question {
+    margin: 0rem 2rem;
+    font-size: 5rem;
+  }
+
+  .answers-sub-container {
+    height: 15rem;
+    border-radius: 3rem;
+    border: 1.5rem solid #000;
+    font-size: 5rem;
+  }
+
+  #next-round-btn {
+    top: 23rem;
+    font-size: 4rem;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  footer {
+    height: 6rem;
+  }
+
+  #copyright-text {
+    font-size: 3rem;
+  }
+} */
 
 @media screen and (max-width: 750px) {
   #game-container {
@@ -264,6 +333,17 @@ footer {
   #next-round-btn {
     font-size: 2rem;
     top: 12rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .website-hero-name {
+    font-size: 7rem;
+  }
+
+  #play-btn {
+    font-size: 5rem;
+    border: 1.2rem solid #fff;
   }
 }
 
