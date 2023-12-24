@@ -66,7 +66,7 @@ main {
 #welcome-container {
   display: flex;
   justify-content: center;
-  margin: 15rem 0rem;
+  margin: 15rem 0rem 20rem 0rem;
 }
 
 #game-container {
@@ -230,15 +230,26 @@ footer {
 }
 
 @media screen and (max-width: 2560px) {
+  /*Constant Elements*/
   .website-hero-name {
     font-size: 18rem;
   }
 
+  footer {
+    height: 6rem;
+  }
+
+  #copyright-text {
+    font-size: 3rem;
+  }
+
+  /*Welcome Container*/
   #play-btn {
     font-size: 15rem;
     border: 2rem solid #fff;
   }
 
+  /*Game Container*/
   h3 {
     font-size: 4rem;
     bottom: 5rem;
@@ -266,31 +277,49 @@ footer {
     padding: 1rem 2rem;
   }
 
-  footer {
-    height: 6rem;
-  }
-
-  #copyright-text {
+  /* #encouragement-title {
     font-size: 3rem;
   }
+
+  #score-text {
+    font-size: 3rem;
+  }
+
+  #restart-quiz {
+    margin: 4rem 0rem;
+    font-size: 3.5rem;
+    border-radius: 4rem;
+    padding: 1.5rem 3rem;
+  } */
 }
 
 @media screen and (max-width: 1250px) {
-  #welcome-container {
-    margin: 20rem 0rem;
-  }
-
-  #game-container {
-    margin: 5rem 0rem 27rem 0rem;
-  }
-
+  /*Constant Elements*/
   .website-hero-name {
     font-size: 15rem;
+  }
+
+  footer {
+    height: 5rem;
+  }
+
+  #copyright-text {
+    font-size: 2.5rem;
+  }
+
+  /*Welcome Container*/
+  #welcome-container {
+    margin: 20rem 0rem;
   }
 
   #play-btn {
     font-size: 10rem;
     border: 1.2rem solid #fff;
+  }
+
+  /*Game Container*/
+  #game-container {
+    margin: 5rem 0rem 27rem 0rem;
   }
 
   h3 {
@@ -320,28 +349,23 @@ footer {
     border-radius: 2rem;
     padding: 1rem 2rem;
   }
-
-  footer {
-    height: 5rem;
-  }
-
-  #copyright-text {
-    font-size: 2.5rem;
-  }
 }
 
 @media screen and (max-width: 850px) {
-  #game-container {
-    margin: 0rem 0rem 8rem 0rem;
-  }
-
+  /*Constant Elements*/
   .website-hero-name {
     font-size: 12rem;
   }
 
+  /*Welcome Container*/
   #play-btn {
     font-size: 7rem;
     border: 1.2rem solid #fff;
+  }
+
+  /*Game Container*/
+  #game-container {
+    margin: 0rem 0rem 8rem 0rem;
   }
 
   #round-container {
@@ -392,34 +416,21 @@ footer {
     font-size: 2.5rem;
     top: 0rem;
   }
-
-  /* #encouragement-title {
-    font-size: 3rem;
-  }
-
-  #score-text {
-    font-size: 3rem;
-  }
-
-  #restart-quiz {
-    margin: 4rem 0rem;
-    font-size: 3.5rem;
-    border-radius: 4rem;
-    padding: 1.5rem 3rem;
-  } */
 }
 
 @media screen and (max-width: 650px) {
-  #welcome-container {
-    margin: 15rem 0rem;
-  }
-
-  #game-container {
-    margin: 0rem 0rem 6rem 0rem;
-  }
-
+  /*Constant Elements*/
   .website-hero-name {
     font-size: 7rem;
+  }
+
+  #copyright-text {
+    font-size: 2rem;
+  }
+
+  /*Welcome Container*/
+  #welcome-container {
+    margin: 15rem 0rem;
   }
 
   #play-btn {
@@ -427,6 +438,11 @@ footer {
     padding: 2rem 3rem;
     border-radius: 3rem;
     border: 0.6rem solid #fff;
+  }
+
+  /*Game Container*/
+  #game-container {
+    margin: 0rem 0rem 6rem 0rem;
   }
 
   h3 {
@@ -453,19 +469,25 @@ footer {
   #next-round-btn {
     font-size: 2rem;
   }
-
-  #copyright-text {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (max-width: 430px) {
-  #welcome-container {
-    margin: 10rem 0rem;
-  }
-
+  /*Constant Elements*/
   .website-hero-name {
     font-size: 5rem;
+  }
+
+  footer {
+    height: 4rem;
+  }
+
+  #copyright-text {
+    font-size: 1.5rem;
+  }
+
+  /*Welcome Container*/
+  #welcome-container {
+    margin: 10rem 0rem;
   }
 
   #play-btn {
@@ -475,6 +497,7 @@ footer {
     border: 0.6rem solid #fff;
   }
 
+  /*Game Container*/
   h3 {
     font-size: 1.5rem;
   }
@@ -504,107 +527,4 @@ footer {
     font-size: 1.7rem;
     top: 1rem;
   }
-
-  footer {
-    height: 4rem;
-  }
-
-  #copyright-text {
-    font-size: 1.5rem;
-  }
 }
-/* @media screen and (max-width: 750px) {
-  #game-container {
-    margin: 3rem 0rem 20rem 0rem;
-  }
-
-  #question {
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    padding: 1rem 1rem;
-    border-radius: 0rem 1rem 1rem 0rem;
-
-    line-height: 1;
-    position: absolute;
-    bottom: 4rem;
-  }
-
-  #round-number {
-    color: #fff;
-    padding: 0.5rem 0rem;
-    border-radius: 1rem;
-    font-size: 2rem;
-  }
-
-  .answers-sub-container {
-    height: 10rem;
-    font-size: 2.5rem;
-    border: 0.8rem solid #000;
-  }
-
-  #next-round-btn {
-    font-size: 2rem;
-    top: 12rem;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .website-hero-name {
-    font-size: 7rem;
-  }
-
-  #play-btn {
-    font-size: 5rem;
-    border: 1.2rem solid #fff;
-  }
-}
-
-
-@media screen and (max-width: 450px) {
-  #results-container {
-    margin: 0rem 2rem;
-  }
-
-  #question {
-    font-size: 1.5rem;
-    margin: 1rem 1rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    gap: 0.5rem;
-  }
-
-  #round-number {
-    font-size: 1.7rem;
-    padding: 0.4rem 0.7rem;
-  }
-
-  .answers-sub-container {
-    padding: 1.5rem 1rem;
-    width: 90%;
-    font-size: 2rem;
-    height: 7rem;
-  }
-
-  #next-round-btn {
-    font-size: 1.5rem;
-  }
-
-  #encouragement-title {
-    font-size: 2rem;
-  }
-
-  #score-text {
-    font-size: 2.5rem;
-  }
-
-  #restart-quiz {
-    margin: 3rem 0rem;
-    font-size: 2.5rem;
-    border: 0.5rem solid #fff;
-  }
-} */
