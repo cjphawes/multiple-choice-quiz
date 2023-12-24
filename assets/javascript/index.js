@@ -215,7 +215,7 @@ function nextBtnEnable() {
   nextRoundBtn.disabled = false;
   nextRoundBtn.style.opacity = "1";
   nextRoundBtn.style.color = "#fff";
-  nextRoundBtn.style.border = "0.4rem solid #fff";
+  nextRoundBtn.style.border = "0.6rem solid #fff";
   nextRoundBtn.style.cursor = "pointer";
   nextRoundBtn.style.backgroundImage =
     "linear-gradient(to bottom right, #f8770f 20%, #e63010 80%)";
