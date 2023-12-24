@@ -407,7 +407,38 @@ footer {
   } */
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
+  .website-hero-name {
+    font-size: 7rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  #round-number {
+    font-size: 2.5rem;
+  }
+
+  #question {
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+
+  .answers-sub-container {
+    padding: 1.5rem 1rem;
+    font-size: 3rem;
+    border: 1rem solid #000;
+
+    height: 9rem;
+  }
+
+  #next-round-btn {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }
 /* @media screen and (max-width: 750px) {
   #game-container {
