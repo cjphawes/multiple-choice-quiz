@@ -209,8 +209,6 @@ function checkAnswer() {
   nextRoundBtn.style.color = "#000";
   nextRoundBtn.style.backgroundImage = "none";
   nextRoundBtn.style.backgroundColor = "#fff";
-  {
-  }
 }
 
 //enable the next round btn
