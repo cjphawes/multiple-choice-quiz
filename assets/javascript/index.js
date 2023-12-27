@@ -119,11 +119,9 @@ nextRoundBtn.addEventListener("click", () => {
 restartBtn.addEventListener("click", restartQuiz);
 
 ////WELCOME CONTAINER SET-UP
-
-//Hiding the game container and results container from page load
 gameContainer.classList.add("hide");
 resultsContainer.classList.add("hide");
-//Resetting Temp Variables back to original numbers
+//Setting Temp Variables to original numbers
 let currentQuestionIndex = 0;
 let currentRound = 0;
 correctAnswers = 0;
@@ -135,17 +133,13 @@ let chosenAnswer = "";
 //START OF QUIZ
 
 /**
- *This function will be used to start the game on the user click, it will hide the welcome container
+ *This function will be used to start the game on user click, it will hide the welcome container
  *and show the game container, whilst shuffling and displaying the first question set.
  */
 function startQuiz() {
-  //Hide the welcome container
   welcomeContainer.classList.add("hide"); // !important; //NEED TO CHANGE THIS
-  //Run the function for shuffling the question set
   shuffleQuestions();
-  //Show game container
   gameContainer.classList.remove("hide");
-  //Run the function for displaying the first question
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
 }
 
@@ -165,7 +159,7 @@ function shuffleQuestions() {
 
 /**
  *Displays the next question in the shuffled list of questions, with associated answers, enabling
- *the buttons to click on the answers and updating the round number.
+ *the answer buttons and updating the round number.
  */
 function displayQuestion(questionAndAnswer) {
   currentRound++;
@@ -176,16 +170,14 @@ function displayQuestion(questionAndAnswer) {
   // Update each answer element with the corresponding options
   for (let i = 0; i < questionAndAnswer.options.length; i++) {
     btnContainers[i].textContent = questionAndAnswer.options[i];
-    //Remove the selected class from the answer btn
     btnContainers[i].classList.remove("selected");
-
-    //Enable the answers for clicking by user
     btnContainers[i].disabled = false;
   }
 }
 
 /**
- *
+ * Checks if the answer clicked is correct or if the round is the last round,
+ * if so, it will display the results container
  */
 function checkAnswer() {
   //Get the correct answer from the shuffled list of questions
@@ -203,6 +195,7 @@ function checkAnswer() {
     console.log("Game Over");
     displayResults();
   }
+  //Disable the next round btn
   nextRoundBtn.disabled = true;
   nextRoundBtn.style.opacity = "0.2";
   nextRoundBtn.style.border = "none";
@@ -211,7 +204,9 @@ function checkAnswer() {
   nextRoundBtn.style.backgroundColor = "#fff";
 }
 
-//enable the next round btn
+/**
+ * Enables the next round btn and disables the answer buttons
+ */
 function nextBtnEnable() {
   nextRoundBtn.disabled = false;
   nextRoundBtn.style.opacity = "1";
@@ -226,15 +221,16 @@ function nextBtnEnable() {
   }
 }
 
+/**
+ * Restarts the quiz by resetting the temp variables and hiding the results container
+ */
 function restartQuiz() {
   //reset the temp variables
   currentQuestionIndex = 0;
   currentRound = 0;
   correctAnswers = 0;
 
-  //Hide the results container
   resultsContainer.classList.add("hide");
-  //Show the welcome container
   welcomeContainer.classList.remove("hide");
 }
 
@@ -242,12 +238,9 @@ function restartQuiz() {
  * Displays the results container, showing the users score and the restart btn
  */
 function displayResults() {
-  //Hide the game container
   gameContainer.classList.add("hide");
-  //Show the results container
   resultsContainer.classList.remove("hide");
 
-  // correctAnswers.style.color = "red";
   if (correctAnswers === 10) {
     endQuizTitle.textContent = "Perfect Score!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
@@ -269,7 +262,6 @@ function displayResults() {
     encouragementText.textContent = "Is it worth trying again after that?";
     console.log(correctAnswers);
   }
-  //Enable the restart btn
   restartBtn.disabled = false;
   console.log("restart btn enabled");
 }
