@@ -20,50 +20,86 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 ---
 
-## The process - Wireframes
+## The Process
 
-### User stories
+#### Javascript Flowchart
 
-#### First time visitor goals
+- This flowchart shows the logic and flow of the game.
+
+![flowchart of how the game is run](/assets/images/js-flowchart-for-quiz.webp)
+
+#### HTML & CSS Wireframe Layout
+
+![wireframe of my quiz layout](/assets/images/)
+
+### User Stories
+
+#### First Time Visitor Goals
 
 - As a first time user, I want to be able to play a fun, interactive game that will entertain me.
 - As a first time user, I would like to trial my general knowledge to see how much I know.
 
-#### Returning visitor goals
+#### Returning Visitor Goals
 
 - As a returning user, I would like to achieve a higher score than before competing for the best score possible.
 - As a returning user, I want to expand my general knowledge.
 
-#### Frequent visitor goals
+#### Frequent Visitor Goals
 
 - As a frequent user, I would like to have the option of choosing a variety of quizzes in different subject areas.
 - As a frequent user, I would love to play and compete against my friends and family or random users.
 
 ### Features
 
-#### Home page
+#### Home Page
+
+![image of home page](/assets/images/home-page.webp)
 
 - The home page shows:
 
   - The main goal of the application.
   - A simple interactive method of use for anyone to understand.
-    ![image of home page](/assets/images/)
 
 - The home page includes:
   - A call to action button, the user clicks to initiate the game.
   - The quiz's title, which is also a hyperlink that sends you back to the home page when clicked on.
+  - A footer for copyright purposes.
 
-#### The quiz
+#### The Quiz - Before Selection
 
-- Upon clicking on the CTA button, the user enters the game and will comes across:
-  - A question that has been shuffled.
+![image of main game section before selection](/assets/images/main-game-section-before-selection.webp)
+
+- Once the user enters the game and they will come across:
+
+  - A question that has been shuffled from a list of questions.
   - 4 answer options associated to the question.
-  - A next round CTA button.
+  - A next question CTA button that is automatically disabled to not allow the user to skip a question.
   - The round number the user is currently on.
 
-#### The results
+#### The Quiz - After Selection
 
-- Once all questions have been answered, the results will appear, this will:
-  - Display the user's score.
+![image of main game section after selection](/assets/images/main-game-section-after-selection.webp)
+
+- The user interacts by clicking on the answer box they think is correct, this will:
+  - Disable the other answers
+  - Visually tell the user which answer they chose.
+  - Highlight the next question CTA button in color, subtly directing them where to click to continue the game.
+
+#### The Results
+
+![image of results section](/assets/images/game-results-section.webp)
+
+- Once all questions have been answered, the results will appear and display:
+  - The user's score out of 10.
   - Provide some words of encouragement to try again to get a better score (unless you get 100%)
   - A CTA button for the user to restart the quiz.
+
+#### Future Features To Implement
+
+- Option to select a category/subject to quiz the user in.
+- Add the input for a username on the home page, to make user more engaged and feel more connected to the quiz.
+- Add a leaderboard to the results page to give the game a competitive nature allowing them to fight against random users.
+
+---
+
+## Testing
