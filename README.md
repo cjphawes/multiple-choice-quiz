@@ -103,3 +103,29 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 ---
 
 ## Testing
+
+#### Solved Bugs
+
+-
+
+#### Validator Testing
+
+##### HTML
+
+- No errors were found using the official [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcjphawes.github.io%2Fmultiple-choice-quiz%2Findex.html)
+
+![W3C HTML Validator Image](/assets/images/w3c-html-validator.png)
+
+##### CSS
+
+- No errors were found using the official [(Jigsaw) Validator]
+
+##### Javascript
+
+- No errors were found using the official [JShint Validator]
+
+---
+
+## Deployment
+
+-
