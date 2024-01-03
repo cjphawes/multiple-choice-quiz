@@ -31,7 +31,7 @@ body {
 #index-body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/assets/images/tons-of-open-page-books.webp);
-  background-position: 100% 90%;
+  background-position: 100% 100%;
   background-size: 100%;
 }
 
@@ -66,17 +66,17 @@ main {
 #welcome-container {
   display: flex;
   justify-content: center;
-  margin: 15rem 0rem 20rem 0rem;
+  margin: 15rem 0rem 0rem 0rem;
 }
 
 #game-container {
   text-align: center;
-  margin: 3rem 0rem 30rem 0rem;
+  margin: 3rem 0rem 0rem 0rem;
 }
 
 #results-container {
   text-align: center;
-  margin: 10rem 4rem 15rem 4rem;
+  margin: 10rem 4rem 0rem 4rem;
 }
 
 /*Welcome container elements*/
@@ -229,9 +229,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 2560px) {
-  /*Constant Elements*/
-  .website-hero-name {
+/* @media screen and (max-width: 2560px) { */
+/*Constant Elements*/
+/* .website-hero-name {
     font-size: 18rem;
   }
 
@@ -242,15 +242,15 @@ footer {
   #copyright-text {
     font-size: 3rem;
   }
-
-  /*Welcome Container*/
-  #play-btn {
+ */
+/*Welcome Container*/
+/* #play-btn {
     font-size: 15rem;
     border: 2rem solid #fff;
   }
-
-  /*Game Container*/
-  h3 {
+ */
+/*Game Container*/
+/* h3 {
     font-size: 4rem;
     bottom: 5rem;
   }
@@ -276,9 +276,9 @@ footer {
     border-radius: 2rem;
     padding: 1rem 2rem;
   }
-
-  /*Results Container*/
-  #encouragement-title {
+ */
+/*Results Container*/
+/* #encouragement-title {
     font-size: 8rem;
   }
 
@@ -292,7 +292,7 @@ footer {
     padding: 4rem 5rem;
     border: 1.5rem solid #fff;
   }
-}
+} */
 
 @media screen and (max-width: 1250px) {
   /*Constant Elements*/
