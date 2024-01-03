@@ -137,7 +137,7 @@ let chosenAnswer = "";
  *and show the game container, whilst shuffling and displaying the first question set.
  */
 function startQuiz() {
-  welcomeContainer.classList.add("hide"); // !important; //NEED TO CHANGE THIS
+  welcomeContainer.classList.add("hide");
   shuffleQuestions();
   gameContainer.classList.remove("hide");
   displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
@@ -225,7 +225,7 @@ function nextBtnEnable() {
  * Restarts the quiz by resetting the temp variables and hiding the results container
  */
 function restartQuiz() {
-  //reset the temp variables
+  //Reset the temp variables
   currentQuestionIndex = 0;
   currentRound = 0;
   correctAnswers = 0;
