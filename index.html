@@ -27,15 +27,22 @@
     <!--Header Section-->
     <header class="general-header">
       <!--Title of website-->
-      <h2 class="website-hero-name">
+      <h1 class="website-hero-name">
         <!--Link taking you back to original home page-->
-        <a href="index.html" id="logo-link" ARIALABELHERE
+        <a
+          href="index.html"
+          id="logo-link"
+          aria-label="Directs you back to the home page"
           ><span id="trivia-title">Trivia</span><span id="letter-x">X</span></a
         >
-      </h2>
+      </h1>
     </header>
     <!--Main Section-->
     <main class="main-container">
+      <span
+        role="img"
+        aria-label="open books spread and laid out on top of each other"
+      ></span>
       <!--Home Screen Container -->
       <section id="welcome-container">
         <!--Start btn user clicks on to start the quiz-->
@@ -76,6 +83,6 @@
     <footer>
       <p id="copyright-text">All rights reserved &copy; TriviaX</p>
     </footer>
-    <script src="assets/javascript/index.js" type="text/javascript"></script>
+    <script src="assets/javascript/index.js"></script>
   </body>
 </html>
