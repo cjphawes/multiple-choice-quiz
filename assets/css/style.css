@@ -30,7 +30,7 @@ body {
 /*INDEX.HTML PAGE*/
 #index-body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/assets/images/tons-of-open-page-books.webp);
+    url(../images/tons-of-open-page-books.webp);
   background-position: 100% 100%;
   background-size: 100%;
 }
