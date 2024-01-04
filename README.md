@@ -128,4 +128,24 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 ## Deployment
 
--
+The website was deployed to Github Pages.
+
+To do so , I followed these steps.
+
+**1.** From the website Github repository, navigate to **Settings**.
+**2.** Make sure your default branch is set to "main", in the left-hand side drop down menu, under **Code and Automation**, select **Pages**.
+**3.**Make sure the branch selected is "main", and upon a refresh of the page, at the top of the page automatically,a link will populate detailing your live web address.
+
+The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-choice-quiz/)
+
+---
+
+## Credits
+
+##### Content
+
+- All the questions were created by using [Chat GPT](https://chat.openai.com/auth/login?sso)
+
+##### Media
+
+- The background image used throughout the whole quiz is from [Unsplash](https://unsplash.com/photos/open-book-lot-Oaqk7qqNh_c)
