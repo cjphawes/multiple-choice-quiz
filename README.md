@@ -30,7 +30,17 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 #### HTML & CSS Wireframe Layout
 
-![wireframe of my quiz layout](/assets/images/)
+- This design is very similar to my final layout structure with a few minor changes such as:
+  - Words of encouragement below the score out of 10 in the results container.
+  - I added a background image rather than using a color.
+  - Made edges of boxes rounded and removed the line underneath the question.
+  - I added a footer to the HTML for copyright purposes
+
+![wireframe of my quiz layout](/assets/images/home-screen-container-wf.png)
+![wireframe of my quiz layout](/assets/images/game-container-wf.png)
+![wireframe of my quiz layout](/assets/images/results-container-wf.png)
+
+---
 
 ### User Stories
 
@@ -49,7 +59,15 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 - As a frequent user, I would like to have the option of choosing a variety of quizzes in different subject areas.
 - As a frequent user, I would love to play and compete against my friends and family or random users.
 
+---
+
 ### Features
+
+There are three container elements inside the HTML structure:
+
+- The [Welcome container](#home-page), displaying the button to start the game.
+- The [Game container](#the-quiz---before-selection), displaying the actual quiz elements that the user will interact with.
+- The [Results container](#the-results), displaying the users final results of their game, with the option of restarting if wishing too.
 
 #### Home Page
 
@@ -61,7 +79,7 @@ Take a quick glance at my online quiz on a variety on device screen widths.
   - A simple interactive method of use for anyone to understand.
 
 - The home page includes:
-  - A call to action button, the user clicks to initiate the game.
+  - A call to action button, the user clicks to initiate the game. Upon hovering over the CTA button, the styling will change to a gradient background.
   - The quiz's title, which is also a hyperlink that sends you back to the home page when clicked on.
   - A footer for copyright purposes.
 
@@ -72,7 +90,7 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 - Once the user enters the game and they will come across:
 
   - A question that has been shuffled from a list of questions.
-  - 4 answer options associated to the question.
+  - Four answer options associated to the question.
   - A next question CTA button that is automatically disabled to not allow the user to skip a question.
   - The round number the user is currently on.
 
@@ -82,8 +100,8 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 - The user interacts by clicking on the answer box they think is correct, this will:
   - Disable the other answers
-  - Visually tell the user which answer they chose.
-  - Highlight the next question CTA button in color, subtly directing them where to click to continue the game.
+  - Visually tell the user which answer they chose by styling it all black with white text.
+  - Highlight the next question CTA button in a gradient color, subtly directing them where to click to continue the game.
 
 #### The Results
 
@@ -92,13 +110,13 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 - Once all questions have been answered, the results will appear and display:
   - The user's score out of 10.
   - Provide some words of encouragement to try again to get a better score (unless you get 100%)
-  - A CTA button for the user to restart the quiz.
+  - A CTA button for the user to restart the quiz. Upon hovering over the CTA button, the styling will change to a gradient background.
 
 #### Future Features To Implement
 
-- Option to select a category/subject to quiz the user in.
+- Option to select a category/subject to quiz the user, rather than just general knowledge.
 - Add the input for a username on the home page, to make user more engaged and feel more connected to the quiz.
-- Add a leaderboard to the results page to give the game a competitive nature allowing them to fight against random users.
+- Add a leaderboard to the results page to give the game a competitive nature allowing users to battle against each other.
 
 ---
 
@@ -106,7 +124,11 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 #### Solved Bugs
 
--
+- The background image for the quiz wasn't being displayed when deploying the website
+
+#### Unsolved Bugs
+
+- None.
 
 #### Validator Testing
 
@@ -132,9 +154,9 @@ The website was deployed to Github Pages.
 
 To do so , I followed these steps.
 
-**1.** From the website Github repository, navigate to **Settings**.
-**2.** Make sure your default branch is set to "main", in the left-hand side drop down menu, under **Code and Automation**, select **Pages**.
-**3.**Make sure the branch selected is "main", and upon a refresh of the page, at the top of the page automatically,a link will populate detailing your live web address.
+**1.** From the website Github repository, navigate to the **Settings** tab.
+**2.** Make sure your default branch is set to `main`, in the left-hand side drop down menu, under **Code and Automation**, select the **Pages** tab.
+**3.** Make sure the branch selected is `main`, and upon a refresh of the page, at the top of the page automatically,a link will populate detailing your live web address.
 
 The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-choice-quiz/)
 
@@ -149,3 +171,4 @@ The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-
 ##### Media
 
 - The background image used throughout the whole quiz is from [Unsplash](https://unsplash.com/photos/open-book-lot-Oaqk7qqNh_c)
+- The images, including inside this README, were all compressed using [Image Resizer](https://imageresizer.com/)
