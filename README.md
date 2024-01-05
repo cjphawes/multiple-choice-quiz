@@ -14,9 +14,9 @@ Have a go and see if you can guess all the questions correctly! [TriviaX](https:
 
 Take a quick glance at my online quiz on a variety on device screen widths.
 
-![a variety of screen widths of my online quiz](/assets/images/)
+![a variety of screen widths of my online quiz](/assets/readme-imgs/am-i-responsive-devices.png)
 
-- Am I Responsive [Webpage]()
+- Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.github.io/multiple-choice-quiz/)
 
 ---
 
@@ -26,7 +26,7 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 - This flowchart shows the logic and flow of the game.
 
-![flowchart of how the game is run](/assets/images/js-flowchart-for-quiz.webp)
+![flowchart of how the game is run](/assets/readme-imgs/js-flowchart-for-quiz.webp)
 
 #### HTML & CSS Wireframe Layout
 
@@ -36,9 +36,9 @@ Take a quick glance at my online quiz on a variety on device screen widths.
   - Made edges of boxes rounded and removed the line underneath the question.
   - I added a footer to the HTML for copyright purposes
 
-![wireframe of my quiz layout](/assets/images/home-screen-container-wf.png)
-![wireframe of my quiz layout](/assets/images/game-container-wf.png)
-![wireframe of my quiz layout](/assets/images/results-container-wf.png)
+![wireframe of my quiz layout](/assets/readme-imgs/home-screen-container-wf.png)
+![wireframe of my quiz layout](/assets/readme-imgs/game-container-wf.png)
+![wireframe of my quiz layout](/assets/readme-imgs/results-container-wf.png)
 
 ---
 
@@ -71,7 +71,7 @@ There are three container elements inside the HTML structure:
 
 #### Home Page
 
-![image of home page](/assets/images/home-page.webp)
+![image of home page](/assets/readme-imgs/home-page.webp)
 
 - The home page shows:
 
@@ -85,7 +85,7 @@ There are three container elements inside the HTML structure:
 
 #### The Quiz - Before Selection
 
-![image of main game section before selection](/assets/images/main-game-section-before-selection.webp)
+![image of main game section before selection](/assets/readme-imgs/main-game-section-before-selection.webp)
 
 - Once the user enters the game and they will come across:
 
@@ -96,7 +96,7 @@ There are three container elements inside the HTML structure:
 
 #### The Quiz - After Selection
 
-![image of main game section after selection](/assets/images/main-game-section-after-selection.webp)
+![image of main game section after selection](/assets/readme-imgs/main-game-section-after-selection.webp)
 
 - The user interacts by clicking on the answer box they think is correct, this will:
   - Disable the other answers
@@ -105,7 +105,7 @@ There are three container elements inside the HTML structure:
 
 #### The Results
 
-![image of results section](/assets/images/game-results-section.webp)
+![image of results section](/assets/readme-imgs/game-results-section.webp)
 
 - Once all questions have been answered, the results will appear and display:
   - The user's score out of 10.
@@ -136,7 +136,7 @@ There are three container elements inside the HTML structure:
 
 - No errors were found using the official [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcjphawes.github.io%2Fmultiple-choice-quiz%2Findex.html)
 
-![W3C HTML Validator Image](/assets/images/w3c-html-validator.png)
+![W3C HTML Validator Image](/assets/readme-imgs/w3c-html-validator.png)
 
 ##### CSS
 
