@@ -1,4 +1,4 @@
-![image of game title and background](/assets/images/game-title.png)
+![image of game title and background](/assets/readme-imgs/game-title.webp)
 
 # TriviaX
 
