@@ -42,15 +42,15 @@ body {
   margin-top: 1.5rem;
 }
 
-#logo-link:link,
-#logo-link:visited {
+#trivia-link:link,
+#trivia-link:visited {
   text-decoration: none;
   color: inherit;
   letter-spacing: 1.5rem;
   color: #fff;
 }
-#logo-link:hover,
-#logo-link:active {
+#trivia-link:hover,
+#trivia-link:active {
   color: #ddd;
 }
 
