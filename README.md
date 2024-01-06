@@ -120,7 +120,7 @@ There are three container elements inside the HTML structure:
 
 ## Testing
 
-Please refer to TESTING.md file for all test-related documentation.
+Please refer to [TESTING.md](/TESTING.md) file for all test-related documentation.
 
 #### Solved Bugs
 
@@ -139,7 +139,14 @@ Please refer to TESTING.md file for all test-related documentation.
 
 - None.
 
----
+#### Mistakes
+
+- Mistakes were made while committing messages to Github.
+  - There was one mistake in the following commits:
+
+    - "remove validator testing and put on TESTING.md file"
+
+    **_Supposed to be:_** "docs:remove validator testing and put on TESTING.md file"
 
 ## Deployment
 
