@@ -2,8 +2,6 @@
 
 # TriviaX
 
----
-
 **Hello Fellow Coders**!
 
 Welcome to TriviaX, an online general knowledge quiz, testing the users IQ to the max!
@@ -16,7 +14,7 @@ Take a quick glance at my online quiz on a variety on device screen widths.
 
 ![a variety of screen widths of my online quiz](/assets/readme-imgs/am-i-responsive-devices.png)
 
-- Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.github.io/multiple-choice-quiz/)
+Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.github.io/multiple-choice-quiz/)
 
 ---
 
@@ -122,9 +120,20 @@ There are three container elements inside the HTML structure:
 
 ## Testing
 
+Please refer to TESTING.md file for all test-related documentation.
+
 #### Solved Bugs
 
-- The background image for the quiz wasn't being displayed when deploying the website
+- **Issue 1:** The background image for the quiz wasn't being displayed when deploying the website.
+  - **Solution:** I corrected the file path address for the image due to it starting in the wrong folder.
+- **Issue 2:** Upon restarting the game via the restart quiz button, the next question button was not disabled, allowing the user to click next without answering the question.
+  - **Solution:**
+- **Issue 3:**
+  - **Solution:**
+- **Issue 4:**
+  - **Solution:**
+- **Issue 5:**
+  - **Solution:**
 
 #### Unsolved Bugs
 
@@ -166,7 +175,11 @@ The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-
 
 ##### Content
 
-- All the questions were created by using [Chat GPT](https://chat.openai.com/auth/login?sso)
+- All the questions were created using [Chat GPT](https://chat.openai.com/auth/login?sso)
+- The Favicon icon was made using [Favicon](https://favicon.io/favicon-generator/)
+- The code used for the sticky footer was from [Materialize CSS](https://materializecss.com/footer.html)
+- The footer copyright logo was found from [CSS Tricks](https://css-tricks.com/snippets/html/glyphs/)
+- The code used for shuffling the question set i created was the [Fisher-Yates Algorithm](https://stackoverflow.com/questions/59810241/how-to-fisher-yates-shuffle-a-javascript-array)
 
 ##### Media
 
