@@ -221,14 +221,13 @@ footer {
 }
 
 /*Media Queries*/
-@media screen and (max-width: 3840px) {
+/* @media screen and (max-width: 3840px) {
   #index-body {
     background-size: cover;
   }
 }
 
 @media screen and (max-width: 1500px) {
-  /*Constant Elements*/
   .website-hero-name {
     font-size: 7rem;
   }
@@ -241,12 +240,10 @@ footer {
     font-size: 2.5rem;
   }
 
-  /*Welcome Container*/
   #play-btn {
     font-size: 5rem;
   }
 
-  /*Game Container*/
   #game-container {
     margin: 3rem 0rem 15rem 0rem;
   }
@@ -269,7 +266,6 @@ footer {
     top: 19rem;
   }
 
-  /*Results Container*/
   #results-container {
     margin: 5rem 4rem 7rem 4rem;
   }
@@ -289,7 +285,6 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
-  /*Game Container*/
   #game-container {
     margin: 0rem 0rem 8rem 0rem;
   }
@@ -343,7 +338,6 @@ footer {
     top: 0rem;
   }
 
-  /*Results Container*/
   #results-container {
     margin: 7rem 4rem 5rem 4rem;
   }
@@ -365,7 +359,6 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-  /*Constant Elements*/
   .website-hero-name {
     font-size: 7rem;
   }
@@ -378,7 +371,6 @@ footer {
     font-size: 2rem;
   }
 
-  /*Welcome Container*/
   #welcome-container {
     margin: 15rem 0rem;
   }
@@ -390,7 +382,6 @@ footer {
     border: 0.6rem solid #fff;
   }
 
-  /*Game Container*/
   #game-container {
     margin: 0rem 0rem 6rem 0rem;
   }
@@ -420,7 +411,6 @@ footer {
     font-size: 2rem;
   }
 
-  /*Results Container*/
   #results-container {
     margin: 7rem 2rem 5rem 2rem;
   }
@@ -442,7 +432,6 @@ footer {
 }
 
 @media screen and (max-width: 520px) {
-  /*Constant Elements*/
   .website-hero-name {
     font-size: 5rem;
   }
@@ -455,7 +444,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  /*Welcome Container*/
   #welcome-container {
     margin: 10rem 0rem;
   }
@@ -467,7 +455,6 @@ footer {
     border: 0.6rem solid #fff;
   }
 
-  /*Game Container*/
   h3 {
     font-size: 1.5rem;
   }
@@ -498,7 +485,6 @@ footer {
     top: 1rem;
   }
 
-  /*Results Container*/
   #encouragement-title {
     font-size: 2rem;
   }
@@ -513,4 +499,4 @@ footer {
     padding: 1.5rem 2rem;
     border: 0.5rem solid #fff;
   }
-}
+} */
