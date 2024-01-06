@@ -139,22 +139,6 @@ Please refer to TESTING.md file for all test-related documentation.
 
 - None.
 
-#### Validator Testing
-
-##### HTML
-
-- No errors were found using the official [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcjphawes.github.io%2Fmultiple-choice-quiz%2Findex.html)
-
-![W3C HTML Validator Image](/assets/readme-imgs/w3c-html-validator.png)
-
-##### CSS
-
-- No errors were found using the official [(Jigsaw) Validator]
-
-##### Javascript
-
-- No errors were found using the official [JShint Validator]
-
 ---
 
 ## Deployment
