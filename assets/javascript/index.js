@@ -1,5 +1,5 @@
 //VARIABLES
-let questionAndAnswer = [
+const questionAndAnswer = [
   {
     question: "What is the capital of Thailand?",
     options: ["Laos", "Bangkok", "Chiang Mai", "Phnom Penh"],
@@ -77,22 +77,21 @@ const welcomeContainer = document.getElementById("welcome-container");
 const gameContainer = document.getElementById("game-container");
 const resultsContainer = document.getElementById("results-container");
 //Grabbing the answer btn and setting the variable
-let btnContainers = document.getElementsByClassName("answers-sub-container");
+const btnContainers = document.getElementsByClassName("answers-sub-container");
 const playBtn = document.getElementById("play-btn");
 //Variable for shuffled questions undefined enabling us to define inside the function startQuiz
 let shuffledListOfQuestionAndAnswers;
 //Grabbing the round number element for setting the round number
-let roundNumber = document.getElementById("round-number");
+const roundNumber = document.getElementById("round-number");
 //Grabbing the question <p> element for setting the question
-let questionElement = document.getElementById("question");
+const questionElement = document.getElementById("question");
 //Grabbing btn elements for next question and restarting the quiz
 const nextRoundBtn = document.getElementById("next-round-btn");
 const restartBtn = document.getElementById("restart-quiz");
 //Grabbing the results container text variables
-let endQuizTitle = document.getElementById("encouragement-title");
-let correctAnswers = document.getElementById("correct-answers");
-let scoreText = document.getElementById("score-text");
-let encouragementText = document.getElementById("encouragement-text");
+const endQuizTitle = document.getElementById("encouragement-title");
+const correctAnswers = document.getElementById("correct-answers");
+const scoreText = document.getElementById("score-text");
 
 //// EVENT LISTENERS
 
@@ -244,22 +243,18 @@ function displayResults() {
   if (correctAnswers === 10) {
     endQuizTitle.textContent = "Perfect Score!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    encouragementText.textContent = "You are a genius!";
     console.log(correctAnswers);
   } else if (correctAnswers >= 6) {
     endQuizTitle.textContent = "Wow you did great!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    encouragementText.textContent = "Keep it up!";
     console.log(correctAnswers);
   } else if (correctAnswers >= 3) {
     endQuizTitle.textContent = "Someone needs to go back to school!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    encouragementText.textContent = "Keep trying!";
     console.log(correctAnswers);
   } else if (correctAnswers < 3) {
     endQuizTitle.textContent = "You need to go back to school!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    encouragementText.textContent = "Is it worth trying again after that?";
     console.log(correctAnswers);
   }
   restartBtn.disabled = false;
