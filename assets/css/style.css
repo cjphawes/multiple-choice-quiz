@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: calc(60% + 0.8vmin);
 }
 
 body {
@@ -36,21 +36,20 @@ body {
 }
 
 /*Header Section*/
-.website-hero-name {
-  text-align: center;
-  font-size: 9rem;
-  margin-top: 1.5rem;
+header {
 }
-
-#trivia-link:link,
-#trivia-link:visited {
+.website-hero-name:link,
+.website-hero-name:visited {
+  text-align: center;
+  margin-top: 1.5rem;
   text-decoration: none;
   color: inherit;
   letter-spacing: 1.5rem;
   color: #fff;
+  font-size: 9rem;
 }
-#trivia-link:hover,
-#trivia-link:active {
+.website-hero-name:hover,
+.website-hero-name:active {
   color: #ddd;
 }
 
@@ -234,13 +233,13 @@ footer {
 }
 
 /*Media Queries*/
-/* @media screen and (max-width: 3840px) {
+@media screen and (max-width: 3840px) {
   #index-body {
     background-size: cover;
   }
 }
 
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1500px) {
   .website-hero-name {
     font-size: 7rem;
   }
