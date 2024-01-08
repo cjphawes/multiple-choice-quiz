@@ -37,6 +37,8 @@ body {
 
 /*Header Section*/
 header {
+  margin: 0;
+  padding: 0;
 }
 .website-hero-name:link,
 .website-hero-name:visited {
@@ -47,6 +49,7 @@ header {
   letter-spacing: 1.5rem;
   color: #fff;
   font-size: 9rem;
+  background-color: #f8770f;
 }
 .website-hero-name:hover,
 .website-hero-name:active {
@@ -55,6 +58,9 @@ header {
 
 #letter-x {
   font-family: "Monoton", sans-serif;
+}
+
+h1 {
 }
 
 /*Main Section*/
