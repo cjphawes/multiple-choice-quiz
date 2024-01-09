@@ -181,7 +181,8 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   border-radius: 2rem;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
+  height: 4rem;
   transition: all 0.3s;
 }
 
@@ -212,13 +213,14 @@ h2 {
   border: 0.5rem solid #fff;
   text-decoration: none;
   border-radius: 3rem;
-  padding: 1.5rem 2.5rem;
-  transition: all 0.2s;
+  padding: 0rem 2.5rem;
+  height: 6rem;
+  transition: all 0.3s;
 }
 
 #restart-quiz:hover {
   cursor: pointer;
-  border: inset 0rem;
+  border: 0rem;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
@@ -228,10 +230,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
+  height: 2.5rem;
 }
 #copyright-text {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 50px 50px;
 }
