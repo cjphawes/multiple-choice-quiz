@@ -219,7 +219,6 @@ h2 {
 #restart-quiz:hover {
   cursor: pointer;
   border: inset 0rem;
-  /* padding: 2rem 3rem; */
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
