@@ -126,14 +126,12 @@ Please refer to [TESTING.md](/TESTING.md) file for all test-related documentatio
 
 - **Issue 1:** The background image for the quiz wasn't being displayed when deploying the website.
   - **Solution:** I corrected the file path address for the image due to it starting in the wrong folder.
-- **Issue 2:** Upon restarting the game via the restart quiz button, the next question button was not disabled, allowing the user to click next without answering the question.
-  - **Solution:**
-- **Issue 3:**
-  - **Solution:**
-- **Issue 4:**
-  - **Solution:**
-- **Issue 5:**
-  - **Solution:**
+- **Issue 2:** When trying to hide the welcome container on click of the play button CTA, it wasn't hiding.
+  - **Solution:** I added `!important` to the css styling of the class `.hide`
+- **Issue 3:** The `textContent setting of null` error was being shown on the display of the results container
+  - **Solution:** I had not realised i removed the `encouragement-text` line of code in the HTML so removing these lines of code in the JS removed the error.
+- **Issue 4:** I was getting another error on the display of the results container showing, "unable to read property of `.question`
+  - **Solution:** The fix for this was adding an IF statement to the `nextRoundBtn` function
 
 #### Unsolved Bugs
 
@@ -142,11 +140,24 @@ Please refer to [TESTING.md](/TESTING.md) file for all test-related documentatio
 #### Mistakes
 
 - Mistakes were made while committing messages to Github.
-  - There was one mistake in the following commits:
 
-    - "remove validator testing and put on TESTING.md file"
+  - There were four mistake in the following commits:
+
+    - **20a1b29** - "remove validator testing and put on TESTING.md file"
 
     **_Supposed to be:_** "docs:remove validator testing and put on TESTING.md file"
+
+    - **714e319** - "remove png and webp versions of imgs"
+
+    **_Supposed to be:_** "maint:remove png and webp versions of imgs"
+
+    - **1e1727d** - "change btn vars to const, restructure code semantically"
+
+    **_Supposed to be:_** "feat:change btn vars to const, restructure code semantically"
+
+    - **98162ad** - "add comments, remove seven div elements"
+
+    **_Supposed to be:_** "feat:add comments, remove seven div elements"
 
 ## Deployment
 
@@ -171,6 +182,7 @@ The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-
 - The code used for the sticky footer was from [Materialize CSS](https://materializecss.com/footer.html)
 - The footer copyright logo was found from [CSS Tricks](https://css-tricks.com/snippets/html/glyphs/)
 - The code used for shuffling the question set i created was the [Fisher-Yates Algorithm](https://stackoverflow.com/questions/59810241/how-to-fisher-yates-shuffle-a-javascript-array)
+- The code used for the automatic font scaling is from [Automatic font scaling](https://sjorswijsman.medium.com/3-easy-css-tricks-for-responsive-websites-i-use-in-every-project-68ec334a1522)
 
 ##### Media
 
