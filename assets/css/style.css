@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 html {
@@ -36,26 +37,27 @@ body {
 }
 
 /*Header Section*/
-h1 {
+header {
+  text-align: center;
 }
 
 .website-hero-name:link,
 .website-hero-name:visited {
-  display: inline-block;
-  text-align: center;
   text-decoration: none;
-  letter-spacing: 1.5rem;
   color: #fff;
-  font-size: 9rem;
-  background-color: #f8770f;
 }
 .website-hero-name:hover,
 .website-hero-name:active {
   color: #ddd;
 }
 
+#trivia-title {
+  font-size: 10rem;
+}
+
 #letter-x {
   font-family: "Monoton", sans-serif;
+  font-size: 10rem;
 }
 
 /*Main Section*/
@@ -93,9 +95,9 @@ main {
 
 /*Welcome container elements*/
 #play-btn {
-  font-size: 9rem;
+  font-size: 12rem;
   font-weight: 900;
-  padding: 5rem 7rem;
+  padding: 3rem 5rem;
   border-radius: 5rem;
   border: 1.2rem solid #fff;
   text-decoration: none;
@@ -117,7 +119,7 @@ main {
   top: -14rem;
 }
 
-h3 {
+h2 {
   font-size: 3rem;
   padding: 1.5rem 1.5rem;
   border-radius: 0rem 2rem 2rem 0rem;
@@ -156,7 +158,7 @@ h3 {
   column-gap: 2rem;
   margin: 4rem 2rem 2rem 2rem;
   width: 90%;
-  max-width: 2500px;
+  max-width: 3500px;
   background-color: aqua;
 }
 
