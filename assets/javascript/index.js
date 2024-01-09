@@ -109,7 +109,6 @@ for (let i = 0; i < btnContainers.length; i++) {
   btnContainers[i].addEventListener("click", () => {
     btnContainers[i].classList.add("selected");
     chosenAnswer = btnContainers[i].textContent;
-    console.log(`You chose ${chosenAnswer}`);
     nextBtnEnable();
   });
 }
@@ -160,10 +159,10 @@ function startQuiz() {
  */
 function shuffleQuestions() {
   for (let i = questionAndAnswer.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
+    let randomQuestion = Math.floor(Math.random() * (i + 1));
     let temp = questionAndAnswer[i];
-    questionAndAnswer[i] = questionAndAnswer[j];
-    questionAndAnswer[j] = temp;
+    questionAndAnswer[i] = questionAndAnswer[randomQuestion];
+    questionAndAnswer[randomQuestion] = temp;
   }
   shuffledListOfQuestionAndAnswers = questionAndAnswer;
   return;
@@ -198,13 +197,9 @@ function checkAnswer() {
   //Check if the answer clicked is the correct answer
   if (chosenAnswer === correctAnswer) {
     correctAnswers++;
-    console.log(`Correct Answer!`);
-  } else {
-    console.log(`Wrong Answer! The correct answer is ${correctAnswer}`);
   }
   //Check if the current round is the last round, if so, display the results
   if (currentRound === maxNumOfQuestions) {
-    console.log("Game Over");
     displayResults();
   }
   //Disable the next round btn
@@ -256,20 +251,15 @@ function displayResults() {
   if (correctAnswers === 10) {
     endQuizTitle.textContent = "Perfect Score!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    console.log(correctAnswers);
   } else if (correctAnswers >= 6) {
     endQuizTitle.textContent = "Wow you did great!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    console.log(correctAnswers);
   } else if (correctAnswers >= 3) {
     endQuizTitle.textContent = "Someone needs to go back to school!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    console.log(correctAnswers);
   } else if (correctAnswers < 3) {
     endQuizTitle.textContent = "You need to go back to school!";
     scoreText.textContent = `You scored ${correctAnswers} out of ${maxNumOfQuestions}`;
-    console.log(correctAnswers);
   }
   restartBtn.disabled = false;
-  console.log("restart btn enabled");
 }
