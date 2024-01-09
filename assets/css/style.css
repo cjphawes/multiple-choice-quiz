@@ -36,16 +36,14 @@ body {
 }
 
 /*Header Section*/
-header {
-  margin: 0;
-  padding: 0;
+h1 {
 }
+
 .website-hero-name:link,
 .website-hero-name:visited {
+  display: inline-block;
   text-align: center;
-  margin-top: 1.5rem;
   text-decoration: none;
-  color: inherit;
   letter-spacing: 1.5rem;
   color: #fff;
   font-size: 9rem;
@@ -58,9 +56,6 @@ header {
 
 #letter-x {
   font-family: "Monoton", sans-serif;
-}
-
-h1 {
 }
 
 /*Main Section*/
