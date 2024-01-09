@@ -1,4 +1,4 @@
-![image of game title and background](/assets/readme-imgs/game-title.webp)
+![image of game title and background](documentation-imgs/game-title.webp)
 
 # TriviaX
 
@@ -12,7 +12,7 @@ Have a go and see if you can guess all the questions correctly! [TriviaX](https:
 
 Take a quick glance at my online quiz on a variety on device screen widths.
 
-![a variety of screen widths of my online quiz](/assets/readme-imgs/am-i-responsive-devices.png)
+![a variety of screen widths of my online quiz](documentation-imgs/am-i-responsive-devices.webp)
 
 Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.github.io/multiple-choice-quiz/)
 
@@ -24,7 +24,7 @@ Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.gith
 
 - This flowchart shows the logic and flow of the game.
 
-![flowchart of how the game is run](/assets/readme-imgs/js-flowchart-for-quiz.webp)
+![flowchart of how the game is run](documentation-imgs/js-flowchart-for-quiz.webp)
 
 #### HTML & CSS Wireframe Layout
 
@@ -34,9 +34,9 @@ Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.gith
   - Made edges of boxes rounded and removed the line underneath the question.
   - I added a footer to the HTML for copyright purposes
 
-![wireframe of my quiz layout](/assets/readme-imgs/home-screen-container-wf.png)
-![wireframe of my quiz layout](/assets/readme-imgs/game-container-wf.png)
-![wireframe of my quiz layout](/assets/readme-imgs/results-container-wf.png)
+![wireframe of my quiz layout](documentation-imgs/home-screen-container-wf.webp)
+![wireframe of my quiz layout](documentation-imgs/game-container-wf.webp)
+![wireframe of my quiz layout](documentation-imgs/results-container-wf.webp)
 
 ---
 
@@ -69,7 +69,7 @@ There are three container elements inside the HTML structure:
 
 #### Home Page
 
-![image of home page](/assets/readme-imgs/home-page.webp)
+![image of home page](documentation-imgs/home-page.webp)
 
 - The home page shows:
 
@@ -83,7 +83,7 @@ There are three container elements inside the HTML structure:
 
 #### The Quiz - Before Selection
 
-![image of main game section before selection](/assets/readme-imgs/main-game-section-before-selection.webp)
+![image of main game section before selection](documentation-imgs/main-game-section-before-selection.webp)
 
 - Once the user enters the game and they will come across:
 
@@ -94,7 +94,7 @@ There are three container elements inside the HTML structure:
 
 #### The Quiz - After Selection
 
-![image of main game section after selection](/assets/readme-imgs/main-game-section-after-selection.webp)
+![image of main game section after selection](documentation-imgs/main-game-section-after-selection.webp)
 
 - The user interacts by clicking on the answer box they think is correct, this will:
   - Disable the other answers
@@ -103,7 +103,7 @@ There are three container elements inside the HTML structure:
 
 #### The Results
 
-![image of results section](/assets/readme-imgs/game-results-section.webp)
+![image of results section](documentation-imgs/game-results-section.webp)
 
 - Once all questions have been answered, the results will appear and display:
   - The user's score out of 10.
@@ -139,25 +139,25 @@ Please refer to [TESTING.md](/TESTING.md) file for all test-related documentatio
 
 #### Mistakes
 
-- Mistakes were made while committing messages to Github.
+There were four mistakes were made while committing messages to Github.
 
-  - There were four mistake in the following commits:
+- **20a1b29** - "remove validator testing and put on TESTING.md file"
 
-    - **20a1b29** - "remove validator testing and put on TESTING.md file"
+**_Supposed to be:_** "docs:remove validator testing and put on TESTING.md file"
 
-    **_Supposed to be:_** "docs:remove validator testing and put on TESTING.md file"
+- **714e319** - "remove png and webp versions of imgs"
 
-    - **714e319** - "remove png and webp versions of imgs"
+**_Supposed to be:_** "maint:remove png and webp versions of imgs"
 
-    **_Supposed to be:_** "maint:remove png and webp versions of imgs"
+- **1e1727d** - "change btn vars to const, restructure code semantically"
 
-    - **1e1727d** - "change btn vars to const, restructure code semantically"
+**_Supposed to be:_** "feat:change btn vars to const, restructure code semantically"
 
-    **_Supposed to be:_** "feat:change btn vars to const, restructure code semantically"
+- **98162ad** - "add comments, remove seven div elements"
 
-    - **98162ad** - "add comments, remove seven div elements"
+**_Supposed to be:_** "feat:add comments, remove seven div elements"
 
-    **_Supposed to be:_** "feat:add comments, remove seven div elements"
+---
 
 ## Deployment
 
