@@ -90,15 +90,22 @@ const nextRoundBtn = document.getElementById("next-round-btn");
 const restartBtn = document.getElementById("restart-quiz");
 //Grabbing the results container text variables
 const endQuizTitle = document.getElementById("encouragement-title");
-const correctAnswers = document.getElementById("correct-answers");
+let correctAnswers = document.getElementById("correct-answers");
 const scoreText = document.getElementById("score-text");
 
 //// EVENT LISTENERS
 
-//Get the play btn and create event listener, running the function displayRoundOne
+/*
+ *This function will be used to start the quiz on user click
+ */
 playBtn.addEventListener("click", startQuiz);
+
 //Run a for loop through the answer buttons
 for (let i = 0; i < btnContainers.length; i++) {
+  /*
+   *This function will be used to add the class selected to the answer button clicked, set the chosenAnswer variable
+   *and run the nextBtnEnable function
+   */
   btnContainers[i].addEventListener("click", () => {
     btnContainers[i].classList.add("selected");
     chosenAnswer = btnContainers[i].textContent;
@@ -107,14 +114,20 @@ for (let i = 0; i < btnContainers.length; i++) {
   });
 }
 
-//Get the next round btn and create event listener, running the function displayNextRound
+/*
+ *This function will be used to run the functions checkAnswer, displayQuestion and increase the question index
+ */
 nextRoundBtn.addEventListener("click", () => {
   checkAnswer();
   currentQuestionIndex++;
-  displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
+  if (currentQuestionIndex < shuffledListOfQuestionAndAnswers.length) {
+    displayQuestion(shuffledListOfQuestionAndAnswers[currentQuestionIndex]);
+  }
 });
 
-//Get the restart btn and create event listener, running the function restartQuiz
+/*
+ *This function will be used to restart the quiz on user click
+ */
 restartBtn.addEventListener("click", restartQuiz);
 
 ////WELCOME CONTAINER SET-UP
