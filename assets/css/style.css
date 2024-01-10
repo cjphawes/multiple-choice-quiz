@@ -221,10 +221,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
+  height: 3rem;
 }
 #copyright-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -241,9 +241,12 @@ footer {
     font-size: 5rem;
   }
 
+  #round-container {
+    margin-bottom: 1.5em;
+  }
+
   #question {
     font-size: 1.5rem;
-    margin-top: 0.5em;
   }
 
   .answers-sub-container {
