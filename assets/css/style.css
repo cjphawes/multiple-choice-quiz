@@ -51,12 +51,12 @@ header {
 }
 
 #trivia-title {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 #letter-x {
   font-family: "Monoton", sans-serif;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 /*Main Section*/
@@ -78,7 +78,7 @@ main {
   text-align: center;
   width: 100%;
   display: flex;
-  margin-bottom: 2em;
+  margin: 1em 0em 2em 0em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -120,7 +120,7 @@ main {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 0.3em 0.5em;
   border-radius: 1rem;
   background-color: #000;
@@ -136,26 +136,25 @@ h2 {
   border-radius: 0.2em 0.3em 0.3em 0.2em;
   font-weight: 700;
   background-color: #e63010;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 #question {
   display: block;
   margin: 0em 0.5em;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #fff;
 }
 
 #answers-main-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 1em;
-  column-gap: 1em;
-  margin: 2em 0em 1em 0em;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 2em 1em 1em 1em;
+  height: auto;
+  width: 100%;
   max-width: 3500px;
 }
 
@@ -163,20 +162,22 @@ h2 {
   align-self: center;
   padding: 0.5em 1em;
   border-radius: 4rem;
-  border: 0.5rem solid #000;
+  border: 0.2em solid #000;
   transition: all 0.3s;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   cursor: pointer;
+  width: 60%;
 }
 
 #next-round-btn {
-  font-size: 1.5rem;
+  margin-top: 0.5em;
+  font-size: 2.5rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 3rem;
   padding: 0em 1em;
-  height: 3rem;
+  height: 5rem;
   transition: all 0.3s;
 }
 
@@ -220,10 +221,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.5rem;
+  height: 3.5rem;
 }
 #copyright-text {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -234,11 +235,118 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #round-container {
-    margin-bottom: 1.5em;
-}  
+@media screen and (max-width: 1300px){
+#trivia-title, #letter-x {
+  font-size: 5rem;
+}
 
+h2 {
+  font-size: 2rem;
+}
+
+#round-number {
+  font-size: 2rem;
+}
+  
+#question {
+  font-size: 2rem;
+}
+
+.answers-sub-container {
+  font-size: 2.5rem;
+}
+
+#next-round-btn {
+  font-size: 1.5rem;
+  height: 4rem;
+}
+
+}
+  
+@media screen and (max-width: 650px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+    
+  #round-number {
+    font-size: 1.5rem;
+  }
+  
+  #question {
+    font-size: 1.3rem;
+  }
+
+  .answers-sub-container {
+    font-size: 1.7rem;
+  }
+  
+  #next-round-btn {
+    font-size: 1rem;
+    height: 3rem;
+  }
+  
+
+}
+  /* #game-container {
+    margin: 0em 2em 2em 2em;
+  }
+
+  #round-container {
+    top: -5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #round-number {
+    font-size: 1.5rem;
+  }
+
+  #question {
+    font-size: 1.5rem;
+  }
+
+  #answers-main-container {
+    margin: 1.5em 2em 1em 2em;
+  }
+
+  .answers-sub-container {
+    width: 40%;
+    font-size: 1.5rem;
+    height: 5rem;
+  }
+
+  #next-round-btn {
+    font-size: 1.2rem;
+    height: 2.5rem;
+  }
+
+  #results-container {
+    margin: 0em 2em 5em 2em;
+  }
+
+  #encouragement-title {
+    font-size: 2rem;
+  }
+
+  #score-text {
+    font-size: 2.5rem;
+  }
+
+  #restart-quiz {
+    margin: 0em;
+    font-size: 2.5rem;
+    height: 6rem;
+  }
+
+  footer {
+    height: 2rem;
+  } */
+  
+}
+
+/* @media screen and (max-width: 768px) {
 #question {
   font-size: 1.5rem;
 }
@@ -261,11 +369,7 @@ footer {
   #next-round-btn {
     font-size: 1.2rem;
     height: 3rem;
-  }
-
-
-  
-}
+  } */
 
 /*Change layout of game container*/
 /* @media screen and (max-width: 2300px) {
