@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: calc(40% + 0.9vmin);
+}
+
 body {
   font-weight: 400;
   font-family: sans-serif;
@@ -47,12 +51,12 @@ header {
 }
 
 #trivia-title {
-  font-size: 5.5vw;
+  font-size: 10rem;
 }
 
 #letter-x {
   font-family: "Monoton", sans-serif;
-  font-size: 5.5vw;
+  font-size: 10rem;
 }
 
 /*Main Section*/
@@ -72,7 +76,7 @@ main {
 
 #game-container {
   text-align: center;
-  margin: 3vw;
+  margin: 3em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -84,28 +88,28 @@ main {
 #results-container {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 3em;
   align-items: center;
   justify-content: center;
-  margin: 3vw 4vw 5vw 4vw;
+  margin: 3em 4em 10em 4em;
 }
 
 /*Welcome container elements*/
 #play-btn {
-  font-size: 5vw;
+  font-size: 10rem;
   font-weight: 900;
-  padding: 2vw 4vw;
-  border-radius: 3vw;
-  border: 0.7vw solid #fff;
+  padding: 0.3em 0.4em;
+  margin: 0em 0.5em;
+  border-radius: 3rem;
+  border: 1rem solid #fff;
   text-decoration: none;
   transition: all 0.3s;
   color: #fff;
   background-color: transparent;
-  margin: 5vw 0vw 10vw 0vw;
 }
 #play-btn:hover {
   color: #fff;
-  border: inset 0vw;
+  border: inset 0rem;
   cursor: pointer;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
@@ -113,35 +117,35 @@ main {
 /*Game container elements*/
 #round-container {
   position: absolute;
-  left: 0vw;
-  top: -7vw;
+  left: 0rem;
+  top: -12rem;
 }
 
 h2 {
-  font-size: 2vw;
-  padding: 0.7vw 1vw 0.7vw 0.5vw;
-  border-radius: 0vw 1.5vw 1.5vw 0vw;
+  font-size: 3.5rem;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  border-radius: 0rem 2.5rem 2.5rem 0rem;
   background-color: #000;
   color: #fff;
 
   display: flex;
-  gap: 0.5vw;
+  gap: 0.3em;
 }
 
 #round-number {
   color: #fff;
-  padding: 0vw 1vw 0vw 0.7vw;
-  border-radius: 0.5vw 1vw 1vw 0.5vw;
+  padding: 0em 0.4em 0em 0.3em;
+  border-radius: 0.2em 0.3em 0.3em 0.2em;
   font-weight: 700;
   background-color: #e63010;
-  font-size: 2vw;
+  font-size: 3.5rem;
 }
 
 #question {
   display: block;
-  margin: 0vw 1vw;
+  margin: 0em 1em;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3.5rem;
   font-weight: 600;
   color: #fff;
 }
@@ -150,70 +154,66 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 0vw;
-  column-gap: 1vw;
-  margin: 1vw;
+  row-gap: 0em;
+  column-gap: 1em;
+  margin: 4em 4em 2em 4em;
   width: 90%;
   max-width: 3500px;
-  height: 15vw;
+  height: 25em;
 }
 
 .answers-sub-container {
   align-self: center;
-  border-radius: 2vw;
-  border: 0.5vw solid #000;
+  border-radius: 4rem;
+  border: 1rem solid #000;
   transition: all 0.3s;
-  font-size: 2vw;
+  font-size: 4rem;
   height: 90%;
   font-weight: 600;
   cursor: pointer;
 }
 
 #next-round-btn {
-  font-size: 1.5vw;
+  font-size: 3rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 1.5vw;
-  padding: 0vw 1vw;
-  height: 3.5vw;
+  border-radius: 3rem;
+  padding: 0em 1em;
+  height: 6rem;
   transition: all 0.3s;
 }
 
 /*Results container elements*/
 #encouragement-title {
-  margin-bottom: 1vw;
-  font-size: 3vw;
+  margin-bottom: 1em;
+  font-size: 4rem;
   font-weight: normal;
   color: #fff;
 }
 
 #score-text {
-  font-size: 3.5vw;
+  font-size: 4.5rem;
   font-weight: 600;
   color: #fff;
-}
-
-#correct-answers {
-  color: #e63010;
 }
 
 #restart-quiz {
-  margin: 2vw 0vw;
-  font-size: 2.5vw;
+  margin: 1em 0em;
+  font-size: 5rem;
   font-weight: 600;
   background-color: #000;
   color: #fff;
-  border: 0.3vw solid #fff;
+  border: 0.5rem solid #fff;
   text-decoration: none;
-  border-radius: 2vw;
-  padding: 0vw 2.5vw;
-  height: 6vw;
+  border-radius: 4rem;
+  padding: 0em 1em;
+  height: 10rem;
   transition: all 0.3s;
 }
 
 #restart-quiz:hover {
   cursor: pointer;
-  border: 0vw;
+  border: 0rem;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
@@ -223,12 +223,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.5vw;
+  height: 5rem;
 }
 #copyright-text {
-  font-size: 1.5vw;
+  font-size: 2rem;
   font-weight: 400;
-  margin: 50px 50px;
 }
 
 /*Media Queries*/
@@ -239,18 +238,6 @@ footer {
 }
 
 /* @media screen and (max-width: 1500px) { */
-/* .website-hero-name {
-    font-size: 7rem;
-  }
-
-  footer {
-    height: 5rem;
-  }
-
-  #copyright-text {
-    font-size: 2.5rem;
-  } */
-
 /* #play-btn {
     font-size: 5rem;
   } */
