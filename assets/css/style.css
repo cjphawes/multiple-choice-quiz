@@ -72,6 +72,7 @@ main {
 #welcome-container {
   display: flex;
   justify-content: center;
+  margin-top: 15rem;
 }
 
 #game-container {
@@ -96,10 +97,11 @@ main {
 
 /*Welcome container elements*/
 #play-btn {
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 900;
   padding: 0.3em 0.4em;
-  margin: 0em 0.5em;
+  margin: 0em 1em;
+  text-wrap: nowrap;
   border-radius: 3rem;
   border: 0.5rem solid #fff;
   text-decoration: none;
@@ -236,6 +238,9 @@ footer {
 }
 
 @media screen and (max-width: 1300px) {
+  #play-btn {
+    font-size: 4rem;
+  }
   #trivia-title,
   #letter-x {
     font-size: 5rem;
@@ -273,6 +278,11 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+  #play-btn {
+    font-size: 3.5rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2.5rem;
+  }
   h2 {
     font-size: 1rem;
   }
