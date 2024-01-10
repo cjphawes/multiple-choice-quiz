@@ -242,7 +242,15 @@ footer {
   }
 
   #round-container {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  #round-number {
+    font-size: 1.3rem;
   }
 
   #question {
