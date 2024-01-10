@@ -76,7 +76,7 @@ main {
 
 #game-container {
   text-align: center;
-  margin: 3em;
+  margin: 0em 3em 3em 3em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -236,34 +236,74 @@ footer {
     background-size: cover;
   }
 }
-
-/* @media screen and (max-width: 1500px) { */
-/* #play-btn {
-    font-size: 5rem;
-  } */
-
-/* #game-container {
-    margin: 3rem 0rem 15rem 0rem;
-  }
-
-  h3 {
-    font-size: 2rem;
-
-    bottom: 4rem;
-  }
-
-  #round-number {
+@media screen and (max-width: 2300px) {
+  #question {
     font-size: 3rem;
   }
 
-  #question {
-    font-size: 3.5rem;
+  .answers-sub-container {
+    height: 80%;
+    font-size: 3rem;
   }
 
   #next-round-btn {
-    top: 19rem;
+    font-size: 2.5rem;
+    height: 5rem;
+  }
+}
+  
+/*Change layout of game container*/
+@media screen and (max-width: 1800px) {
+  #round-container {
+    position: relative;
+    top: -1rem;
+    margin-bottom: 2em;
   }
 
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+
+    border-radius: 1.5rem;
+    font-size: 2rem;
+  }
+
+  #round-number {
+    font-size: 2rem;
+    border-radius: 0.3em;
+  }
+
+  #game-container {
+    margin: 0em 3em 8em 3em;
+  }
+
+  #question {
+    margin: 0em 1em;
+    font-size: 2.5rem;
+  }
+
+  #answers-main-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 3em 2em 2em 2em;
+    height: auto;
+  }
+
+  .answers-sub-container {
+    width: 90%;
+    height: 10rem;
+  }
+}
+
+  @media screen and (max-width: 1300px) {
+  #play-btn {
+    font-size: 6rem;
+  }
+}
+
+/*
   #results-container {
     margin: 5rem 4rem 7rem 4rem;
   }
@@ -280,9 +320,9 @@ footer {
     margin: 7rem 0rem;
     font-size: 4rem;
   } */
-/* } */
+  /* } */
 
-/* @media screen and (max-width: 850px) {
+  /* @media screen and (max-width: 850px) {
   #game-container {
     margin: 0rem 0rem 8rem 0rem;
   }
@@ -498,3 +538,4 @@ footer {
     border: 0.5rem solid #fff;
   }
 } */
+}
