@@ -128,10 +128,12 @@ Please refer to [TESTING.md](/TESTING.md) file for all test-related documentatio
   - **Solution:** I corrected the file path address for the image due to it starting in the wrong folder.
 - **Issue 2:** When trying to hide the welcome container on click of the play button CTA, it wasn't hiding.
   - **Solution:** I added `!important` to the css styling of the class `.hide`
-- **Issue 3:** The `textContent setting of null` error was being shown on the display of the results container
+- **Issue 3:** The `textContent setting of null` error was being shown on the display of the results container.
   - **Solution:** I had not realised i removed the `encouragement-text` line of code in the HTML so removing these lines of code in the JS removed the error.
-- **Issue 4:** I was getting another error on the display of the results container showing, "unable to read property of `.question`
+- **Issue 4:** I was getting another error on the display of the results container showing, "unable to read property of `.question`.
   - **Solution:** The fix for this was adding an IF statement to the `nextRoundBtn` function
+- **Issue:** The elements on the page were shifting around when hovering on the restart quiz button and when selecting an answer.
+  - **Solution:** I set a fixed height to the button elements so that the shift will no longer occur.
 
 #### Unsolved Bugs
 
