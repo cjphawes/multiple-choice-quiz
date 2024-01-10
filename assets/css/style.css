@@ -79,7 +79,6 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: red;
 }
 
 #results-container {
@@ -115,12 +114,12 @@ main {
 #round-container {
   position: absolute;
   left: 0vw;
-  top: -5vw;
+  top: -7vw;
 }
 
 h2 {
   font-size: 2vw;
-  padding: 0.5vw 1vw 0.5vw 0.5vw;
+  padding: 0.7vw 1vw 0.7vw 0.5vw;
   border-radius: 0vw 1.5vw 1.5vw 0vw;
   background-color: #000;
   color: #fff;
@@ -151,13 +150,12 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 0.5vw;
+  row-gap: 0vw;
   column-gap: 1vw;
   margin: 1vw;
   width: 90%;
   max-width: 3500px;
   height: 20vw;
-  background-color: aqua;
 }
 
 .answers-sub-container {
@@ -167,13 +165,13 @@ h2 {
   padding: 0.5vw 0.5vw;
   transition: all 0.3s;
   font-size: 2vw;
-  height: 70%;
+  height: 85%;
   font-weight: 600;
   cursor: pointer;
 }
 
 #next-round-btn {
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-weight: 600;
   text-decoration: none;
   border-radius: 1.5vw;
