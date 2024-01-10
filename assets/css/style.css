@@ -250,7 +250,8 @@ footer {
   }
 
   .answers-sub-container {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    padding: 0.4em 1em;
   }
 
   #next-round-btn {
