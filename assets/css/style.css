@@ -3,12 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 1rem;
 }
-
-/* html {
-  font-size: calc(60% + 0.8vmax);
-} */
 
 body {
   font-weight: 400;
@@ -77,7 +72,7 @@ main {
 
 #game-container {
   text-align: center;
-  margin: 3rem;
+  margin: 3vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -107,11 +102,11 @@ main {
   transition: all 0.3s;
   color: #fff;
   background-color: transparent;
-  margin: 5rem 0rem 10rem 0rem;
+  margin: 5vw 0vw 10vw 0vw;
 }
 #play-btn:hover {
   color: #fff;
-  border: inset 0rem;
+  border: inset 0vw;
   cursor: pointer;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
@@ -119,37 +114,35 @@ main {
 /*Game container elements*/
 #round-container {
   position: absolute;
-  left: 0rem;
-  top: -30rem;
+  left: 0vw;
+  top: -5vw;
 }
 
 h2 {
-  font-size: 3vw;
-  padding: 1vw 1vw;
+  font-size: 2vw;
+  padding: 0.5vw 1vw 0.5vw 0.5vw;
   border-radius: 0vw 1.5vw 1.5vw 0vw;
-  line-height: 1.3;
   background-color: #000;
   color: #fff;
 
   display: flex;
-  gap: 2rem;
+  gap: 0.5vw;
 }
 
 #round-number {
   color: #fff;
   padding: 0vw 1vw 0vw 0.7vw;
   border-radius: 0.5vw 1vw 1vw 0.5vw;
-  /* border-radius: 1vw; */
   font-weight: 700;
   background-color: #e63010;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 #question {
   display: block;
-  margin: 0rem 2rem;
+  margin: 0vw 1vw;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 600;
   color: #fff;
 }
@@ -158,32 +151,34 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 1rem;
-  column-gap: 1rem;
-  margin: 2rem;
+  row-gap: 0.5vw;
+  column-gap: 1vw;
+  margin: 1vw;
   width: 90%;
   max-width: 3500px;
+  height: 20vw;
   background-color: aqua;
 }
 
 .answers-sub-container {
   align-self: center;
-  border-radius: 3rem;
-  border: 0.5rem solid #000;
-  padding: 1.5rem 1.5rem;
+  border-radius: 2vw;
+  border: 0.5vw solid #000;
+  padding: 0.5vw 0.5vw;
   transition: all 0.3s;
-  font-size: 2rem;
+  font-size: 2vw;
+  height: 70%;
   font-weight: 600;
   cursor: pointer;
 }
 
 #next-round-btn {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 2rem;
-  padding: 0rem 2rem;
-  height: 4rem;
+  border-radius: 1.5vw;
+  padding: 0vw 1vw;
+  height: 4vw;
   transition: all 0.3s;
 }
 
