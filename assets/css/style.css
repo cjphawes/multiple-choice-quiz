@@ -16,7 +16,6 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .hide {
@@ -281,7 +280,7 @@ footer {
 
 @media screen and (max-width: 650px) {
   #play-btn {
-    font-size: 3.5rem;
+    font-size: 3rem;
     border: 0.4rem solid #fff;
     border-radius: 2.5rem;
   }
