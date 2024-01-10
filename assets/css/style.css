@@ -116,11 +116,11 @@ main {
 
 /*Game container elements*/
 #round-container {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding: 0.3em 0.5em;
   border-radius: 1rem;
   background-color: #000;
@@ -136,14 +136,14 @@ h2 {
   border-radius: 0.2em 0.3em 0.3em 0.2em;
   font-weight: 700;
   background-color: #e63010;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #question {
   display: block;
   margin: 0em 0.5em;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #fff;
 }
@@ -164,7 +164,7 @@ h2 {
   border-radius: 4rem;
   border: 0.2em solid #000;
   transition: all 0.3s;
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 600;
   cursor: pointer;
   width: 60%;
@@ -172,12 +172,12 @@ h2 {
 
 #next-round-btn {
   margin-top: 0.5em;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 3rem;
   padding: 0em 1em;
-  height: 5rem;
+  height: 4rem;
   transition: all 0.3s;
 }
 
@@ -235,43 +235,44 @@ footer {
   }
 }
 
-@media screen and (max-width: 1300px){
-#trivia-title, #letter-x {
-  font-size: 5rem;
+@media screen and (max-width: 1300px) {
+  #trivia-title,
+  #letter-x {
+    font-size: 5rem;
+  }
+
+  /* h2 {
+    font-size: 2rem;
+  }
+
+  #round-number {
+    font-size: 2rem;
+  } */
+
+  #question {
+    font-size: 1.5rem;
+    margin-top: 1em;
+  }
+
+  .answers-sub-container {
+    font-size: 2.2rem;
+  }
+
+  #next-round-btn {
+    font-size: 1.5rem;
+    height: 4rem;
+  }
 }
 
-h2 {
-  font-size: 2rem;
-}
-
-#round-number {
-  font-size: 2rem;
-}
-  
-#question {
-  font-size: 2rem;
-}
-
-.answers-sub-container {
-  font-size: 2.5rem;
-}
-
-#next-round-btn {
-  font-size: 1.5rem;
-  height: 4rem;
-}
-
-}
-  
 @media screen and (max-width: 650px) {
   h2 {
     font-size: 1.5rem;
   }
-    
+
   #round-number {
     font-size: 1.5rem;
   }
-  
+
   #question {
     font-size: 1.3rem;
   }
@@ -279,265 +280,9 @@ h2 {
   .answers-sub-container {
     font-size: 1.7rem;
   }
-  
+
   #next-round-btn {
     font-size: 1rem;
     height: 3rem;
   }
-  
-
 }
-  /* #game-container {
-    margin: 0em 2em 2em 2em;
-  }
-
-  #round-container {
-    top: -5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  #round-number {
-    font-size: 1.5rem;
-  }
-
-  #question {
-    font-size: 1.5rem;
-  }
-
-  #answers-main-container {
-    margin: 1.5em 2em 1em 2em;
-  }
-
-  .answers-sub-container {
-    width: 40%;
-    font-size: 1.5rem;
-    height: 5rem;
-  }
-
-  #next-round-btn {
-    font-size: 1.2rem;
-    height: 2.5rem;
-  }
-
-  #results-container {
-    margin: 0em 2em 5em 2em;
-  }
-
-  #encouragement-title {
-    font-size: 2rem;
-  }
-
-  #score-text {
-    font-size: 2.5rem;
-  }
-
-  #restart-quiz {
-    margin: 0em;
-    font-size: 2.5rem;
-    height: 6rem;
-  }
-
-  footer {
-    height: 2rem;
-  } */
-  
-}
-
-/* @media screen and (max-width: 768px) {
-#question {
-  font-size: 1.5rem;
-}
-
-  #answers-main-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin: 2em 2em 1em 2em;
-    height: auto;
-  }
-
-  .answers-sub-container {
-    width: 80%;
-    font-size: 1.5rem;
-    height: 4.5rem;
-    border: 0.3rem solid #000;
-  }
-
-  #next-round-btn {
-    font-size: 1.2rem;
-    height: 3rem;
-  } */
-
-/*Change layout of game container*/
-/* @media screen and (max-width: 2300px) {
-  html { */
-    /* font-size: calc(40% + 0.5vmin); */
-  /* } */
-
-  /* .answers-sub-container {
-    height: 80%;
-    font-size: 3rem;
-  }
-
-  #next-round-btn {
-    font-size: 2.5rem;
-    height: 5rem;
-  } */
-} */
-
-/* @media screen and (max-width: 1900px) {
-  #results-container {
-    margin: 3rem 4rem 5rem 4rem;
-  }
-
-  #encouragement-title {
-    font-size: 3.5rem;
-  }
-
-  #score-text {
-    font-size: 4rem;
-  }
-
-  #restart-quiz {
-    margin: 3rem 0rem;
-    font-size: 3.5rem;
-    height: 8rem;
-  }
-
-  #game-container {
-    margin: 0em 3em 4em 3em;
-  }
-
-  #question {
-    margin: 0em 1em;
-    font-size: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  #trivia-title,
-  #letter-x {
-    font-size: 5rem;
-  }
-
-  #play-btn {
-    font-size: 6rem;
-  }
-
-  #results-container {
-    margin: 3em 4em 7em 4em;
-    gap: 1em;
-  }
-
-  #encouragement-title {
-    font-size: 2.5rem;
-    margin-bottom: 1em;
-  }
-
-  #score-text {
-    font-size: 3rem;
-  }
-
-  #restart-quiz {
-    margin: 1em 0em;
-    font-size: 3.5rem;
-    height: 8rem;
-  }
-
-  footer {
-    height: 2.5rem;
-  }
-
-  #copyright-text {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #game-container {
-    margin: 0em 2em 2em 2em;
-  }
-
-  #round-container {
-    top: -5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  #round-number {
-    font-size: 1.5rem;
-  }
-
-  #question {
-    font-size: 1.5rem;
-  }
-
-  #answers-main-container {
-    margin: 1.5em 2em 1em 2em;
-  }
-
-  .answers-sub-container {
-    width: 40%;
-    font-size: 1.5rem;
-    height: 5rem;
-  }
-
-  #next-round-btn {
-    font-size: 1.2rem;
-    height: 2.5rem;
-  }
-
-  #results-container {
-    margin: 0em 2em 5em 2em;
-  }
-
-  #encouragement-title {
-    font-size: 2rem;
-  }
-
-  #score-text {
-    font-size: 2.5rem;
-  }
-
-  #restart-quiz {
-    margin: 0em;
-    font-size: 2.5rem;
-    height: 6rem;
-  }
-
-  footer {
-    height: 2rem;
-  }
-
-  #copyright-text {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #play-btn {
-    font-size: 4rem;
-    border: 0.5rem solid #fff;
-  }
-
-  #round-container {
-    top: -4rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  #round-number {
-    font-size: 1.2rem;
-  }
-
-  #question {
-    font-size: 1.2rem;
-  }
-} */
