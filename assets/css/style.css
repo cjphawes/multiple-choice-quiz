@@ -84,10 +84,10 @@ main {
 #results-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2vw;
   align-items: center;
   justify-content: center;
-  margin: 3rem 4rem 10rem 4rem;
+  margin: 3vw 4vw 5vw 4vw;
 }
 
 /*Welcome container elements*/
@@ -155,41 +155,40 @@ h2 {
   margin: 1vw;
   width: 90%;
   max-width: 3500px;
-  height: 20vw;
+  height: 15vw;
 }
 
 .answers-sub-container {
   align-self: center;
   border-radius: 2vw;
   border: 0.5vw solid #000;
-  padding: 0.5vw 0.5vw;
   transition: all 0.3s;
   font-size: 2vw;
-  height: 85%;
+  height: 90%;
   font-weight: 600;
   cursor: pointer;
 }
 
 #next-round-btn {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 600;
   text-decoration: none;
   border-radius: 1.5vw;
   padding: 0vw 1vw;
-  height: 4vw;
+  height: 3.5vw;
   transition: all 0.3s;
 }
 
 /*Results container elements*/
 #encouragement-title {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 1vw;
+  font-size: 3vw;
   font-weight: normal;
   color: #fff;
 }
 
 #score-text {
-  font-size: 2.5rem;
+  font-size: 3.5vw;
   font-weight: 600;
   color: #fff;
 }
@@ -199,22 +198,22 @@ h2 {
 }
 
 #restart-quiz {
-  margin: 2rem 0rem;
-  font-size: 2rem;
+  margin: 2vw 0vw;
+  font-size: 2.5vw;
   font-weight: 600;
   background-color: #000;
   color: #fff;
-  border: 0.5rem solid #fff;
+  border: 0.3vw solid #fff;
   text-decoration: none;
-  border-radius: 3rem;
-  padding: 0rem 2.5rem;
-  height: 6rem;
+  border-radius: 2vw;
+  padding: 0vw 2.5vw;
+  height: 6vw;
   transition: all 0.3s;
 }
 
 #restart-quiz:hover {
   cursor: pointer;
-  border: 0rem;
+  border: 0vw;
   background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
 }
 
