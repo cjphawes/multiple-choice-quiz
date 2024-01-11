@@ -1,5 +1,9 @@
 # Testing
 
+#### Compatibility Testing
+
+Testing was completed in Google Chrome, Microsoft Edge and Firefox web browsers.
+
 #### Compatibility Issues
 
 Only one issue was found, this was when using an Iphone.
@@ -22,7 +26,9 @@ Only one issue was found, this was when using an Iphone.
 
 ##### Javascript
 
-- No errors were found using the official [JShint Validator]()
+- No errors were found using the official [JShint Validator](https://jshint.com/)
+
+![JSHint Validator Image](/documentation-imgs/jshint-validator.webp)
 
 ---
 
