@@ -272,10 +272,10 @@ footer {
     height: 3rem;
   }
 
-  /* #results-container {
-    margin: 6em 4em 10em 4em;
+  #results-container {
+    margin: 6em 1em 10em 1em;
   }
- */
+
   #encouragement-title {
     font-size: 2rem;
   }
