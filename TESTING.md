@@ -5,23 +5,24 @@
 Testing was completed in Google Chrome, Microsoft Edge and Firefox web browsers.
 
 - Google Chrome
-  ![]()
-  ![]()
-  ![]()
-  ![]()
+
+  ![](/documentation-imgs/chrome-home-page-test.webp)
+  ![](/documentation-imgs/chrome-game-before-selection-test.webp)
+  ![](/documentation-imgs/chrome-game-after-selection-test.webp)
+  ![](/documentation-imgs/chrome-results-page-test.webp)
 
 - Microsoft Edge
-  ![]()
-  ![]()
-  ![]()
-  ![]()
+  ![](/documentation-imgs/ms-edge-home-page-test.webp)
+  ![](/documentation-imgs/ms-edge-game-before-selection-test.webp)
+  ![](/documentation-imgs/ms-game-section-after-selection.webp)
+  ![](/documentation-imgs/ms-edge-results-page-test.webp)
 
 - Mozilla Firefox
-  ![]()
-  ![]()
-  ![]()
-  ![]()
-  ![]()
+
+  ![](/documentation-imgs/firefox-home-page-test.webp)
+  ![](/documentation-imgs/firefox-game-before-selection-test.webp)
+  ![](/documentation-imgs/firefox-game-after-selection-test.webp)
+  ![](/documentation-imgs/firefox-results-page-test.webp)
 
 #### Compatibility Issues
 
