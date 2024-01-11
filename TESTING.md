@@ -28,6 +28,23 @@ Only one issue was found, this was when using an Iphone.
 
 ### Accessibility and Performance
 
+- For the users on smaller devices I made sure the Play Button and Restart Buttons had different backgrounds to their counterparts on the desktop devices due to not being able to hover with a cursor.
+
+This is the **Desktop Version:**
+
+![My desktop home page](/documentation-imgs/home-page.webp)
+![My desktop results page](/documentation-imgs/game-results-section.webp)
+
+This is the **Tablet Version:**
+
+![My tablet home page](/documentation-imgs/tablet-device-home-page.webp)
+![My tablet results page](/documentation-imgs/tablet-device-results-page.webp)
+
+This is the **Mobile Version:**
+
+![My mobile home page](/documentation-imgs/mobile-device-home-page.webp)
+![My mobile results page](/documentation-imgs/mobile-device-results-page.webp)
+
 - I used the Lighthouse Dev Tools to assess the performance and accessibility of my quiz game. I am happy with receiving over 95%!.
 
 ![Image of lighthouse dev tools test](documentation-imgs/lighthouse-perfomance-test.webp)
