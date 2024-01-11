@@ -273,7 +273,7 @@ footer {
   }
 
   #results-container {
-    margin: 6em 1em 10em 1em;
+    margin: 6em 1em 5em 1em;
   }
 
   #encouragement-title {
@@ -290,6 +290,20 @@ footer {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #play-btn,
+  #restart-quiz {
+    border: 0rem;
+    background-image: linear-gradient(
+      to bottom right,
+      #f8770f 20%,
+      #e63010 80%
+    );
+  }
+}
+/* #restart-quiz {}
+} */
+
 @media screen and (max-width: 650px) {
   #welcome-container {
     margin-top: 8rem;
@@ -297,7 +311,6 @@ footer {
 
   #play-btn {
     font-size: 3rem;
-    border: 0.4rem solid #fff;
     border-radius: 2.5rem;
   }
   h2 {
