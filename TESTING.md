@@ -6,23 +6,23 @@ Testing was completed in Google Chrome, Microsoft Edge and Firefox web browsers.
 
 - Google Chrome
 
-  ![](/documentation-imgs/chrome-home-page-test.webp)
-  ![](/documentation-imgs/chrome-game-before-selection-test.webp)
-  ![](/documentation-imgs/chrome-game-after-selection-test.webp)
-  ![](/documentation-imgs/chrome-results-page-test.webp)
+  ![Image of Google Chrome Browser of home page](/documentation-imgs/chrome-home-page-test.webp)
+  ![Image of Google Chrome Browser of game page after selection](/documentation-imgs/chrome-game-before-selection-test.webp)
+  ![Image of Google Chrome Browser of game page before selection](/documentation-imgs/chrome-game-after-selection-test.webp)
+  ![Image of Google Chrome Browser of results page](/documentation-imgs/chrome-results-page-test.webp)
 
 - Microsoft Edge
-  ![](/documentation-imgs/ms-edge-home-page-test.webp)
-  ![](/documentation-imgs/ms-edge-game-before-selection-test.webp)
-  ![](/documentation-imgs/ms-game-section-after-selection.webp)
-  ![](/documentation-imgs/ms-edge-results-page-test.webp)
+  ![Image of Microsoft Edge Browser of home page](/documentation-imgs/ms-edge-home-page-test.webp)
+  ![Image of Microsoft Edge Browser of game page before selection](/documentation-imgs/ms-edge-game-before-selection-test.webp)
+  ![Image of Microsoft Edge Browser of game page after selection](/documentation-imgs/ms-edge-game-after-selection-test.webp)
+  ![Image of Microsoft Edge Browser of results page](/documentation-imgs/ms-edge-results-page-test.webp)
 
 - Mozilla Firefox
 
-  ![](/documentation-imgs/firefox-home-page-test.webp)
-  ![](/documentation-imgs/firefox-game-before-selection-test.webp)
-  ![](/documentation-imgs/firefox-game-after-selection-test.webp)
-  ![](/documentation-imgs/firefox-results-page-test.webp)
+  ![Image of Mozilla Firefox Browser of home page](/documentation-imgs/firefox-home-page-test.webp)
+  ![Image of Mozilla Firefox Browser of game page before selection](/documentation-imgs/firefox-game-before-selection-test.webp)
+  ![Image of Mozilla Firefox Browser of game page after selection](/documentation-imgs/firefox-game-after-selection-test.webp)
+  ![Image of Mozilla Firefox Browser of results page](/documentation-imgs/firefox-results-page-test.webp)
 
 #### Compatibility Issues
 
