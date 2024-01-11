@@ -92,7 +92,7 @@ main {
   gap: 1.5em;
   align-items: center;
   justify-content: center;
-  margin: 3em 4em 10em 4em;
+  margin: 6em 4em 10em 4em;
 }
 
 /*Welcome container elements*/
@@ -272,6 +272,18 @@ footer {
     height: 3rem;
   }
 
+  /* #results-container {
+    margin: 6em 4em 10em 4em;
+  }
+ */
+  #encouragement-title {
+    font-size: 2rem;
+  }
+
+  #score-text {
+    font-size: 2.5rem;
+  }
+
   #restart-quiz {
     font-size: 3rem;
     height: 6rem;
@@ -312,5 +324,19 @@ footer {
   #next-round-btn {
     font-size: 1rem;
     height: 2.5rem;
+  }
+
+  #encouragement-title {
+    font-size: 1.5rem;
+  }
+
+  #score-text {
+    font-size: 2rem;
+  }
+
+  #restart-quiz {
+    font-size: 2.5rem;
+    height: 5rem;
+    border: 0.3rem solid #fff;
   }
 }
