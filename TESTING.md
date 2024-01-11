@@ -35,9 +35,9 @@ Only one issue was found, this was when using an Iphone.
 - **Home Page Testing**
 
   - Play Now CTA Button:
-    - What to expect - When the user hovers over the **Play Now** button, the user should see the border disappear and the background turn to an orange/red gradient color.
+    - What to expect - When the user hovers over the play now button, the user should see the border disappear and the background turn to an orange/red gradient color. Upon clicking the button it should start the game.
     - Testing: ![GIF of play btn test](/documentation-assets/doc-gifs/play-btn-test.gif)
-    - The result - The feature acted as designed, it removed the border and changed the background color to orange/red gradient color.
+    - The result - The feature acted as designed, it removed the border and changed the background color to orange/red gradient color, as well as starting the game for the user.
 
 - **Game Container Testing**
 
@@ -47,10 +47,24 @@ Only one issue was found, this was when using an Iphone.
     - Testing: ![GIF of game title test](/documentation-assets/doc-gifs/game-title-test.gif)
     - The result - The feature acted as designed, the color changed to a darker white and returned the user back to the home page.
 
-  - Answer button element:
-    - What to expect -
-    - Testing: ![GIF of answer button element test]()
-    - The result -
+  - Answer buttons:
+
+    - What to expect - Upon selecting one of the answer buttons, the rest of them should become greyed out (no longer clickable) and the selected button should change to black for greater user experience.
+    - Testing: ![GIF of answer buttons test](/documentation-assets/doc-gifs/answer-button-test.gif)
+    - The result - The feature acted as designed, the color of the selected button changes to black, whilst the rest of the buttons become greyed out and unable to be selected.
+
+  - Next question button:
+
+    - What to expect - Once a answer has been selected, the button should become enabled to click and the background should turn to an orange/red gradient color with a white border. On the last question, the button should take the game to the results page.
+    - Testing: ![GIF of next question button test](/documentation-assets/doc-gifs/next-question-btn-test.gif)
+    - The result - The feature acted as designed, on the last question, it directed the user to the results page and the styling was correct having a white border and orange/red gradient color background.
+
+  - Restart quiz button:
+    - What to expect - When hovering over the button the background should change to an orange/red gradient color and the border removed. Upon clicking the button it should redirect the user back to the home page to start the game again.
+    - Testing: ![GIF of restart quiz button test](/documentation-assets/doc-gifs/restart-btn-test.gif)
+    - The result - The feature acted as designed, it redirected the user back to the home page and when hovering over the styling changed to a orange/red gradient color background and no border.
+
+---
 
 #### Validator Testing
 
