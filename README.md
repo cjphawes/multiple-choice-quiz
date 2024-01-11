@@ -141,7 +141,7 @@ Please refer to [TESTING.md](/TESTING.md) file for all test-related documentatio
 
 #### Mistakes
 
-There were four mistakes were made while committing messages to Github.
+There were seven mistakes were made while committing messages to Github.
 
 - **20a1b29** - "remove validator testing and put on TESTING.md file"
 
@@ -158,6 +158,18 @@ There were four mistakes were made while committing messages to Github.
 - **98162ad** - "add comments, remove seven div elements"
 
 **_Supposed to be:_** "feat:add comments, remove seven div elements"
+
+- **b821061** - "style:change units to vw for resutls container"
+
+**_Supposed to be:_** style:change units to vw for results container"
+
+- **4ebc713** - "style:change styling of resutls container and bg image"
+
+**_Supposed to be:_** "style:change styling of results container and bg image"
+
+- **6994066** - "style:change margins of main contianers, comment out some media Q's"
+
+**_Supposed to be:_** "style:change margins of main containers, comment out some media Q's"
 
 ---
 
