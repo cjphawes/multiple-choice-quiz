@@ -1,4 +1,4 @@
-![image of game title and background](documentation-imgs/game-title.webp)
+![image of game title and background](/documentation-assets/doc-imgs/game-title.webp)
 
 # TriviaX
 
@@ -12,7 +12,7 @@ Have a go and see if you can guess all the questions correctly! [TriviaX](https:
 
 Take a quick glance at my online quiz on a variety on device screen widths.
 
-![a variety of screen widths of my online quiz](documentation-imgs/am-i-responsive-devices.webp)
+![a variety of screen widths of my online quiz](/documentation-assets/doc-imgs/am-i-responsive-devices.webp)
 
 Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.github.io/multiple-choice-quiz/)
 
@@ -24,7 +24,7 @@ Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.gith
 
 - This flowchart shows the logic and flow of the game.
 
-![flowchart of how the game is run](documentation-imgs/js-flowchart-for-quiz.webp)
+![flowchart of how the game is run](/documentation-assets/doc-imgs/js-flowchart-for-quiz.webp)
 
 #### HTML & CSS Wireframe Layout
 
@@ -34,9 +34,9 @@ Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.gith
   - Made edges of boxes rounded and removed the line underneath the question.
   - I added a footer to the HTML for copyright purposes
 
-![wireframe of my quiz layout](documentation-imgs/home-screen-container-wf.webp)
-![wireframe of my quiz layout](documentation-imgs/game-container-wf.webp)
-![wireframe of my quiz layout](documentation-imgs/results-container-wf.webp)
+![wireframe of my quiz layout](/documentation-assets/doc-imgs/home-screen-container-wf.webp)
+![wireframe of my quiz layout](/documentation-assets/doc-imgs/game-container-wf.webp)
+![wireframe of my quiz layout](/documentation-assets/doc-imgs/results-container-wf.webp)
 
 ---
 
@@ -69,7 +69,7 @@ There are three container elements inside the HTML structure:
 
 #### Home Page
 
-![image of home page](documentation-imgs/home-page.webp)
+![image of home page](/documentation-assets/doc-imgs/home-page.webp)
 
 - The home page shows:
 
@@ -83,7 +83,7 @@ There are three container elements inside the HTML structure:
 
 #### The Quiz - Before Selection
 
-![image of main game section before selection](documentation-imgs/main-game-section-before-selection.webp)
+![image of main game section before selection](/documentation-assets/doc-imgs/main-game-section-before-selection.webp)
 
 - Once the user enters the game and they will come across:
 
@@ -94,7 +94,7 @@ There are three container elements inside the HTML structure:
 
 #### The Quiz - After Selection
 
-![image of main game section after selection](documentation-imgs/main-game-section-after-selection.webp)
+![image of main game section after selection](/documentation-assets/doc-imgs/main-game-section-after-selection.webp)
 
 - The user interacts by clicking on the answer box they think is correct, this will:
   - Disable the other answers
@@ -103,7 +103,7 @@ There are three container elements inside the HTML structure:
 
 #### The Results
 
-![image of results section](documentation-imgs/game-results-section.webp)
+![image of results section](/documentation-assets/doc-imgs/game-results-section.webp)
 
 - Once all questions have been answered, the results will appear and display:
   - The user's score out of 10.
@@ -202,3 +202,4 @@ The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-
 
 - The background image used throughout the whole quiz is from [Unsplash](https://unsplash.com/photos/open-book-lot-Oaqk7qqNh_c)
 - The images, including inside this README, were all compressed using [Image Resizer](https://imageresizer.com/)
+- The GIFs created for the demonstration of testing was used with [Chrome Capture Extension](https://chromewebstore.google.com/detail/chrome-capture-gif-screen/ggaabchcecdbomdcnbahdfddfikjmphe) on Google Chrome
