@@ -4,6 +4,25 @@
 
 Testing was completed in Google Chrome, Microsoft Edge and Firefox web browsers.
 
+- Google Chrome
+  ![]()
+  ![]()
+  ![]()
+  ![]()
+
+- Microsoft Edge
+  ![]()
+  ![]()
+  ![]()
+  ![]()
+
+- Mozilla Firefox
+  ![]()
+  ![]()
+  ![]()
+  ![]()
+  ![]()
+
 #### Compatibility Issues
 
 Only one issue was found, this was when using an Iphone.
