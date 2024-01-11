@@ -301,8 +301,6 @@ footer {
     );
   }
 }
-/* #restart-quiz {}
-} */
 
 @media screen and (max-width: 650px) {
   #welcome-container {
