@@ -112,7 +112,7 @@ main {
   color: #fff;
   border: inset 0rem;
   cursor: pointer;
-  background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
+  background-color: #782420;
 }
 
 /*Game container elements*/
@@ -213,7 +213,7 @@ h2 {
 #restart-quiz:hover {
   cursor: pointer;
   border: 0rem;
-  background-image: linear-gradient(to bottom right, #f8770f 20%, #e63010 80%);
+  background-color: #782420;
 }
 
 /*Footer Section*/
@@ -294,11 +294,7 @@ footer {
   #play-btn,
   #restart-quiz {
     border: 0rem;
-    background-image: linear-gradient(
-      to bottom right,
-      #f8770f 20%,
-      #e63010 80%
-    );
+    background-color: #782420;
   }
 }
 
