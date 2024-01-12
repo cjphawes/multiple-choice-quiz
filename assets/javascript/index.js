@@ -218,10 +218,9 @@ function nextBtnEnable() {
   nextRoundBtn.disabled = false;
   nextRoundBtn.style.opacity = "1";
   nextRoundBtn.style.color = "#fff";
-  nextRoundBtn.style.border = "0.3vw solid #fff";
+  nextRoundBtn.style.border = "0.3rem solid #fff";
   nextRoundBtn.style.cursor = "pointer";
-  nextRoundBtn.style.backgroundImage =
-    "linear-gradient(to bottom right, #f8770f 20%, #e63010 80%)";
+  nextRoundBtn.style.backgroundColor = "#782420";
   //disable the answers from clicking
   for (let i = 0; i < btnContainers.length; i++) {
     btnContainers[i].disabled = true;
