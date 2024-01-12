@@ -26,9 +26,10 @@ Testing was completed in Google Chrome, Microsoft Edge and Firefox web browsers.
 
 #### Compatibility Issues
 
-Only one issue was found, this was when using an Iphone.
+Two issues were found, this was when using an Iphone.
 
 - The button elements text color was displayed as blue and not black unlike on the desktop or android phones.
+- The next question button on the first question, the styling properties of a disabled button are different being the opacity of the button is much greater than of the desktop or android versions, making it look as though it could be a clickable button.
 
 #### Component Testing
 
