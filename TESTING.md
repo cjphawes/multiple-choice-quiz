@@ -83,7 +83,7 @@ Two issues were found, this was when using an Iphone.
 
 ##### Javascript
 
-- No errors were found using the official [JShint Validator](https://jshint.com/), the only warning was referencing outer scoped variables from inside a function, may lead to confusing semantics.
+- No errors were found using the official [JShint Validator](https://jshint.com/), the only warning was referencing outer scoped variables from inside a function, which may lead to confusing semantics. However I tested it on multiple browsers and it worked perfectly without any issues.
 
 ![JSHint Validator Image](/documentation-assets/doc-imgs/jshint-validator.webp)
 
