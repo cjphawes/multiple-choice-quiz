@@ -18,6 +18,15 @@ Am I Responsive [Webpage](https://ui.dev/amiresponsive?url=https://cjphawes.gith
 
 ---
 
+## The Rules!
+
+My game is simple.
+
+**1.** 10 Questions, select `Play Now` when you are ready to start.
+**2.** One guess per round (don't click the wrong one;)
+**3.** Click `Next Question` when you are ready to move on.
+**4.** See how bad you are at general knowledge at the end :)
+
 ## The Process
 
 #### Javascript Flowchart
@@ -132,7 +141,7 @@ Please refer to [TESTING.md](/TESTING.md) file for all test-related documentatio
   - **Solution:** I had not realised i removed the `encouragement-text` line of code in the HTML so removing these lines of code in the JS removed the error.
 - **Issue 4:** I was getting another error on the display of the results container showing, "unable to read property of `.question`.
   - **Solution:** The fix for this was adding an IF statement to the `nextRoundBtn` function
-- **Issue:** The elements on the page were shifting around when hovering on the restart quiz button and when selecting an answer.
+- **Issue 5:** The elements on the page were shifting around when hovering on the restart quiz button and when selecting an answer.
   - **Solution:** I set a fixed height to the button elements so that the shift will no longer occur.
 
 #### Unsolved Bugs
@@ -184,6 +193,14 @@ To do so , I followed these steps.
 **3.** Make sure the branch selected is `main`, and upon a refresh of the page, at the top of the page automatically,a link will populate detailing your live web address.
 
 The live link can be found here - [TriviaX](https://cjphawes.github.io/multiple-choice-quiz/)
+
+## Local Deployment
+
+To make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/cjphawes/multiple-choice-quiz.git`
+
+Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/new#https://github.com/cjphawes/multiple-choice-quiz), which will start Gitpod workspace for you.
 
 ---
 
