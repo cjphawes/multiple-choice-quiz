@@ -86,7 +86,7 @@ There are three container elements inside the HTML structure:
   - A simple interactive method of use for anyone to understand.
 
 - The home page includes:
-  - A call to action button, the user clicks to initiate the game. Upon hovering over the CTA button, the styling will change to a gradient background.
+  - A call to action button, the user clicks to initiate the game. Upon hovering over the CTA button, the styling will change to a `#782420` background.
   - The quiz's title, which is also a hyperlink that sends you back to the home page when clicked on.
   - A footer for copyright purposes.
 
@@ -108,7 +108,7 @@ There are three container elements inside the HTML structure:
 - The user interacts by clicking on the answer box they think is correct, this will:
   - Disable the other answers
   - Visually tell the user which answer they chose by styling it all black with white text.
-  - Highlight the next question CTA button in a gradient color, subtly directing them where to click to continue the game.
+  - Highlight the next question CTA button in the `#782420` color, subtly directing them where to click to continue the game.
 
 #### The Results
 
@@ -117,7 +117,7 @@ There are three container elements inside the HTML structure:
 - Once all questions have been answered, the results will appear and display:
   - The user's score out of 10.
   - Provide some words of encouragement to try again to get a better score (unless you get 100%)
-  - A CTA button for the user to restart the quiz. Upon hovering over the CTA button, the styling will change to a gradient background.
+  - A CTA button for the user to restart the quiz. Upon hovering over the CTA button, the styling will change to a `#782420` background.
 
 #### Future Features To Implement
 
@@ -214,6 +214,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/new#htt
 - The footer copyright logo was found from [CSS Tricks](https://css-tricks.com/snippets/html/glyphs/)
 - The code used for shuffling the question set i created was the [Fisher-Yates Algorithm](https://stackoverflow.com/questions/59810241/how-to-fisher-yates-shuffle-a-javascript-array)
 - The code used for the automatic font scaling is from [Automatic font scaling](https://sjorswijsman.medium.com/3-easy-css-tricks-for-responsive-websites-i-use-in-every-project-68ec334a1522)
+- To find the correct shade of color I wanted, I used [Tint & Shade Generator](https://maketintsandshades.com/)
 
 ##### Media
 
